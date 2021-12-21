@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+#wrap {
+    width: 1000px; 
+    height: 900px; 
+    margin: 0 auto;
+}
+
+aside {
+        float: left; 
+        width: 300px; 
+        height: 600px; 
+        margin-top: 20px;
+        position: relative;
+    }
+
+#wrap aside #profile #profile-box {
+        top: 50px;
+        left: 50px;
+        position: absolute;
+    }
+
+#wrap aside #profile #profile-text {
+        top: 200px;
+        left: 90px;
+        position: absolute;
+    }  
+    
+#wrap aside #update-mypage{
+    top: 288px;
+    text-align: center;
+    position: relative;
+}
+
+#wrap aside .profile-board {
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+}
+
+#wrap aside #profile-board1 {
+    top: 320px;
+}
+
+#wrap aside #profile-board2 {
+    top: 335px;
+}
+
+#wrap aside #profile-board3 {
+    top: 345px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+#home_img {
+    width: 20px;
+}
+
+section {
+    margin: 0% auto;
+    text-align:center;
+    float: left; 
+    width: 700px; 
+    height: 900px; 
+    }
+
+/* 프로필 부분 */
+#profile {
+        width: 270px;
+        height: 500px;
+        left: 341px;
+        top: 219px;
+    
+        background: rgba(149, 178, 142, 0.5);
+        border-radius: 25px;
+    }
+
+#profile-box {
+        margin: 0% auto;
+        text-align:center; 
+        width: 170px;
+        height: 170px; 
+        border-radius: 70%;
+        overflow: hidden;
+    }
+    
+    
+#profile-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+#profile-text {
+        margin-top: 30px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+ /* 내가 등록한 상품 */
+#myProduct, #heartProduct  {
+    height: 40px;
+    font-size: 17px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+
+/* 내가등록한상품, 찜한 상품 이미지 */
+.product-img {
+    width: 200px;
+    height: 250px;
+    float:left;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+#myProduct1 {
+    border: 2px solid #E5E5E5;
+    height: 270px;
+    background-color: white;
+}
+
+/* 내가 찜한 상품 */
+#heartProduct1{ 
+    border: 2px solid #E5E5E5;
+    height: 270px;
+    background-color: white;
+}

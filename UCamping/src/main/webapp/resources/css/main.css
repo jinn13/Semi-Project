@@ -1,0 +1,351 @@
+@charset "UTF-8";
+/* -----------------body------------------ */
+.body {
+  /* position: relative; */
+  width: 1200px;
+  margin: auto;
+  /* display: none; */
+  /* background-color: red; */
+}
+
+/* ------------- body 1-1) 메인 이미지 ------------ */
+
+.main-slide {
+  /* width: auto; */
+  /* ↓현재 메인 슬라이드와 메뉴 사이의 간격 조정수치.. */
+  top: -3px;
+  /* height: auto; */
+
+  /* ↑ 수정 전 수치들  */
+  width: 1200px;
+  height: 580px;
+  margin: auto;
+  position: relative;
+  /* background-color: coral; */
+}
+
+.main-slide > .slick .item1 {
+  height: 580px;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-slide > .slick .item1 .main-img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.2);
+  transition: transform 10s;
+}
+
+.main-slide > .slick .item1.slick-current .main-img {
+  transform: scale(1);
+}
+
+.main-img > p {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  padding-top: 200px;
+  /* position: absolute; */
+  /* top: 50px; */
+  /* right: 90px; */
+}
+
+/* 메인 슬라이드 관련 내용 */
+.slick-track {
+  position: relative;
+  z-index: index 1;
+}
+
+.main-left {
+  position: absolute;
+  left: 155px;
+  bottom: 115px;
+  width: 30px;
+  height: 30px;
+  background-color: royalblue;
+}
+
+.main-right {
+  position: absolute;
+  right: -255px;
+  bottom: 115px;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
+.slick-dots {
+  /* ↓ 얘 설정하면 더보기가 hover가 안됨..영역이 설정되서였음*/
+  width: 650px;
+  list-style: none;
+  text-align: end;
+  position: absolute;
+  /* background-color: hotpink; */
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  /* ↓ 슬라이드 버튼 간격 */
+  width: 10px;
+  height: 20px;
+  margin: 0 30px 100px;
+  /* padding: 0; */
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 0px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: 0;
+  background: 0 0;
+}
+
+.slick-dots li button:before {
+  font-size: 70px;
+  line-height: 30px;
+  position: absolute;
+  top: -50px;
+  content: "─";
+  text-align: center;
+  opacity: 0.75;
+  color: #6d6968;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #ffffff;
+}
+
+/* ------ body 1-2) 새로 올라온 상품 ------- */
+.item-list {
+  /* width: 1200px; */
+  margin: auto;
+  text-align: center;
+}
+
+.small-title {
+  display: inline-flex;
+  width: 790px;
+  margin: auto;
+  padding: 30px 0px 30px;
+  /* background-color: purple; */
+}
+
+.small-title > h2 {
+  margin: auto;
+  /* background-color: pink; */
+}
+
+.small-title > a {
+  margin-top: 9px;
+  font-size: 12px;
+  /* background-color: blue; */
+}
+
+.small-title > a:hover {
+  color: #a4835f;
+}
+
+/* 상품 이미지 설정 */
+.item-img {
+  width: 175px;
+  height: 175px;
+  margin: auto;
+}
+
+/* 상품 이름 설정 */
+.img-slide > div {
+  font-size: 14px;
+}
+
+/* 상품 가격 설정 */
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  /* background-color: hotpink; */
+}
+
+/* ------------슬라이드 관련 항목-------------- */
+.img-slide {
+  position: relative;
+  /* background: yellowgreen; */
+  width: 1200px;
+  margin: auto;
+  /* ↓ 이미지 간격 */
+  padding: 0 190px;
+}
+
+.slide-btn {
+  position: relative;
+  width: 790px;
+  cursor: pointer;
+}
+
+.sml-left {
+  position: absolute;
+  left: 155px;
+  bottom: 115px;
+  width: 30px;
+  height: 30px;
+}
+
+.sml-right {
+  position: absolute;
+  right: -255px;
+  bottom: 115px;
+  width: 30px;
+  height: 30px;
+}
+
+.img-slide2 {
+  position: relative;
+  /* background: yellowgreen; */
+  width: 1200px;
+  margin: auto;
+  /* ↓ 이미지 간격 */
+  padding: 0 190px;
+}
+
+.sml-left2 {
+  position: absolute;
+  left: 155px;
+  bottom: 115px;
+  width: 30px;
+  height: 30px;
+}
+
+.sml-right2 {
+  position: absolute;
+  right: -255px;
+  bottom: 115px;
+  width: 30px;
+  height: 30px;
+}
+
+.img-slide3 {
+  position: relative;
+  /* background: yellowgreen; */
+  width: 1200px;
+  margin: auto;
+  /* ↓ 이미지 간격 */
+  padding: 0 190px;
+}
+
+.sml-left3 {
+  position: absolute;
+  left: 155px;
+  bottom: 115px;
+  width: 30px;
+  height: 30px;
+  /* background-color: aqua; */
+}
+
+.sml-right3 {
+  position: absolute;
+  right: -255px;
+  bottom: 115px;
+  width: 30px;
+  height: 30px;
+  /* background-color: blueviolet; */
+}
+
+.img-slide4 {
+  position: relative;
+  /* background: yellowgreen; */
+  width: 1200px;
+  margin: auto;
+  /* ↓ 이미지 간격 */
+  padding: 0 190px;
+}
+
+.sml-left4 {
+  position: absolute;
+  left: 155px;
+  bottom: 115px;
+  width: 30px;
+  height: 30px;
+  /* background-color: aqua; */
+}
+
+.sml-right4 {
+  position: absolute;
+  right: -255px;
+  bottom: 115px;
+  width: 30px;
+  height: 30px;
+  /* background-color: blueviolet; */
+}
+
+/* --------------------화면 나눔 선 -------------------------- */
+.line {
+  width: auto;
+  margin: auto;
+  border: none;
+  height: 0.1px;
+  background-color: #e5e5e5;
+}
+
+/* -----------------두번째 메인 슬라이드--------------- */
+.main-slide2 {
+  width: 1200px;
+  height: 300px;
+  margin: auto;
+  /* border: 2px solid brown; */
+  /* position: relative; */
+  /* display: inline-flex; */
+}
+
+.main-slide2 > .slick .item {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-slide2 > .slick .item .bg {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.1);
+  transition: transform 5s;
+}
+
+.main-slide2 > .slick .item.slick-current .bg {
+  transform: scale(1);
+}
+
+.main-left2 {
+  position: absolute;
+  left: 20px;
+  bottom: 120px;
+  width: 30px;
+  height: 40px;
+  /* background-color: chartreuse; */
+}
+
+.main-right2 {
+  position: absolute;
+  right: -390px;
+  bottom: 120px;
+  width: 30px;
+  height: 40px;
+  /* background-color: aqua; */
+}

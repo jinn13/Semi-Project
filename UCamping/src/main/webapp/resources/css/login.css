@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/* -----------------body------------------ */
+.body {
+  /* position: relative; */
+  width: 1200px;
+  margin: auto;
+  /* display: none; */
+  /* background-color: red; */
+}
+
+.login-view {
+  position: relative;
+  width: 964px;
+  /* height: auto; */
+  margin: auto;
+  display: block;
+  /* background-color: yellow; */
+}
+
+/* --------------작은 카테고리------------- */
+.sml-category {
+  display: flex;
+  /* justify-content: center; */
+  line-height: 60px;
+  width: 400px;
+  flex-grow: 1;
+  /* background: green; */
+}
+
+.sml-category > li {
+  font-size: 12px;
+  margin-left: 14px;
+  font-weight: bold;
+}
+
+/* 작은 메뉴 색상 변경(건드리면 골치아픔) */
+.sml-category:hover > span {
+  color: #a4835f;
+}
+
+.sml-category:hover > span .material-icons-outlined.chgcolor {
+  color: #a4835f;
+}
+
+.sml-category:hover > span .material-icons.chgcolor {
+  color: #a4835f;
+}
+
+#bar {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#sml-ctgr-img1 {
+  display: inline-block;
+  vertical-align: -7px;
+  margin-right: 15px;
+  width: 10px;
+  height: 10px;
+}
+/* ------------ 로그인 wrapper ----------------- */
+.login-section {
+  position: relative;
+  width: auto;
+  /* ↓ 얘 설정하면 푸터 위로 올라옴 이건 설정 피하자.  */
+  /* float: left; */
+  /* ↓ 얘 잘못건드리면 헤더 오른쪽으로 살짝 밀려남 */
+  display: flex;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  height: auto;
+  /* background-color: lightpink; */
+  overflow: auto;
+  top: 0px;
+  margin-bottom: 50px;
+}
+
+.login-content {
+  width: 482px;
+  /* height: auto; */
+  /* background-color: lime; */
+}
+
+.login-content > p {
+  font-size: 36px;
+  font-weight: bold;
+  /* width: 452px; */
+  /* height: 50px; */
+  text-align: center;
+  padding-top: 48px;
+  /* padding-left: 250px; */
+  /* margin-left: 45px; */
+  /* background-color: red; */
+}
+
+/* -------------로그인 사진 부분----------------- */
+.login-pic {
+  /* position: relative; */
+  /* display: inline; */
+  width: 482px;
+  height: 622px;
+  /* background-color: navy; */
+  overflow: hidden;
+}
+
+#login-img {
+  width: 482px;
+}
+
+/* ---------- 로그인 사진 애니메이션------------- */
+.login-pic > #login-img {
+  /* transform: scale(1.5); */
+  transform: translateY(0px);
+  transition: transform 3s;
+}
+
+.login-pic:hover > #login-img {
+  transform: scale(1.1) translateY(10px);
+}
+
+/* --------------로그인 입력창 내용--------------------- */
+
+#login-form-input > input {
+  border: 1px solid #757575;
+  width: 408px;
+  height: 46px;
+  border-radius: 10px;
+  /* ↓ 로그인 글자와 input창 사이 간격 */
+  margin-top: 25px;
+  margin-left: 30px;
+  /* background: rgba(0, 0, 0, 0); */
+  /* color: white; */
+  padding-left: 15px;
+}
+
+#id {
+  /* ↓ 아이디, 비밀번호 입력창 사이 간격 */
+  margin-bottom: -15px;
+}
+
+.submit {
+  width: 426px;
+  height: 52px;
+  color: white;
+  font-size: 24px;
+  border: none;
+  background-color: black;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+/* --------------------화면 나눔 선 -------------------------- */
+.line {
+  width: auto;
+  margin: auto;
+  border: none;
+  height: 0.1px;
+  background-color: #e5e5e5;
+}
+
+.short-line {
+  width: 420px;
+  margin-left: 31px;
+  /* float: left; */
+  /* right: 110px; */
+  border: none;
+  height: 0.1px;
+  background-color: #e5e5e5;
+}
+
+/* --------아이디, 비번찾기, 회원가입 메뉴------------- */
+.find-signup-area {
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+  width: atuo;
+  flex-grow: 1;
+  /* background: green; */
+  /* flex-basis: 33%; */
+  /* position: absolute; */
+  /* right: 0px; */
+}
+
+.find-signup-area > li {
+  font-size: 12px;
+  margin-left: 10px;
+  font-weight: bold;
+  /* color: #c4c4c4; */
+}
+
+.sml-text2 > span {
+  /* color: #c4c4c4; */
+}
+
+/* 작은 메뉴 색상 변경(건드리면 골치아픔) */
+.find-signup-area:hover > span {
+  color: #a4835f;
+}
+
+.find-signup-area:hover > span .material-icons-outlined.chgcolor {
+  color: #a4835f;
+}
+
+.find-signup-area:hover > span .material-icons.chgcolor {
+  color: #a4835f;
+}
+
+#bar {
+  font-size: 14px;
+  font-weight: bold;
+}
+/* -------------간편 로그인 부분---------------- */
+.simple-login-area > p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 19px;
+  margin-bottom: 5px;
+}
+
+.splgin-btn {
+  width: 426px;
+  height: 52px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-top: 12px;
+  margin-left: 30px;
+}
+
+#naver {
+  background-color: #2db400;
+}
+
+#kakao {
+  background-color: #ffcf00;
+}
+
+#google {
+  background-color: #c4c4c4;
+}

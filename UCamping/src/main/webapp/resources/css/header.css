@@ -1,0 +1,414 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  margin: 0px;
+  padding: 0px;
+  color: black;
+}
+
+header {
+  position: relative;
+  z-index: index 1;
+  /* position: relative; */
+  width: 100%;
+  height: 157px;
+  /* margin: auto; */
+  /* background: pink; */
+}
+
+#line {
+  width: 100%;
+  border-bottom: 1px solid #a4835f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#line2 {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #a4835f;
+  /* top: ; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first {
+  width: 1200px;
+  height: 100px;
+  margin: auto;
+  /* background-color: lawngreen; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-menu {
+  display: flex;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.logo {
+  /* background: blue; */
+  display: inline;
+  line-height: 100px;
+  width: 400px;
+  height: 100px;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  flex-grow: 1;
+  flex-basis: 33%;
+}
+
+.logo > p {
+  text-align: center;
+}
+
+.search {
+  position: relative;
+  top: 10%;
+  width: 375px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50px;
+  border-color: black;
+  border: 2px solid #a4835f;
+  margin-top: 24px;
+  flex-grow: 1;
+  flex-basis: 33%;
+}
+
+.search > form > input {
+  border: none;
+  width: 346px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  padding-left: 10px;
+  /* background-color: chartreuse; */
+}
+
+input::placeholder {
+  color: #e4d0bb;
+  text-align: left;
+}
+
+.glass {
+  vertical-align: middle;
+  position: relative;
+  /* left: 18px; */
+  color: #a4835f;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  /* background-color: chocolate; */
+}
+
+/* -----------로그아웃 상태 : 로그인, 회원가입 등 작은 버튼들 1 ------------*/
+.sml-menu {
+  /* 로그인 후의 버튼이 보고싶다면 밑의 주석처리한 display:none으로 변경하기 */
+  /* 그리고 아래의 sml-menu2도 display: flex;로 바꾸어야 함 */
+  /*display: none;*/
+   display: flex; 
+
+  justify-content: center;
+  line-height: 118px;
+  width: 400px;
+  flex-grow: 1;
+  /* background: green; */
+  flex-basis: 33%;
+}
+
+.sml-menu > li {
+  font-size: 14px;
+  margin-left: 18px;
+  font-weight: bold;
+}
+
+/* 작은 메뉴 색상 변경(건드리면 골치아픔) */
+.sml-text:hover > span {
+  color: #a4835f;
+}
+
+.sml-text:hover > span .material-icons-outlined.chgcolor {
+  color: #a4835f;
+}
+
+.sml-text:hover > span .material-icons.chgcolor {
+  color: #a4835f;
+}
+
+#bar {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#sml-img1 {
+  display: inline-block;
+  vertical-align: -6px;
+  width: 24px;
+  height: 24px;
+}
+
+#sml-img2 {
+  display: inline-block;
+  vertical-align: -7px;
+  padding-right: 7px;
+  width: 15px;
+  height: 15px;
+}
+
+#sml-img3 {
+  display: inline-block;
+  vertical-align: -6px;
+  padding-right: 4px;
+  width: 20px;
+  height: 18px;
+}
+
+/* -----------로그인 상태 : 로그인 후 보이는 작은 버튼 2 ------------*/
+.sml-menu2 {
+  /* 로그아웃 시의 버튼이 보고싶다면 밑의 주석처리한 display:none로 변경하기 */
+  /* +위의 sml-menu도 display: flex;로 바꾸어야 함 */
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  line-height: 118px;
+  width: 400px;
+  flex-grow: 1;
+  /* background: green; */
+  flex-basis: 33%;
+}
+
+.sml-menu2 > li {
+  font-size: 14px;
+  margin-left: 18px;
+  font-weight: bold;
+  /* background-color: aqua; */
+}
+
+/* 작은 메뉴 색상 변경(건드리면 골치아픔) */
+.sml-text2:hover > span {
+  color: #a4835f;
+}
+
+.sml-text2:hover > span .material-icons-outlined.chgcolor {
+  color: #a4835f;
+}
+
+.sml-text2:hover > span .material-icons.chgcolor {
+  color: #a4835f;
+}
+
+#bar {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#sml-img1 {
+  display: inline-block;
+  vertical-align: -6px;
+  width: 24px;
+  height: 24px;
+}
+
+#sml-img2 {
+  display: inline-block;
+  vertical-align: -7px;
+  padding-right: 7px;
+  width: 15px;
+  height: 15px;
+}
+
+#sml-img3 {
+  display: inline-block;
+  vertical-align: -6px;
+  padding-right: 4px;
+  width: 20px;
+  height: 18px;
+}
+
+#sml-img4 {
+  display: inline-block;
+  position: relative;
+
+  vertical-align: 41px;
+  margin-left: -14px;
+  /* padding-right: 1px; */
+  width: 20px;
+  height: 18px;
+  /* background-color: yellow; */
+}
+
+.ssml-menu {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  font-size: 10px;
+  margin-top: -91px;
+  margin-left: -90px;
+  line-height: 30px;
+  text-align: center;
+  box-shadow: 1px 1px 8px gray;
+  border-radius: 5px;
+  display: none;
+  background-color: white;
+}
+
+#hamburger {
+  position: relative;
+  right: 10px;
+  padding-left: 11px;
+  margin-top: 48px;
+  margin-bottom: 9px;
+}
+
+#hamburger:hover > ul {
+  display: block;
+  /* background-color: red; */
+}
+
+/* ------------------------ nav -------------------------- */
+/* 메뉴 전체 공간 */
+.container {
+  width: 100%;
+  padding: 0px 0;
+  margin: auto;
+  /* background-color: red; */
+}
+
+#navwrap {
+  width: 100%;
+  /* background-color: yellow; */
+}
+
+/* nav의 드롭다운 메뉴 */
+.nav {
+  width: 790px;
+  font-size: 18px;
+  font-weight: bold;
+  /* 메뉴 줄간격 */
+  line-height: 13px;
+  position: relative;
+  z-index: 1;
+  padding: 0 0 0 0px;
+  margin: auto;
+  display: flex;
+
+  background-color: white;
+}
+
+/* 풀 드롭다운 (배경 색 검정-글자색 하양)버젼 */
+.fulldrop a:link,
+.fulldrop a:visited,
+.fulldrop a:hover,
+.fulldrop a:focus {
+  color: white;
+}
+
+.nav > li {
+  display: inline-flex;
+  margin: auto;
+  /* background-color: blue; */
+}
+
+.nav > li > a {
+  padding: 20px 63px;
+  /* background-color: lawngreen; */
+}
+
+/* 풀 드롭다운 */
+.nav > li > .fulldrop {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  list-style: none;
+  top: 53px;
+  left: 0px;
+  overflow: hidden;
+
+  /* 이 주석 위부분 코드들 위치 관련 설정들임(건들면 안됨) */
+  width: 100%;
+  display: flex;
+  margin: auto;
+  /* 드롭다운 메뉴 배경색 */
+  /* background-color: rgb(245, 245, 245); */
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* 제목에 호버 시 메뉴 풀드롭 */
+.nav > li:hover .fulldrop {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0px;
+}
+
+/* 큰 메뉴 호버 시 글씨색 */
+.nav > li:hover > a {
+  color: #a4835f;
+}
+
+/* 큰 메뉴 호버시 배경색 */
+.nav > li:hover {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(245, 245, 240);
+  /* background-color: rgba(150, 150, 150, 0.7); */
+}
+
+/* 작은 카테고리 메뉴들 호버 시 색상변경 */
+.nav ul li:hover > a {
+  color: #95b28e;
+}
+
+/* 풀 드롭 중앙 수평정렬 */
+.nav .column {
+  width: 14.1%;
+  float: left;
+  color: black;
+  font-weight: 200px;
+  /* margin: 0 0 0 2.2%; */
+  text-align: center;
+  /* border-right: 1px solid #a4835f; */
+  width: 790px;
+}
+
+/* 풀 드롭시 ul 설정 */
+.nav .column ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  /* border: 1px solid black; */
+  /* width: 500px; */
+}
+
+/* 풀 드롭시 큰 글자 설정*/
+.nav .column h3 {
+  font-size: 15px;
+  color: #a4835f;
+  font-weight: bold;
+  padding: 11px 0;
+  margin: 5px 0 5px 0;
+}
+
+/* 풀 드롭시 작은 글자 설정 */
+.nav .column ul li {
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+}
+
+/* 풀드롭 줄간격 */
+.nav .column ul li a {
+  display: block;
+  padding: 0 0 18px 0;
+}

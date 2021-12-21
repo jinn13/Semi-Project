@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+#tbl-board{
+    table-layout:center;
+    margin:auto;
+}
+table.buygoods {
+    margin:auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin : 20px 10px;
+    width: 65%;
+  }
+   #td.td4 {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  }
