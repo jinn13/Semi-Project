@@ -27,46 +27,69 @@
                 <li><a href="${ path }" class="sml-text2"><span><i id="sml-ctgr-img1" class="material-icons-outlined chgcolor">home</i> 홈</span></a></li>
                 <li id="bar">></li>
                 <li><a href="${ path }/member/login" class="sml-text2"><span>로그인</span></a></li>
+                <li id="bar">></li>
+                <li><a href="${ path }/member/login" class="sml-text2"><span>ID찾기</span></a></li>
             </ul>
 
             <section class="login-section">
                 <div class="login-pic">
-                    <img src="${ path }/resources/images/login-img/login-img3-1.jpg" id="login-img" alt="">
+                    <img src="${ path }/resources/images/login-img/login-img2-1.jpg" id="login-img" alt="">
                 </div>
 
                 
                 <div class="login-content">
-                    <p>로그인</p>
+                    <p>아이디 찾기</p>
                       <form id="login-form" action="${ path }/member/login" method="post">
                         <div id="login-form-input">
-                          <input type="text" name="userId" id="userId" required="required" placeholder="아이디">
-                          <input type="password" name="userPwd" id="userPwd" required="required" placeholder="비밀번호">
+                          <input type="text" name="userName" id="userName" required="required" placeholder="이름을 입력해주세요.">
+                          <input type="text" name="userPhone" id="userPhone" required="required" placeholder="전화번호를 입력해주세요.">
                         </div>
-                          <input type="submit" value="로그인" class="submit">
+                          <input type="button" id="findid" style="font-size: 18px;" value="아이디 찾기" class="submit">
                       </form>
 
                         <ul class="find-signup-area">
-                            <li><a href="${ path }/find-id" class="sml-text2"><span>아이디 찾기</span></a></li>
-                            <li id="bar">|</li>
-                            <li><a href="#" class="sml-text2"><span>비밀번호 찾기</span></a></li>
-                            <li id="bar">|</li>
-                            <li><a href="${ path }/member/enroll" class="sml-text2"><span>회원가입</span></a></li>
+                            <li><a href="${ path }/member/login" class="sml-text2"><span>이전 화면으로</span></a></li>
+
                         </ul>
 
                         <hr class="short-line">
 
-                        <div class="simple-login-area">
-                          <p>SNS 간편 로그인</p>
-                          <input type="button" class="splgin-btn" id="naver" value="네이버 간편 로그인">
-                          <input type="button" class="splgin-btn" id="kakao" value="카카오 간편 로그인">
-                          <input type="button" class="splgin-btn" id="google" value="구글 간편 로그인">
-                      </div>
                 </div>
             </section>
           </div>
 </div>
 
 </body>
+<script>
+	// 아이디 중복 확인
+	$(document).ready(()=>{
+		$("#findid").on("click", ()=>{
+			let userName = $("#userName").val().trim(); 
+            let userPhone = $("#userPhone").val().trim();
+			// alert("버튼클릭 : "+userName+", "+userPhone);
+			$.ajax({
+				type: "post",
+				url: "${ pageContext.request.contextPath }/find-id", // 서블릿의 url매핑 경로
+				dataType: "json",
+				data: {
+					userName, userPhone
+				},
+				success: (data)=>{
+					console.log(data)
+					
+					 if(data.duplicate == true){
+					 	alert("아이디는"+data+"입니다.");
+					 }else{
+					 	alert("ID가 존재하지 않습니다. 가입을 먼저 해 주세요.");
+					 }
+				},
+				error: (error)=>{
+					console.log(error);
+				}
+			});
+		});
+	});
+</script> 
 <script src="${ path }/resources/js/main.js"></script>
 
 <jsp:include page="/views/common/footer.jsp" />

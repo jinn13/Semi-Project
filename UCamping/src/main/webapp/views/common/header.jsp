@@ -55,7 +55,7 @@
                       <li><a href="#" class="sml-text2"><span><i id="sml-img3" class="material-icons chgcolor">person_pin</i>${ loginMember.nickname } 님</span></a>
                         <li id="hamburger"><a href="#" class="sml-text2"><span><i id="sml-img4" class="material-icons-outlined chgcolor">menu</i></span></a>
                           <ul class="ssml-menu">
-                            <li><a href="#" class="sml-text2"><span>로그아웃</span></a>
+                            <li><a href="${ path }/logout" class="sml-text2"><span>로그아웃</span></a>
                           </ul>
                       </li>
                   	</ul>
@@ -258,9 +258,9 @@
                             <div class="column">
                                     <h3>고객센터</h3>
                               <ul>
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">1:1문의</a></li>
+                                <li><a href="${ pageContext.request.contextPath }/board/notice">공지사항</a></li>
+                                <li><a href="${ pageContext.request.contextPath }/board/list">FAQ</a></li>
+                                <li><a href="${ pageContext.request.contextPath }/board/question">1:1문의</a></li>
                               </ul>
                             </div>
                             <!----- Full Drop Down Contents  Ends  Here---->  

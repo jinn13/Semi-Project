@@ -15,16 +15,68 @@
 <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+        <style>
+            .term-wrap{
+                width: 960px;
+                margin: auto;
+            }
 
+            .term-wrap > h2{
+                text-align: center;
+            }
+
+            /* --------------작은 카테고리------------- */
+            .sml-category {
+            display: flex;
+            /* justify-content: center; */
+            line-height: 60px;
+            width: 400px;
+            flex-grow: 1;
+            /* background: green; */
+            }
+
+            .sml-category > li {
+            font-size: 12px;
+            margin-left: 14px;
+            font-weight: bold;
+            }
+
+            /* 작은 메뉴 색상 변경(건드리면 골치아픔) */
+            .sml-category:hover > span {
+            color: #a4835f;
+            }
+
+            .sml-category:hover > span .material-icons-outlined.chgcolor {
+            color: #a4835f;
+            }
+
+            .sml-category:hover > span .material-icons.chgcolor {
+            color: #a4835f;
+            }
+
+            #bar {
+            font-size: 14px;
+            font-weight: bold;
+            }
+
+            #sml-ctgr-img1 {
+            display: inline-block;
+            vertical-align: -7px;
+            margin-right: 15px;
+            width: 10px;
+            height: 10px;
+            }
+
+        </style>
 
 </head>
 <body>
     <div class="body">
         <div class="term-wrap">
             <ul class="sml-category">
-                <li><a href="#" class="sml-text2"><span><i id="sml-ctgr-img1" class="material-icons-outlined chgcolor">home</i> 홈</span></a></li>
+                <li><a href="${ path }" class="sml-text2"><span><i id="sml-ctgr-img1" class="material-icons-outlined chgcolor">home</i> 홈</span></a></li>
                 <li id="bar">></li>
-                <li><a href="#" class="sml-text2"><span>개인정보처리방침</span></a></li>
+                <li><a href="${ path }/terms" class="sml-text2"><span>개인정보처리방침</span></a></li>
             </ul>
 
            <h2>유캠핑 개인정보 처리방침</h2> 

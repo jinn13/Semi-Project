@@ -85,4 +85,51 @@ public class MemberDao {
 		return result;
 	}
 
+	public Member findId(Connection conn, String userName, String userPhone) {
+		Member member = null;
+		PreparedStatement  pstm = null;
+		ResultSet rs = null;
+		String query = "SELECT * FROM MEMBER WHERE NAME=? AND PHONE=?";
+		// Prepared안쓰면 쿼리문 안에다 + +쓰고 ID쓰고 이런 귀찮은 작업을 해야함.
+		
+		try {
+			pstm = conn.prepareStatement(query);
+			
+			// ?(위치홀더) 만들어서 쿼리문 수행 전에 id로 세팅해둠
+			pstm.setString(1, userName);
+			pstm.setString(2, userPhone);
+			
+			// 쿼리문 실행 후 그 결과값을 resultset으로 리턴해주는 역할
+			rs = pstm.executeQuery();
+			
+			if(rs.next()) {
+				member= new Member();
+				member.setNo(rs.getInt("NO"));
+				member.setId(rs.getString("ID"));
+				member.setPassword(rs.getString("PASSWORD"));
+				member.setRole(rs.getString("ROLE"));
+				member.setName(rs.getString("NAME"));
+				member.setBirth(rs.getString("BIRTH"));
+				member.setNickname(rs.getString("NICKNAME"));
+				member.setEmail(rs.getString("EMAIL"));
+				member.setPhone(rs.getString("PHONE"));
+				member.setStatus(rs.getString("STATUS"));
+				member.setEnrollDate(rs.getDate("ENROLL_DATE"));
+				member.setModifyDate(rs.getDate("MODIFY_DATE"));
+				
+				// 컬럼라벨을 줘도 되고, 순번을 줘도 된다.  
+				System.out.println("ID : "+rs.getString("ID")+", password : "+rs.getString("PASSWORD")+", NAME : "+rs.getString("NAME"));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			// JDBCTemplate도 static import해서 좀 더 줄여준다. 
+			close(rs);
+			close(pstm);	
+		}
+		
+		return member;
+	}
+
 }
