@@ -100,18 +100,17 @@
                             <div class="column">
                                     <h3>마이페이지</h3>
                               <ul>
-                                <li><a href="#">프로필 설정</a></li>
-                                <li><a href="#">계정 설정</a></li>
-                                <li><a href="#">찜한상품</a></li>
+                              <li><a href="${ path }/mypage">회원정보</a></li>
+                              <li><a href="#">찜한상품</a></li>
                               </ul>
                             </div>
                             
                             <div class="column">
                                     <h3>고객센터</h3>
                               <ul>
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">1:1문의</a></li>
+                                <li><a href="${ path }/notice">공지사항</a></li>
+                                <li><a href="${ path }/board/list">FAQ</a></li>
+                                <li><a href="${ path }/question">1:1문의</a></li>
                               </ul>
                             </div>
                             
@@ -148,8 +147,7 @@
                           <div class="column">
                                   <h3>마이페이지</h3>
                             <ul>
-                              <li><a href="#">프로필 설정</a></li>
-                              <li><a href="#">계정 설정</a></li>
+                              <li><a href="${ path }/mypage">회원정보</a></li>
                               <li><a href="#">찜한상품</a></li>
                             </ul>
                           </div>
@@ -157,16 +155,16 @@
                           <div class="column">
                                   <h3>고객센터</h3>
                             <ul>
-                              <li><a href="#">공지사항</a></li>
-                              <li><a href="#">FAQ</a></li>
-                              <li><a href="#">1:1문의</a></li>
+                              <li><a href="${ path }/notice">공지사항</a></li>
+                              <li><a href="${ path }/board/list">FAQ</a></li>
+                              <li><a href="${ path }/question">1:1문의</a></li>
                             </ul>
                           </div>
                           <!----- Full Drop Down Contents  Ends  Here---->  
             
             
                         <!----- Full Drop Down Name ----> 
-                          <li class="dropdown"><a href="${ path }/views/member/mypage.jsp">마이페이지</a>     
+                          <li class="dropdown"><a href="${ path }/mypage">마이페이지</a>     
                         <!----- Full Drop Down Name Ends Here ---->     
                           
                         <!----- Full Drop Down Contents  Starts Here---->     
@@ -199,8 +197,7 @@
                           <div class="column">
                                   <h3>마이페이지</h3>
                             <ul>
-                              <li><a href="${ path }/views/member/mypageUpdate.jsp">프로필 설정</a></li>
-                              <li><a href="#">계정 설정</a></li>
+                              <li><a href="${ path }/mypage">회원정보</a></li>
                               <li><a href="#">찜한상품</a></li>
                             </ul>
                           </div>
@@ -208,15 +205,15 @@
                           <div class="column">
                                   <h3>고객센터</h3>
                             <ul>
-                              <li><a href="#">공지사항</a></li>
-                              <li><a href="#">FAQ</a></li>
-                              <li><a href="#">1:1문의</a></li>
+                              <li><a href="${ path }/notice">공지사항</a></li>
+                              <li><a href="${ path }/board/list">FAQ</a></li>
+                              <li><a href="${ path }/question">1:1문의</a></li>
                             </ul>
                           </div>
                           <!----- Full Drop Down Contents  Ends  Here---->  
             
                         <!----- Full Drop Down Name ----> 
-                        <li class="dropdown"><a href="${ pageContext.request.contextPath }/board/list">고객센터</a>     
+                        <li class="dropdown"><a href="${ path }/board/list">고객센터</a>     
                           <!----- Full Drop Down Name Ends Here ---->     
                             
                           <!----- Full Drop Down Contents  Starts Here---->     
@@ -249,27 +246,19 @@
                             <div class="column">
                                     <h3>마이페이지</h3>
                               <ul>
-                                <li><a href="#">프로필 설정</a></li>
-                                <li><a href="#">계정 설정</a></li>
-                                <li><a href="#">찜한상품</a></li>
+                              <li><a href="${ path }/mypage">회원정보</a></li>
+                              <li><a href="#">찜한상품</a></li>
                               </ul>
                             </div>
                             
                             <div class="column">
                                     <h3>고객센터</h3>
                               <ul>
-<<<<<<< HEAD
-                                <li><a href="${ pageContext.request.contextPath }/board/notice">공지사항</a></li>
-                                <li><a href="${ pageContext.request.contextPath }/board/list">FAQ</a></li>
-                                <li><a href="${ pageContext.request.contextPath }/board/question">1:1문의</a></li>
-=======
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="${ path }/views/board/question.jsp">1:1문의</a></li>
-<<<<<<< HEAD
->>>>>>> 주소연결
-=======
->>>>>>> 주소연결
+
+                                <li><a href="${ path }/notice">공지사항</a></li>
+                                <li><a href="${ path }/board/list">FAQ</a></li>
+                                <li><a href="${ path }/question">1:1문의</a></li>
+
                               </ul>
                             </div>
                             <!----- Full Drop Down Contents  Ends  Here---->  

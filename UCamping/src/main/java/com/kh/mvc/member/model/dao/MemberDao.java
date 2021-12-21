@@ -90,7 +90,6 @@ public class MemberDao {
 		PreparedStatement  pstm = null;
 		ResultSet rs = null;
 		String query = "SELECT * FROM MEMBER WHERE NAME=? AND PHONE=?";
-		// Prepared안쓰면 쿼리문 안에다 + +쓰고 ID쓰고 이런 귀찮은 작업을 해야함.
 		
 		try {
 			pstm = conn.prepareStatement(query);
@@ -124,7 +123,6 @@ public class MemberDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			// JDBCTemplate도 static import해서 좀 더 줄여준다. 
 			close(rs);
 			close(pstm);	
 		}

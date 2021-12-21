@@ -9,9 +9,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
 import com.kh.mvc.member.model.service.MemberService;
+import com.kh.mvc.member.model.vo.Member;
 
 @WebServlet("/find-id")
 public class FindIdServlet extends HttpServlet {
@@ -31,26 +33,32 @@ public class FindIdServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     	
-		// ID값을 가져와서 DB에 있는 값인지 확인하고 결과를 전달하는 기능
-    	Map<String, Boolean> map = new HashMap<>();
+		// 이름과 전화번호로 DB에 있는 값인지 확인하고 결과를 전달하는 기능
+    	Member ismember=new Member();
+    	HttpSession session=null;
+    	
+    	// 이름과 전화번호를 변수에 저장
     	String userName = request.getParameter("userName");
     	String userPhone = request.getParameter("userPhone");
     	
+    	// 잘 가져오나 확인
     	System.out.println("UserName : " +userName);
     	System.out.println("UserPhone : " +userPhone);
+    	
+    	// ismember변수에 서비스의 isDubplicete 메소드에 매개값을 전달하고 처리된 결과 저장하기 
+    	ismember=service.isDuplicate(userName, userPhone);
 
-    	// 실제 DB에 존재하는지 서비스에게 받아서 true, false로 받고.
-    	map.put("duplicate", service.isDuplicate(userName, userPhone)); // 키값은 duplicate, value는 true or false
-
-    	System.out.println(map);
+    	// session에 저장중
+    	session=request.getSession();
+    	session.setAttribute("ismember", ismember);
+    	System.out.println("값 확인 중"+ismember);
+    	
+    	// json형태, utf-8 설정
     	response.setContentType("application/json; charset=UTF-8");
     	
-    	// 맵 객체를 클라이언트에 json형태로 내려준다..
-    	new Gson().toJson(map, response.getWriter());
+    	// 객체를 클라이언트에 json형태로 내려주었음. 
+    	new Gson().toJson(ismember, response.getWriter());
     	
-//    	request.getRequestDispatcher("/views/member/find-id.jsp").forward(request, response);
-    	
-//		doGet(request, response);
 	}
 
 }

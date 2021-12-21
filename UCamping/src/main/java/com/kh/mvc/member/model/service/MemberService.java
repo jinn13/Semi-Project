@@ -44,15 +44,15 @@ public class MemberService {
 		
 	}
 
-	public Boolean isDuplicate(String userName, String userPhone) {
-		Boolean result=null;
+	public Member isDuplicate(String userName, String userPhone) {
+		Member result=null;
 		Connection conn= getConnection();
 		Member member=dao.findId(conn, userName, userPhone);
 		
 		if(member!=null) {
-			result=true;
+			result=member;
 		}else{
-			result=false;
+			result=null;
 		}
 		
 		close(conn);

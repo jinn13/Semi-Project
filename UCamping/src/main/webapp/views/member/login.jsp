@@ -42,7 +42,7 @@
                           <input type="text" name="userId" id="userId" required="required" placeholder="아이디">
                           <input type="password" name="userPwd" id="userPwd" required="required" placeholder="비밀번호">
                         </div>
-                          <input type="submit" value="로그인" class="submit">
+                          <input type="submit" style="cursor:pointer;" value="로그인" class="submit">
                       </form>
 
                         <ul class="find-signup-area">

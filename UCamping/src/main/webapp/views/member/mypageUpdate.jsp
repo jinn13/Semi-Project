@@ -29,7 +29,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="${ path }/mypageUpdate">
                             > 
                             회원 정보 수정
                         </a>

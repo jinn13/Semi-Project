@@ -44,11 +44,13 @@
                           <input type="text" name="userName" id="userName" required="required" placeholder="이름을 입력해주세요.">
                           <input type="text" name="userPhone" id="userPhone" required="required" placeholder="전화번호를 입력해주세요.">
                         </div>
-                          <input type="button" id="findid" style="font-size: 18px;" value="아이디 찾기" class="submit">
+                          <input type="button" id="findid" style="font-size: 18px;cursor:pointer;"  value="아이디 찾기" class="submit">
                       </form>
 
                         <ul class="find-signup-area">
                             <li><a href="${ path }/member/login" class="sml-text2"><span>이전 화면으로</span></a></li>
+                            <li id="bar">|</li>
+                            <li><a href="${ path }/member/enroll" class="sml-text2"><span>회원가입으로 가기</span></a></li>
 
                         </ul>
 
@@ -75,12 +77,10 @@
 					userName, userPhone
 				},
 				success: (data)=>{
-					console.log(data)
-					
-					 if(data.duplicate == true){
-					 	alert("아이디는"+data+"입니다.");
+					 if(data != null){
+					 	alert("아이디는 "+data.id+"입니다.");
 					 }else{
-					 	alert("ID가 존재하지 않습니다. 가입을 먼저 해 주세요.");
+					 	alert("해당 정보의 ID가 존재하지 않습니다. 가입을 해 주세요.");
 					 }
 				},
 				error: (error)=>{
