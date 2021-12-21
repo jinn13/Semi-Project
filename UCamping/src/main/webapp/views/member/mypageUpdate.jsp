@@ -6,18 +6,14 @@
 
 <jsp:include page="/views/common/header.jsp" />
     
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
+
 <title>My page Update</title>
 <link rel="stylesheet" href="${ path }/resources/css/mypageUpdate.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     
-</head>
-<body>
+
 <main id="wrap">
         <nav>
         	<div class="product_box">
@@ -131,7 +127,15 @@
     </section>
 </main>
 	
-</body>
-</html>
+<script>
+	$(document).ready(() => {
+		$("#updateImg").on("click", () => {
+			const url = "${ pageContext.request.contextPath }/views/member/updateImg.jsp";
+			const status = "lest=500px, top=200px, width=500px, height=200px";
+		
+			open(url, "", status);
+		});
+	});
+</script>
 
 <jsp:include page="/views/common/footer.jsp" />
