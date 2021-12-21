@@ -19,6 +19,13 @@
         position: absolute;
     }
     
+    #wrap aside #profile-img-update {
+        top: 300px;
+        text-align: center;
+        position: relative;
+
+    }
+    
     #wrap aside #profile #profile-text {
         top: 200px;
         left: 90px;
@@ -128,3 +135,32 @@ input {
     background: rgba(149, 178, 142, 0.5);
     border-radius: 25px;
 }
+
+#updateImg {
+    width: 100px;
+    height: 20px;
+    border-style: hidden;
+    border-radius: 30px;
+    background-color: #FFBC39;
+}
+
+/* 카테고리 */
+.categories_box{
+    margin: 30px 0 25px 10px;
+}
+
+.categories_box:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.categories_box li {
+    float: left;
+    padding-right: 5px;
+    font-size: 12px;
+    color: #666;
+    line-height: 17px;
+}
+
+

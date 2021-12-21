@@ -6,22 +6,36 @@
 
 <jsp:include page="/views/common/header.jsp" />
     
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+
+<title>My page Update</title>
 <link rel="stylesheet" href="${ path }/resources/css/mypageUpdate.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     
-</head>
-<body>
+
 <main id="wrap">
         <nav>
-            <div>
-                <img id="home_img" src="../resources/image/home.png">
+        	<div class="product_box">
+            <div class="categories_box">
+                <ul>
+                    <li>
+                        <a href="">HOME</a>
+                    </li>
+                    <li>
+                        <a href="">
+                            > 
+                           	마이페이지
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            > 
+                            회원 정보 수정
+                        </a>
+                    </li>
+                </ul>
+            </div>
             </div>
         </nav>
         <aside>
@@ -30,6 +44,7 @@
                         <img id="profile-img" src="${ path }/resources/images/pro_photo.jpg">
                     </div>
                     <div id="profile-text"><p id="profile-text1">캠핑처돌이</p></div>
+                    <div id="profile-img-update"><button id="updateImg">프로필 수정</button></div>
                 </div>
         </aside>
         <section id="container">
@@ -112,7 +127,15 @@
     </section>
 </main>
 	
-</body>
-</html>
+<script>
+	$(document).ready(() => {
+		$("#updateImg").on("click", () => {
+			const url = "${ pageContext.request.contextPath }/views/member/updateImg.jsp";
+			const status = "lest=500px, top=200px, width=500px, height=200px";
+		
+			open(url, "", status);
+		});
+	});
+</script>
 
 <jsp:include page="/views/common/footer.jsp" />
