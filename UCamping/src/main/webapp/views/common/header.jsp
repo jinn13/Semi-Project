@@ -266,6 +266,9 @@
                                 <li><a href="#">공지사항</a></li>
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="${ path }/views/board/question.jsp">1:1문의</a></li>
+<<<<<<< HEAD
+>>>>>>> 주소연결
+=======
 >>>>>>> 주소연결
                               </ul>
                             </div>
