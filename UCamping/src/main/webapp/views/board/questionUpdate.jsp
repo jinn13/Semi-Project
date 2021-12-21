@@ -29,7 +29,7 @@
                     </tr>
                     <tr>
                         <th>작성자</th>
-                        <td><input type="text" name="writer" value="${ loginMember.id }" style="width:400px; height:20px;" readonly></td>
+                        <td><input type="text" name="writer" value="${ loginMember.nickname }" style="width:400px; height:20px;" readonly></td>
                     </tr>
                     <tr>
                         <th>비밀번호</th>
