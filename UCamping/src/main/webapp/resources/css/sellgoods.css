@@ -1,5 +1,210 @@
-@charset "UTF-8";
+#tbl-sellgoods{
+  width: 48%;
+  margin: auto;
 
+}
 
+table.goodsregist {
+    margin:auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border-spacing: 1px;
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin : 20px 10px;
+} th {
+  height: 90px;
+  text-align: right;
+  font-size: 16px;
+  border-bottom: 1px solid rgb(202, 200, 200);
+} td {
+  text-align: left;
+  border-bottom: 1px solid rgb(202, 200, 200);
+  font-size: 14px;
+}
+td.goodsimage {
+  border-bottom:none;
+}
+td.goodsimage1 {
+  margin-left: 20%;
+  text-align: left;
+  font-size: 11px;
+}
+div.state {
+  float:left;
+}
+div.dealtype {
+  float:left;
+}
+#selltext {
+  width: 400px;
+  font-size: 16px;
+  resize: none; 
+  border-radius: 1px;
+}
+#att_zone {
+  width: 660px;
+  min-height: 150px;
+  padding: 10px;
+  border: 1px solid rgb(162, 162, 177);
+}
 
+#att_zone:empty:before {
+  content: attr(data-placeholder);
+  color: #999;
+  font-size: .9em;
+}
+
+div.sellnotice {
+  position:relative;
+  background-color:gray;
+  border-radius: 10px;
+  padding: auto;
+  margin: auto;
+  width:850px;
+  height:200px;
   
+}
+div.sellnotice1 {
+  position: absolute;
+  font-size: 13px;
+  font-weight: bold;
+  display:table-cell;
+  vertical-align:center;
+  margin: auto;
+  color: rgb(37, 35, 35);
+  padding-top : 50px;
+  padding-left: 100px;
+  
+}
+
+div.goodsinfo {
+  position:relative;
+  border-radius: 10px;
+  padding: auto;
+  margin: auto;
+  width:850px;
+  height:200px;
+  
+}
+textarea.goodsinfo1 {
+  position: absolute;
+  font-size: 14px;
+  display:table-cell;
+  vertical-align:center;
+  margin: auto;
+  color: rgb(37, 35, 35);
+  width: 845px;
+  height:170px;
+  resize: none;
+}
+#btns {
+  margin:auto;
+  text-align: center;
+}
+
+#resetbtn {
+  border-radius: 5px;
+  border: none;
+  background-color: #e0e0e0;
+  color: #404040;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+#resetbtn:hover{
+  background-color: rgb(223, 101, 30);
+}
+
+#registbtn {
+  border-radius: 5px;
+  border: none;
+  background-color: #000;
+  color:white;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+#registbtn:hover{
+  background-color: rgb(223, 101, 30);
+}
+
+
+footer {
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 1200px;
+  /* left: 50%;
+  transform: translateX( -50% ); */
+  /* flex-direction: column; */
+
+  position: sticky;
+  /* top: 100%; */
+
+  background-color: black;
+  border-top: 1px solid #333;
+}
+footer .inner {
+  padding: 40px 0 60px 0;
+}
+footer .inner .menu {
+  display: flex;
+  justify-content: center;
+}
+footer .inner .menu li {
+  position: relative;
+}
+footer .inner .menu li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+footer .inner .menu li:last-child::before {
+  display: none;
+}
+footer .inner .menu li a {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+}
+
+footer .inner .info {
+  margin-top: 30px;
+  text-align: center;
+}
+footer .inner .info span {
+  color: #999;
+  margin-right: 20px;
+  font-size: 12px;
+}
+footer .inner .info span:last-child {
+  margin-right: 0;
+}
+footer .inner .copyright {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+footer .inner .logo {
+  margin: 30px auto 0;
+}
+footer .inner .ucam {
+  color: white;
+  text-align: center;
+}

@@ -68,7 +68,7 @@
                 <div id="navwrap">
                   <ul class="nav">
                         <!----- Full Drop Down Name ----> 
-                        <li class="dropdown"><a href="#">구매하기</a>
+                        <li class="dropdown"><a href="${ path }/views/transaction/buygoods.jsp">구매하기</a>
                         <!----- Full Drop Down Name Ends Here ---->     
                               
                         <!----- Full Drop Down Contents  Starts Here---->     
@@ -116,7 +116,7 @@
                             </div>
                             
                         <!----- Full Drop Down Name ----> 
-                          <li class="dropdown"><a href="#">판매하기</a>     
+                          <li class="dropdown"><a href="${ path }/views/transaction/sellgoods.jsp">판매하기</a>     
                         <!----- Full Drop Down Name Ends Here ---->     
             
                         <!----- Full Drop Down Contents  Starts Here---->     
@@ -166,7 +166,7 @@
             
             
                         <!----- Full Drop Down Name ----> 
-                          <li class="dropdown"><a href="#">마이페이지</a>     
+                          <li class="dropdown"><a href="${ path }/views/member/mypage.jsp">마이페이지</a>     
                         <!----- Full Drop Down Name Ends Here ---->     
                           
                         <!----- Full Drop Down Contents  Starts Here---->     
@@ -199,7 +199,7 @@
                           <div class="column">
                                   <h3>마이페이지</h3>
                             <ul>
-                              <li><a href="#">프로필 설정</a></li>
+                              <li><a href="${ path }/views/member/mypageUpdate.jsp">프로필 설정</a></li>
                               <li><a href="#">계정 설정</a></li>
                               <li><a href="#">찜한상품</a></li>
                             </ul>
@@ -260,7 +260,7 @@
                               <ul>
                                 <li><a href="#">공지사항</a></li>
                                 <li><a href="#">FAQ</a></li>
-                                <li><a href="#">1:1문의</a></li>
+                                <li><a href="${ path }/views/board/question.jsp">1:1문의</a></li>
                               </ul>
                             </div>
                             <!----- Full Drop Down Contents  Ends  Here---->  

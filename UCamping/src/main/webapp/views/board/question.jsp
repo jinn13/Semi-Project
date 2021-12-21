@@ -77,7 +77,9 @@
             <td></td>
         </tr>
     </table>
-    <button type="submit" id="btn1" style="padding:6px; margin:8px;">문의하기</button>
+
+    <button type="button" id="btn1" onClick="location.href='${ path }/views/board/questionUpdate.jsp'" style="padding:6px; margin:8px;">문의하기</button>
+    
     <br><br><br><br>
     
     <div id="pageBar">
