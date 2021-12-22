@@ -31,7 +31,7 @@
         
         <div id="customer-menu">
           <a href="javascript:void(0)">공지사항<hr color="black" size="1"></a>
-          <a href="javascript:void(0)">자주 찾는 질문<hr></a>
+          <a href="javascript:void(0)">자주 찾는 질문(FAQ)<hr></a>
           <a href="javascript:void(0)">이용 안내<hr></a>
           <a href="javascript:void(0)">1:1 게시판 문의<hr></a>
         </div>
@@ -39,7 +39,7 @@
       </aside>
     
       <section>
-        <div id="customer-content">자주 찾는 질문</div>
+        <div id="customer-content">자주 찾는 질문(FAQ)</div>
         <hr style="border: 1.5px solid black; background-color: black; margin-bottom: 15px;">
         <tr>
           <td><input type="text" name="question" id="question" placeholder="검색어를 입력해 주세요"></td>
