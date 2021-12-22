@@ -1,0 +1,370 @@
+@charset "UTF-8";
+
+/* 전체 */
+:lang(ko) {
+    -webkit-font-smoothing: antialiased;
+}
+
+.item_list_area {
+    width: 990px;
+    min-height: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+/* 카테고리 */
+.categories_box{
+    margin: 10px 10px 15px 0px;
+}
+
+.categories_box:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.categories_box li {
+    float: left;
+    padding-right: 5px;
+    font-size: 12px;
+    color: #666;
+    line-height: 17px;
+}
+
+img {
+    vertical-align: top;
+}
+
+div {
+    display: block;
+}
+
+article {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: 0;
+    padding: 0;
+}
+
+.item_list_main_area {
+    height: 100%;
+}
+
+.item_list_main_area .item_list_main {
+    overflow: hidden;
+}
+
+.item_list_main_area .item_list_main:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* 프로필영역 */
+.my_profile_left {
+    float: left;
+    width: 230px;
+    height: 350px;
+    margin-top: 15px;
+    display: block;
+    background-color: rgba(149, 178, 142, 0.5);
+    padding: 30px 0 28px;
+    text-align: center;
+    margin-top: 0px;
+    border-radius: 20px;
+}
+
+.my_profile_left .profile_img {
+    text-align: center;
+    position: relative;
+    margin: 0 45px;
+}
+
+.my_profile_left .profile_img img.profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.my_profile_left .nick {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.my_profile_left .users_count_review {
+    width: 90%;
+    margin-top: 50px;
+    margin-left: 15px;
+}
+
+.my_profile_left .users_count_review a {
+    display: block;
+}
+
+.my_profile_left .users_count_review a:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.my_profile_left .users_review_box a {
+    display: block;
+    margin-top: 20px;
+}
+
+.my_profile_left .users_review_box a:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.my_profile_left .users_review_box .users_item_count_title,
+.my_profile_left .users_review_box .review_tag {
+    float: left;
+    margin-right: 20px;
+}
+
+.my_profile_left .users_review_box .users_item_count_number,
+.my_profile_left .users_review_box .review_count_rating {
+    float: right;
+    margin-right: 3px;
+}
+
+/* 별 */
+.my_profile_left .users_review_box span.review_count_rating_img img {
+    width: 15px;
+}
+
+/* 제품영역 */
+.my_item_right {
+    float: right;
+    width: 740px;
+}
+
+.left_main {
+    float: left;
+    margin-left: 15px;
+    width: 740px;
+}
+
+/* 상품리스트 */
+.item_list_content {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.my_itme_list_count {
+    float: left;
+    font-size: 16px;
+    color: #000;
+    line-height: 27px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.my_categories_box {
+    width: 100%;
+    padding-top: 15px;
+    border-top: 1px solid rgb(238, 238, 238);
+}
+
+
+/* 보기기준 */
+.checked_delete_box {
+    display: block;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.checked_mark .checked_btn{
+    zoom: 1.5;
+}
+.checked_delete_title .checked_del_btn {
+    width: 100px;
+    height: 30px;
+    background-color: #ffbc39;
+    border-radius: 35px;
+}
+.categories_sort {
+    display: block;
+    float: right;
+    margin-bottom: 30px;
+}
+
+.checked_delete_box .checked_mark {
+    display: block;
+    float: left;
+}
+
+.checked_delete_box .checked_delete_title {
+    display: block;
+    float: right;
+}
+
+.categories_sort .my_item_categorie_sort {
+    display: block;
+    float: left;
+}
+
+.categories_sort .my_item_categorie_sort_wish {
+    display: block;
+    margin-left: 10px;
+    float: right;
+}
+
+.my_item_content:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.my_item_content {
+    display: block;
+}
+
+.main_row li {
+    display:flex; 
+    align-content:flex-start; 
+    flex-direction:column; 
+    flex-wrap:wrap; 
+    overflow:auto;
+}
+
+.main_row .profile_main_row {
+    margin: 0;
+    float: left;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.main_row {
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.main_row:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.main_row .main_col_3 {
+    margin-right: 3%;
+    min-height: auto;
+}
+
+.card {
+    background-color: #fff;
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+.main_row .main_col_3 {
+    float: left;
+    min-height: 327px;
+    position: relative;
+    width: 30%;
+}
+
+.card_box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.card_box:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.card_list {
+    border: 0!important;
+    margin: 0;
+    width: 100%;
+}
+
+.img_wrap {
+    width: 100%;
+    background-color: black;
+    position: relative;
+    border-radius: 5px;
+}
+
+.img_wrap .img_outside_box {
+    border-radius: 5px;
+}
+
+.cont .item_title {
+    color: #454c53;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+.cont .item_price {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #000;
+    font-size: 22px;
+}
+
+.img_wish_box .wish_check_btn {
+    height: 32px;
+    width: 30px;
+    display: block;
+    overflow: visible;
+    border: 1px solid rgb(238, 238, 238);
+    
+}
+
+.img_wish_box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 4999;
+}
+.img_box img.thumbnail_img {
+    top:0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

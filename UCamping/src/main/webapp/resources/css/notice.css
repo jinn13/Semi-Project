@@ -11,6 +11,54 @@ body {
   /* padding-top: 150px; */
   
 }
+
+/* --------------작은 카테고리------------- */
+#sml-category-area{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.sml-category {
+  display: flex;
+  /* justify-content: center; */
+  line-height: 60px;
+  width: 400px;
+  flex-grow: 1;
+  /* background: green; */
+}
+
+.sml-category > li {
+  font-size: 12px;
+  margin-left: 14px;
+  font-weight: bold;
+}
+
+/* 작은 메뉴 색상 변경(건드리면 골치아픔) */
+.sml-category:hover > span {
+  color: #a4835f;
+}
+
+.sml-category:hover > span .material-icons-outlined.chgcolor {
+  color: #a4835f;
+}
+
+.sml-category:hover > span .material-icons.chgcolor {
+  color: #a4835f;
+}
+
+#bar {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#sml-ctgr-img1 {
+  display: inline-block;
+  vertical-align: -7px;
+  margin-right: 15px;
+  width: 10px;
+  height: 10px;
+}
+
 /* .inner {
   width: 1200px;
   margin: 0 auto;
@@ -28,14 +76,13 @@ section {
   /* background-color: yellowgreen; */
 }
 
-
-
 section div {
   /* background-color: yellowgreen; */
 }
 
 section #notice {
   font-size: 36px;
+  font-weight: bold;
   margin-bottom: 20px;
   
 }
@@ -45,7 +92,7 @@ table {
   border-top: 3px solid #444444;
   border-collapse: collapse;
   margin: 0 auto;
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 th, td {
@@ -56,8 +103,8 @@ th, td {
 
 section #back-forward {
     text-align: center;
-    font-size: 30px;
-    background-color: #f9f9f9;
+    font-size: 22px;
+    /* background-color: #f9f9f9; */
 }
 
 section #back-forward a {
@@ -66,7 +113,7 @@ section #back-forward a {
 
 section #back-forward a:hover {
   /* border: solid 1px; */
-  background-color: #fff;
+  /* background-color: #fff; */
   text-decoration: underline;
   /* color: #03c75a; */
 }

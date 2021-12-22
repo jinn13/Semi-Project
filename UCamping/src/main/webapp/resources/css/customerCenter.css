@@ -11,6 +11,54 @@ body {
   /* padding-top: 150px; */
   
 }
+
+/* --------------작은 카테고리------------- */
+#sml-category-area{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.sml-category {
+  display: flex;
+  /* justify-content: center; */
+  line-height: 60px;
+  width: 400px;
+  flex-grow: 1;
+  /* background: green; */
+}
+
+.sml-category > li {
+  font-size: 12px;
+  margin-left: 14px;
+  font-weight: bold;
+}
+
+/* 작은 메뉴 색상 변경(건드리면 골치아픔) */
+.sml-category:hover > span {
+  color: #a4835f;
+}
+
+.sml-category:hover > span .material-icons-outlined.chgcolor {
+  color: #a4835f;
+}
+
+.sml-category:hover > span .material-icons.chgcolor {
+  color: #a4835f;
+}
+
+#bar {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#sml-ctgr-img1 {
+  display: inline-block;
+  vertical-align: -7px;
+  margin-right: 15px;
+  width: 10px;
+  height: 10px;
+}
+
 /* .inner {
   width: 1200px;
   margin: 0 auto;

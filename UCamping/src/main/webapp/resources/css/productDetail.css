@@ -2,10 +2,8 @@
 
 /* 언어 ko시 기본 설정 */
 :lang(ko) {
-    font-family: "Noto Sans KR", sans-serif, 돋움, Dotum, Arial;
     -webkit-font-smoothing: antialiased;
 }
-
 
 ul {
     display: block;
@@ -335,17 +333,23 @@ td {
 
 .item_info_count {
     float: left;
-    display: block;
-    width: 50%;
+}
+
+.item_info_count ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 10px 0px 0px 5px;
+    float: left;
+    clear: both;
 }
 
 .item_info_count li {
     float: left;
-    padding-right: 5px;
+    margin-right: 5px;
     font-size: 12px;
     color: #666;
-    line-height: 17px;
 }
+
 
 /* item_sns */
 .item_info .item_sns {

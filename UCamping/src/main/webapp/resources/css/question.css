@@ -1,5 +1,50 @@
 @charset "UTF-8";
+/* --------------작은 카테고리------------- */
+#sml-category-area{
+  width: 1200px;
+  margin: 0 auto;
+}
 
+.sml-category {
+  display: flex;
+  /* justify-content: center; */
+  line-height: 60px;
+  width: 400px;
+  flex-grow: 1;
+  /* background: green; */
+}
+
+.sml-category > li {
+  font-size: 12px;
+  margin-left: 14px;
+  font-weight: bold;
+}
+
+/* 작은 메뉴 색상 변경(건드리면 골치아픔) */
+.sml-category:hover > span {
+  color: #a4835f;
+}
+
+.sml-category:hover > span .material-icons-outlined.chgcolor {
+  color: #a4835f;
+}
+
+.sml-category:hover > span .material-icons.chgcolor {
+  color: #a4835f;
+}
+
+#bar {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#sml-ctgr-img1 {
+  display: inline-block;
+  vertical-align: -7px;
+  margin-right: 15px;
+  width: 10px;
+  height: 10px;
+}
 #tbl-question{
     table-layout: center;
     margin:auto;
@@ -12,13 +57,25 @@
     padding: 10px;
   }
 
-#btn1{
-    font-size:15px;
-    font-weight:bold;
-    position: absolute;
-    left: 1350px;
+#btn-area {
+  width: 964px;
+  margin: auto;
+  text-align: center;
+  /* background-color: yellow; */
+  margin-top: 30px;
+}
 
-    float: right;
+#btn1 {
+  font-size: 15px;
+  /* font-weight: bold; */
+  position: relative;
+  margin: auto;
+  background-color: #a4835f;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 32px;
+  color: white;
+  cursor: pointer;
 }
 
 #pageBar{

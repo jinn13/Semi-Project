@@ -60,4 +60,20 @@ public class MemberService {
 		return result;
 	}
 
+	public Member isMember(String userId, String userName, String userPhone) {
+		Member result=null;
+		Connection conn= getConnection();
+		Member member=dao.findPw(conn, userId, userName, userPhone);
+		
+		if(member!=null) {
+			result=member;
+		}else{
+			result=null;
+		}
+		
+		close(conn);
+		
+		return result;
+	}
+
 }

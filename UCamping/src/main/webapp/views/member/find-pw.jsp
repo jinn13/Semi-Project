@@ -28,29 +28,30 @@
                 <li id="bar">></li>
                 <li><a href="${ path }/member/login" class="sml-text2"><span>로그인</span></a></li>
                 <li id="bar">></li>
-                <li><a href="${ path }/member/login" class="sml-text2"><span>ID찾기</span></a></li>
+                <li><a href="${ path }/member/login" class="sml-text2"><span>비밀번호 찾기</span></a></li>
             </ul>
 
             <section class="login-section">
                 <div class="login-pic">
-                    <img src="${ path }/resources/images/login-img/login-img2-1.jpg" id="login-img" alt="">
+                    <img src="${ path }/resources/images/login-img/login-img4-1.jpg" id="login-img" alt="">
                 </div>
 
                 
                 <div class="login-content">
-                    <p>아이디 찾기</p>
-                      <form id="login-form" action="${ path }/member/login" method="post">
+                    <p>비밀번호 찾기</p>
+                      <form id="findpw-form" action="${ path }/find-pw" method="post">
                         <div id="login-form-input">
-                          <input type="text" name="userName" id="userName" required="required" placeholder="이름을 입력해주세요.">
-                          <input type="text" name="userPhone" id="userPhone" required="required" placeholder="전화번호를 입력해주세요.">
+                        <input type="id" name="userId" id="userId" required="required" placeholder="아이디를 입력해주세요.">
+                        <input type="text" name="userName" id="userName" required="required" placeholder="이름을 입력해주세요.">
+                        <input type="text" name="userPhone" id="userPhone" required="required" placeholder="전화번호를 입력해주세요.">
                         </div>
-                          <input type="button" id="findid" style="font-size: 18px;cursor:pointer;"  value="아이디 찾기" class="submit">
+                        <input type="button" id="findid" style="font-size: 18px;cursor: pointer;" value="비밀번호 찾기" class="submit">
                       </form>
 
                         <ul class="find-signup-area">
                             <li><a href="${ path }/member/login" class="sml-text2"><span>이전 화면으로</span></a></li>
                             <li id="bar">|</li>
-                            <li><a href="${ path }/find-pw" class="sml-text2"><span>비밀번호 찾기</span></a></li>
+                            <li><a href="${ path }/find-id" class="sml-text2"><span>아이디 찾기</span></a></li>
                             <li id="bar">|</li>
                             <li><a href="${ path }/member/enroll" class="sml-text2"><span>회원가입</span></a></li>
 
@@ -68,27 +69,44 @@
 	// 아이디 중복 확인
 	$(document).ready(()=>{
 		$("#findid").on("click", ()=>{
+			let userId = $("#userId").val().trim(); 
 			let userName = $("#userName").val().trim(); 
             let userPhone = $("#userPhone").val().trim();
-			// alert("버튼클릭 : "+userName+", "+userPhone);
-			$.ajax({
-				type: "post",
-				url: "${ pageContext.request.contextPath }/find-id", // 서블릿의 url매핑 경로
-				dataType: "json",
-				data: {
-					userName, userPhone
-				},
-				success: (data)=>{
-					 if(data != null){
-					 	alert("아이디는 "+data.id+"입니다.");
-					 }else{
-					 	alert("해당 정보의 ID가 존재하지 않습니다. 가입을 해 주세요.");
-					 }
-				},
-				error: (error)=>{
-					console.log(error);
-				}
-			});
+			 console.log("버튼클릭 : "+userId+", "+userName+", "+userPhone);	
+ 
+			 
+					$.ajax({
+						type: "post",
+						url: "${ pageContext.request.contextPath }/find-pw", // 서블릿의 url매핑 경로
+						dataType: "json",
+						data: {
+							userId, userName, userPhone
+						},
+						success: (data)=>{
+							 console.log(data);
+							if(!data){
+							 	alert("해당 정보와 일치하는 회원이 존재하지 않습니다.");	
+							 }else{
+								 if(confirm("임시 비밀번호를 발급받으시겠습니까?")==true){
+									 alert("임시 비밀번호는 "+data.password+"입니다. \n비밀번호 복사 후 확인을 눌러주세요.");
+								 }else{
+									 alert("임시 비밀번호 발급을 취소하셨습니다."); 
+								 }
+							 }
+ 
+						},
+						error: (error)=>{
+							console.log(error);
+						}
+					});
+					
+					
+
+			 
+			 
+
+			 
+			
 		});
 	});
 </script> 

@@ -6,17 +6,18 @@
 
 <jsp:include page="/views/common/header.jsp" />       
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="${ path }/resources/css/productDetail.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="${ path }/resources/css/productDetail.css">
+    <title>제품 상세 페이지</title>
 </head>
 <body>
+    <div>
+    <header>
+    </header>
     <section>
         <div class="product_box">
             <div class="categories_box">
@@ -49,10 +50,10 @@
                                         <div class="img_viewport_prev"></div>
                                         <div class="img_viewport_container">
                                             <div class="img_item img_normal_item img_item_other">
-                                                <a><img alt="small_thumbnail_img" class="thumbnail_img" src="${ path }/resources/images/camping_card_ex3.jpg"></a>
+                                                <a><img alt="small_thumbnail_img" class="thumbnail_img" src="${ path }/resources/images/item/item24.jpg"></a>
                                             </div>
                                             <div class="img_item img_normal_item img_item_other">
-                                                <a><img alt="small_thumbnail_img" class="thumbnail_img" src="${ path }/resources/images/camping_card_ex2.jpeg"></a>
+                                                <a><img alt="small_thumbnail_img" class="thumbnail_img" src="${ path }/resources/images/item/item23.jpeg"></a>
                                             </div>
                                             <div class="img_item img_item_other">
                                                 <a><img alt="small_thumbnail_img" class="thumbnail_img" src="${ path }/resources/images/blank_img.jpeg"></a>
@@ -82,11 +83,11 @@
                                     <div class="item_count_sales_box">
                                         <div class="item_info_count">
                                             <ul>
-                                                <li><img src="${ path }/resources/images/heart_emoji.png" width="15px" height="15px"><div class="product_wish_count">0</div>
+                                                <li><img src="${ path }/resources/images/wish_heart.png" width="15px" height="15px">0
                                                 </li>
-                                                <li>조회 <div class="product_view_count">0</div>
+                                                <li>조회 0
                                                 </li>
-                                                <li>채팅 <div class="product_chat_count">0</div>
+                                                <li>채팅 0
                                                 </li>
                                             </ul>
                                         </div>
@@ -170,11 +171,11 @@
                                                         (0)
                                                     </span>
                                                     <span class="review_count_rating_img">
-                                                        <img src="${ path }/resources/images/img_review_star_blank_16x16_x2.png" alt="blank_star1">
-                                                        <img src="${ path }/resources/images/img_review_star_blank_16x16_x2.png" alt="blank_star2">
-                                                        <img src="${ path }/resources/images/img_review_star_blank_16x16_x2.png" alt="blank_star3">
-                                                        <img src="${ path }/resources/images/img_review_star_blank_16x16_x2.png" alt="blank_star4">
-                                                        <img src="${ path }/resources/images/img_review_star_blank_16x16_x2.png" alt="blank_star5">
+                                                        <img src="${ path }/resources/images/pro_image/review_star_1.png" alt="blank_star1">
+                                                        <img src="${ path }/resources/images/pro_image/review_star_1.png" alt="blank_star2">
+                                                        <img src="${ path }/resources/images/pro_image/review_star_1.png" alt="blank_star3">
+                                                        <img src="${ path }/resources/images/pro_image/review_star_1.png" alt="blank_star4">
+                                                        <img src="${ path }/resources/images/pro_image/review_star_1.png" alt="blank_star5">
                                                     </span>
                                                 </a>
                                             </div>
