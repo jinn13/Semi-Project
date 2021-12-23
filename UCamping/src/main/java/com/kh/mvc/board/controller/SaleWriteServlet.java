@@ -82,7 +82,7 @@ public class SaleWriteServlet extends HttpServlet {
     	if(loginMember != null) {    
     		SaleBoard saleboard = new SaleBoard();
     		
-//    		saleboard.setWriterNo(writerNo);
+    		saleboard.setWriterNo(loginMember.getNo());
     		saleboard.setTitle(title);
     		saleboard.setPrice(price);
     		saleboard.setCategory(category);

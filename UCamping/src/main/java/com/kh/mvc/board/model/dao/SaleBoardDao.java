@@ -78,7 +78,7 @@ public class SaleBoardDao {
 				saleboard.setRowNum(rs.getInt("RNUM"));
 				saleboard.setWriterId(rs.getString("ID"));
 				saleboard.setTitle(rs.getString("SALE_TITLE"));
-				saleboard.setContent(rs.getString("SALE_FILENAME"));
+				saleboard.setContent(rs.getString("SALE_CONTENT"));
 				saleboard.setPrice(rs.getString("SALE_PRICE"));
 				System.out.println(saleboard);
 				
@@ -97,7 +97,7 @@ public class SaleBoardDao {
 	public int insertBoard(Connection connection, SaleBoard saleboard) {
 		int result = 0;
 		PreparedStatement pstmt = null;
-		String query = "INSERT INTO SALEBOARD VALUES(SEQ_SALEBOARD_NO.NEXTVAL,?,?,?,?,?,?,DEFAULT,DEFAULT,?,DEFAULT,DEFAULT)";
+		String query = "INSERT INTO SALEBOARD VALUES(SEQ_SALEBOARD_NO.NEXTVAL,?,?,?,?,?,?,DEFAULT,DEFAULT,?,?,DEFAULT)";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -109,6 +109,7 @@ public class SaleBoardDao {
 			pstmt.setString(5, saleboard.getContent());
 			pstmt.setString(6, saleboard.getFileName());
 			pstmt.setString(7, saleboard.getGoodsStatus());
+			pstmt.setString(8, saleboard.getDealStatus());
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
