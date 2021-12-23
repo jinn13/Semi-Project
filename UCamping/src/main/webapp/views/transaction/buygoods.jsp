@@ -28,133 +28,67 @@
             <option value="Clothes&Lantern&Stuff">의류/조명/잡화</option>
         </select>
     </div>
-    <div>
+    <div id="board-list-container">
         <table class="buygoods" id="tbl-board">
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td id="images" colspan="" rowspan="5" width="370px" height="">
-                            <img src="./semi.resources/images/텐트.jpg" width="318px" height="174px"/>
-                        </td>
-                        <td style="font-size: 18px;" id="title"colspan="2" width="646px" height="35px">에버닌 팝업텐트 L(4~5)인용 감성 캠핑 원터치텐트</td>   
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td style="font-size: 16px;" width="200px"><img src="./semi.resources/images/icons8-star-96.png" width="20" height="20"> 관심상품 등록</td>
-                    </tr>
-                    <tr>
-                        
-                        <td width="646px" style="font-size: 16px;">사 놓고 얼마 쓸 일이 없어 판매하게 됐습니다</td>
-                        
-                    </tr>
-                    <tr>
-                        <td style="font-size: 16px;">가격 : 100,000원</td>
-                        <td width="200px" style="font-size: 16px;"><img src="./semi.resources/images/icons8-chat-64.png" width="20" height="20"> 채팅 보내기</td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 16px;">판매자 : yss</td>
-                        
-                    </tr>
-                    <tr></tr>
-                    
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td id="images" colspan="" rowspan="5" width="370px" height="">
-                            <img src="./semi.resources/images/텐트.jpg" width="318px" height="174px"/>
-                        </td>
-                        <td style="font-size: 18px;" id="title"colspan="2" width="646px" height="35px">에버닌 팝업텐트 L(4~5)인용 감성 캠핑 원터치텐트</td>   
-                    
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td style="font-size: 16px;" width="200px"><img src="./semi.resources/images/icons8-star-96.png" width="20" height="20"> 관심상품 등록</td>
-                    </tr>
-                    <tr>
-                        
-                        <td width="646px" style="font-size: 16px;">사 놓고 얼마 쓸 일이 없어 판매하게 됐습니다</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 16px;">가격 : 100,000원</td>
-                        <td width="200px" style="font-size: 16px;"><img src="./semi.resources/images/icons8-chat-64.png" width="20" height="20"> 채팅 보내기</td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 16px;">판매자 : yss</td>
-                        <td></td>
-                    </tr>
-                    <tr></tr>
-
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td id="images" colspan="" rowspan="5" width="370px" height="">
-                            <img src="./semi.resources/images/텐트.jpg" width="318px" height="174px"/>
-                        </td>
-                        <td style="font-size: 18px;" id="title"colspan="2" width="646px" height="35px">에버닌 팝업텐트 L(4~5)인용 감성 캠핑 원터치텐트</td>   
-
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td style="font-size: 16px;" width="200px"><img src="./semi.resources/images/icons8-star-96.png" width="20" height="20"> 관심상품 등록</td>
-                    </tr>
-                    <tr>
-                        
-                        <td width="646px" style="font-size: 16px;">사 놓고 얼마 쓸 일이 없어 판매하게 됐습니다</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 16px;">가격 : 100,000원</td>
-                        <td width="200px" style="font-size: 16px;"><img src="./semi.resources/images/icons8-chat-64.png" width="20" height="20"> 채팅 보내기</td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 16px;">판매자 : yss</td>
-                        <td></td>
-                    </tr>
-                    <tr></tr>
-
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td id="images" colspan="" rowspan="5" width="370px" height="">
-                            <img src="./semi.resources/images/텐트.jpg" width="318px" height="174px"/>
-                        </td>
-                        <td style="font-size: 18px;" id="title"colspan="2" width="646px" height="35px">에버닌 팝업텐트 L(4~5)인용 감성 캠핑 원터치텐트</td>   
-                        
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td style="font-size: 16px;" width="200px"><img src="./semi.resources/images/icons8-star-96.png" width="20" height="20"> 관심상품 등록</td>
-                    </tr>
-                    <tr>
-                        
-                        <td width="646px" style="font-size: 16px;">사 놓고 얼마 쓸 일이 없어 판매하게 됐습니다</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 16px;">가격 : 100,000원</td>
-                        <td width="200px" style="font-size: 16px;"><img src="./semi.resources/images/icons8-chat-64.png" width="20" height="20"> 채팅 보내기</td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 16px;">판매자 : yss</td>
-                        <td></td>
-                    </tr>
-                    <tr></tr>
-
-                    
+	        <c:if test="${ !empty salelist }">
+					<c:forEach var="saleboard" items="${ salelist }">
+	                    <tr>
+	                        <th></th>
+	                        <th></th>
+	                        <th></th>
+	                    </tr>
+	                    <tr>
+	                        <td id="images" colspan="" rowspan="5" width="370px" height="">
+	                            <img src="${ saleboard.FileName }" width="318px" height="174px"/>
+	                        </td>
+	                        <td style="font-size: 18px;" id="title"colspan="2" width="646px" height="35px">${ saleboard.title }</td>   
+	                    </tr>
+	                    <tr>
+	                        <td></td>
+	                        <td style="font-size: 16px;" width="200px"><img src="./semi.resources/images/icons8-star-96.png" width="20" height="20"> 관심상품 등록</td>
+	                    </tr>
+	                    <tr>
+	                        
+	                        <td width="646px" style="font-size: 16px;">${ saleboard.content }</td>
+	                        
+	                    </tr>
+	                    <tr>
+	                        <td style="font-size: 16px;">${ saleboard.price }</td>
+	                        <td width="200px" style="font-size: 16px;"><img src="./semi.resources/images/icons8-chat-64.png" width="20" height="20"> 채팅 보내기</td>
+	                    </tr>
+	                    <tr>
+	                        <td style="font-size: 16px;">${ saleboard.writerId }</td>
+	                        
+	                    </tr>
+	                    <tr></tr>
+	               </c:forEach>
+			</c:if>
+                       
         </table>
+        <div id="pageBar">
+			<!-- 맨 처음으로 -->
+			<button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=1'">&lt;&lt;</button>
+
+			<!-- 이전 페이지로 -->
+			<button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ pageInfo.prevePage }'">&lt;</button>
+
+			<!--  10개 페이지 목록 -->
+			<c:forEach begin="${ pageInfo.startPage }" end="${ pageInfo.endPage }" varStatus="status">
+				<c:if test="${ status.current == pageInfo.currentPage }">				
+					<button disabled>${ status.current }</button>
+				</c:if>
+				
+				<c:if test="${ status.current != pageInfo.currentPage }">				
+					<button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ status.current }'">${ status.current }</button>
+				</c:if>
+			</c:forEach>
+
+			<!-- 다음 페이지로 -->
+			<button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ pageInfo.nextPage }'">&gt;</button>
+
+			<!-- 맨 끝으로 -->
+			<button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ pageInfo.maxPage }'">&gt;&gt;</button>
+		</div>
     </div>
 </body>
 </html>
