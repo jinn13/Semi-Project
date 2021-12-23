@@ -14,7 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import com.kh.mvc.common.wrapper.EncryptPasswordWrapper;
 
 
-@WebFilter(filterName="encryptFilter", servletNames = {"login", "enroll", "find-pw"})
+
+@WebFilter(filterName="encryptFilter", servletNames = {"login", "enroll", "updatePwd"})
 public class EncryptFilter implements Filter {
 
 

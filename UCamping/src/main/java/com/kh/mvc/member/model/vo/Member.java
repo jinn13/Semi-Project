@@ -28,6 +28,8 @@ public class Member {
 	
 	private String phone;
 	
+	private String address;
+	
 	private String status;
 	
 	private Date enrollDate;
