@@ -37,6 +37,7 @@ public class MemberDao {
 				member.setNickname(rs.getString("NICKNAME"));
 				member.setEmail(rs.getString("EMAIL"));
 				member.setPhone(rs.getString("PHONE"));
+				member.setAddress(rs.getString("ADDRESS"));
 				member.setStatus(rs.getString("STATUS"));
 				member.setEnrollDate(rs.getDate("ENROLL_DATE"));
 				member.setModifyDate(rs.getDate("MODIFY_DATE"));
@@ -59,7 +60,7 @@ public class MemberDao {
 	public int insertMember(Connection connection, Member member) {
 		int result = 0;
 		PreparedStatement pstmt = null;
-		String query = "INSERT INTO MEMBER VALUES(SEQ_UNO.NEXTVAL,?,?,DEFAULT,?,?,?,?,?,DEFAULT,DEFAULT,DEFAULT)";
+		String query = "INSERT INTO MEMBER VALUES(SEQ_UNO.NEXTVAL,?,?,DEFAULT,?,?,?,?,?,?,DEFAULT,DEFAULT,DEFAULT)";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -71,7 +72,7 @@ public class MemberDao {
 			pstmt.setString(5, member.getNickname());
 			pstmt.setString(6, member.getEmail());
 			pstmt.setString(7, member.getPhone());
-			
+			pstmt.setString(8, member.getAddress());
 			
 			result = pstmt.executeUpdate();
 			
@@ -84,6 +85,32 @@ public class MemberDao {
 		
 		return result;
 	}
+	
+	public int updateMember(Connection connection, Member member) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE MEMBER SET NICKNAME=?,NAME=?,PHONE=?,EMAIL=?,ADDRESS=?,MODIFY_DATE=SYSDATE WHERE NO=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setString(1, member.getNickname());
+			pstmt.setString(2, member.getName());
+			pstmt.setString(3, member.getPhone());
+			pstmt.setString(4, member.getEmail());
+			pstmt.setString(5, member.getAddress());
+			pstmt.setInt(6, member.getNo());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+	
 
 	public Member findId(Connection conn, String userName, String userPhone) {
 		Member member = null;
@@ -112,6 +139,7 @@ public class MemberDao {
 				member.setNickname(rs.getString("NICKNAME"));
 				member.setEmail(rs.getString("EMAIL"));
 				member.setPhone(rs.getString("PHONE"));
+				member.setAddress(rs.getString("ADDRESS"));
 				member.setStatus(rs.getString("STATUS"));
 				member.setEnrollDate(rs.getDate("ENROLL_DATE"));
 				member.setModifyDate(rs.getDate("MODIFY_DATE"));
@@ -129,5 +157,52 @@ public class MemberDao {
 		
 		return member;
 	}
+	
+	
+	public int updateMemberStatus(Connection connection, int no, String status) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE MEMBER SET STATUS=? WHERE NO=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setString(1, status);
+			pstmt.setInt(2, no);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+
+		return result;
+	}
+
+	public int updateMemberPassword(Connection connection, int no, String password) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE MEMBER SET PASSWORD=? WHERE NO=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setString(1, password);
+			pstmt.setInt(2, no);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+	
+	
+	
 
 }

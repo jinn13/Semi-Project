@@ -37,6 +37,7 @@ public class EnrollServlet extends HttpServlet {
     	member.setBirth(String.join("-", request.getParameterValues("bornBirth")));
     	member.setEmail(request.getParameter("userEmail"));
     	member.setPhone(request.getParameter("userPhone"));
+    	member.setAddress(request.getParameter("userAddress"));
     	
     	System.out.println(member);
     	

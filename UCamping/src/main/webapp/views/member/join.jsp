@@ -31,7 +31,7 @@
 			</div>
 			<div class="form-group">
 				<label for="userPw">비밀번호</label>
-				<input type="password" name="userPwd" id="userPw" placeholder="패스워드"/>
+				<input type="password" name="userPwd" id="userPwd" placeholder="패스워드"/>
 			</div>
 			<div class="form-group">
 				<label for="userPw">비밀번호 재확인</label>
@@ -58,6 +58,10 @@
       		<div class="form-group">
 				<label for="userPhone">휴대전화</label>
 				<input type="text" name="userPhone" id="userPhone" placeholder="휴대전화"/>
+			</div>
+			<div class="form-group">
+				<label for="userAddress">주소</label>
+				<input type="text" name="userAddress" id="userAddress" placeholder="주소"/>
 			</div>
       
       <button type="submit">가입하기</button>

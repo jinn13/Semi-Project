@@ -55,63 +55,63 @@
             <hr>
         <table id="whole-view">
             <div>
-                <form id="memberFrm" action="" method="post">
+                <form id="memberFrm" action="${ path }/mypageUpdate" method="post">
                     <table>
                         <tr>
                             <th>아이디</th>
                             <td>
                                 <input type="text" name="userId" id="newId"
-                                        value="" readonly required >
+                                        value="${ loginMember.id }" readonly required >
                             </td> 	
                         </tr>
                         <tr>
                             <th>비밀번호</th>
                             <td>
                                 <input type="password" name="userPwd" id="userPwd"
-                                        value="" readonly required >
+                                        value="${ loginMember.password }" readonly required >
                             </td> 	
                         </tr>
                         <tr>
                             <th>비밀번호 확인</th>
                             <td>
                                 <input type="password" name="userPwd2" id="userPwd2"
-                                        value="" readonly required >
+                                        value="${ loginMember.password }" readonly required >
                                 <button id="btnPwd">확인</button>
                             </td> 	
                         </tr>
                         <tr>
                             <th>닉네임</th>
                             <td>
-                                <input type="text" name="userNick" id="userNick"
-                                        value="" readonly required >
+                                <input type="text" name="userNickname" id="userNickname"
+                                        value="${ loginMember.nickname }" required >
                             </td> 	
                         </tr>
                         <tr>
                             <th>이름</th>
                             <td>
                                 <input type="text" name="userName" id="userName"
-                                        value="" required>				
+                                        value="${ loginMember.name }" required>				
                             </td> 	
                         </tr>
                         <tr>
                             <th>휴대폰</th>
                             <td>
-                                <input type="tel" name="phone" id="phone"
-                                        value="" maxlength="11">
+                                <input type="tel" name="userPhone" id="userPhone"
+                                        value="${ loginMember.phone }" maxlength="11">
                             </td>
                         </tr>
                         <tr>
                             <th>이메일</th>
                             <td>
-                                <input type="email" name="email" id="email"
-                                        value="">												
+                                <input type="email" name="userEmail" id="userEmail"
+                                        value="${ loginMember.email }">												
                             </td> 	
                         </tr>
                         <tr>
                             <th>주소</th>
                                 <td>
-                                    <input type="text" name="address" id="address" 
-                                        value="">
+                                    <input type="text" name="userAddress" id="userAddress" 
+                                        value="${ loginMember.address }">
                                 </td> 	
                         </tr>
                     </table>
@@ -134,6 +134,19 @@
 			const status = "lest=500px, top=200px, width=500px, height=200px";
 		
 			open(url, "", status);
+		});
+		
+		$("#updatePwd").on("click", () => {
+			const url = "${ pageContext.request.contextPath }/member/updatePwd";
+			const status = "left=500px, top=200px, width=400px,height=200px";
+			
+			open(url, "", status);
+		});
+		
+		$("#btnDelete").on("click", () => {
+			if(confirm("정말로 탈퇴하시겠습니까?")) {
+				location.replace("${ pageContext.request.contextPath }/member/delete");
+			}
 		});
 	});
 </script>
