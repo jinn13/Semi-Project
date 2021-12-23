@@ -68,7 +68,7 @@
                 <div id="navwrap">
                   <ul class="nav">
                         <!----- Full Drop Down Name ----> 
-                        <li class="dropdown"><a href="${ path }/views/transaction/buygoods.jsp">구매하기</a>
+                        <li class="dropdown"><a href="${ path }/saleboard/salelist">구매하기</a>
                         <!----- Full Drop Down Name Ends Here ---->     
                               
                         <!----- Full Drop Down Contents  Starts Here---->     
@@ -88,7 +88,7 @@
                             <div class="column">
                                     <h3>판매하기</h3>
                               <ul>
-                                <li><a href="#">판매홈</a></li>
+                                <li><a href="${ path }/board/salewrite">판매홈</a></li>
                                 <li><a href="#">텐트 및 타프</a></li>
                                 <li><a href="#">침구 및 캠핑용품</a></li>
                                 <li><a href="#">가구 및 수납</a></li>
@@ -116,7 +116,7 @@
                             </div>
                             
                         <!----- Full Drop Down Name ----> 
-                          <li class="dropdown"><a href="${ path }/views/transaction/sellgoods.jsp">판매하기</a>     
+                          <li class="dropdown"><a href="${ path }/board/salewrite">판매하기</a>     
                         <!----- Full Drop Down Name Ends Here ---->     
             
                         <!----- Full Drop Down Contents  Starts Here---->     
@@ -136,7 +136,7 @@
                           <div class="column">
                                   <h3>판매하기</h3>
                             <ul>
-                              <li><a href="#">판매홈</a></li>
+                              <li><a href="${ path }/board/salewrite">판매홈</a></li>
                               <li><a href="#">텐트 및 타프</a></li>
                               <li><a href="#">침구 및 캠핑용품</a></li>
                               <li><a href="#">가구 및 수납</a></li>
@@ -187,7 +187,7 @@
                           <div class="column">
                                   <h3>판매하기</h3>
                             <ul>
-                              <li><a href="#">판매홈</a></li>
+                              <li><a href="${ path }/board/salewrite">판매홈</a></li>
                               <li><a href="#">텐트 및 타프</a></li>
                               <li><a href="#">침구 및 캠핑용품</a></li>
                               <li><a href="#">가구 및 수납</a></li>
@@ -237,7 +237,7 @@
                             <div class="column">
                                     <h3>판매하기</h3>
                               <ul>
-                                <li><a href="#">판매홈</a></li>
+                                <li><a href="${ path }/board/salewrite">판매홈</a></li>
                                 <li><a href="#">텐트 및 타프</a></li>
                                 <li><a href="#">침구 및 캠핑용품</a></li>
                                 <li><a href="#">가구 및 수납</a></li>
