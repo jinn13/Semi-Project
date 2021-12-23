@@ -130,4 +130,11 @@ public class MemberDao {
 		return member;
 	}
 
+	public Member findPw(Connection conn, String userId, String userName, String userPhone) {
+		
+		
+		
+		return null;
+	}
+
 }

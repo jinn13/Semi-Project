@@ -22,8 +22,14 @@
   <link rel="stylesheet" href="${ path }/resources/css/notice.css">
 </head>
 <body>
+		<div id="sml-category-area">
+            <ul class="sml-category">
+                <li><a href="${ path }" class="sml-text2"><span><i id="sml-ctgr-img1" class="material-icons-outlined chgcolor">home</i> 홈</span></a></li>
+                <li id="bar">></li>
+                <li><a href="${ path }/notice" class="sml-text2"><span>공지사항</span></a></li>
+            </ul>
+        </div>
 	<section>
-    
       <div id="notice">공지사항</div>
 
       <table>

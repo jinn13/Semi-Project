@@ -26,7 +26,7 @@
             <div class=first>
                 <div class="main-menu">
                     <div class="logo">
-                        <p><a href="${ path }">UCamping</a></p>
+                        <p><a href="${ path }"><img src="${ path }/resources/images/icon/logo.png" id="logo-img"></a></p>
                     </div>
                     <div class="search">
                         <form>
@@ -37,7 +37,7 @@
                     <!-- 로그인 전 버튼들 -->
                     <c:if test="${ empty loginMember }">
                     <ul class="sml-menu">
-                      <li id="a12"><a href="#" class="sml-text"><span><i id="sml-img1" class="material-icons-outlined chgcolor">shopping_cart</i> 찜한상품</span></a></li>
+                      <li id="a12"><a href="${ path }/mywish" class="sml-text"><span><i id="sml-img1" class="material-icons-outlined chgcolor">shopping_cart</i> 찜한상품</span></a></li>
                       <li id="bar">|</li>
                       <li><a href="${ path }/member/login" class="sml-text"><span><i id="sml-img2" class="material-icons-outlined chgcolor">login</i>&nbsp&nbsp로그인</span></a></li>
                       <li id="bar">|</li>
@@ -48,12 +48,12 @@
                     <!-- 로그인 후 버튼들 -->
                     <c:if test="${ !empty loginMember }">
                     <ul class="sml-menu">
-                      <li><a href="#" class="sml-text2"><span><i id="sml-img1" class="material-icons-outlined chgcolor">shopping_cart</i> 찜한상품</span></a></li>
+                      <li><a href="${ path }/mywish" class="sml-text2"><span><i id="sml-img1" class="material-icons-outlined chgcolor">shopping_cart</i> 찜한상품</span></a></li>
                       <li id="bar">|</li>
                       <li><a href="#" class="sml-text2"><span><i id="sml-img2" class="material-icons-outlined chgcolor">forum</i>&nbsp&nbsp채팅</span></a></li>
                       <li id="bar">|</li>
-                      <li><a href="#" class="sml-text2"><span><i id="sml-img3" class="material-icons chgcolor">person_pin</i>${ loginMember.nickname } 님</span></a>
-                        <li id="hamburger"><a href="#" class="sml-text2"><span><i id="sml-img4" class="material-icons-outlined chgcolor">menu</i></span></a>
+                      <li><a href="${ path }/mypage" class="sml-text2"><span><i id="sml-img3" class="material-icons chgcolor">person_pin</i>${ loginMember.nickname } 님</span></a>
+                        <li id="hamburger"><a href="" class="sml-text2"><span><i id="sml-img4" class="material-icons-outlined chgcolor">menu</i></span></a>
                           <ul class="ssml-menu">
                             <li><a href="${ path }/logout" class="sml-text2"><span>로그아웃</span></a>
                           </ul>
@@ -101,7 +101,8 @@
                                     <h3>마이페이지</h3>
                               <ul>
                               <li><a href="${ path }/mypage">회원정보</a></li>
-                              <li><a href="#">찜한상품</a></li>
+                              <li><a href="${ path }/mywish">찜한상품</a></li>
+                              <li><a href="${ path }/myregister">등록상품</a></li>
                               </ul>
                             </div>
                             
@@ -148,7 +149,8 @@
                                   <h3>마이페이지</h3>
                             <ul>
                               <li><a href="${ path }/mypage">회원정보</a></li>
-                              <li><a href="#">찜한상품</a></li>
+                              <li><a href="${ path }/mywish">찜한상품</a></li>
+                              <li><a href="${ path }/myregister">등록상품</a></li>
                             </ul>
                           </div>
                           
@@ -198,7 +200,8 @@
                                   <h3>마이페이지</h3>
                             <ul>
                               <li><a href="${ path }/mypage">회원정보</a></li>
-                              <li><a href="#">찜한상품</a></li>
+                              <li><a href="${ path }/mywish">찜한상품</a></li>
+                              <li><a href="${ path }/myregister">등록상품</a></li>
                             </ul>
                           </div>
                           
@@ -247,7 +250,8 @@
                                     <h3>마이페이지</h3>
                               <ul>
                               <li><a href="${ path }/mypage">회원정보</a></li>
-                              <li><a href="#">찜한상품</a></li>
+                              <li><a href="${ path }/mywish">찜한상품</a></li>
+                              <li><a href="${ path }/myregister">등록상품</a></li>
                               </ul>
                             </div>
                             

@@ -67,6 +67,14 @@ header {
   flex-basis: 33%;
 }
 
+#logo-img {
+  width: auto;
+  height: 90px;
+  position: relative;
+  margin-top: 10px;
+  /* background-color: yellow; */
+}
+
 .logo > p {
   text-align: center;
 }

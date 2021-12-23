@@ -17,6 +17,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+		<div id="sml-category-area">
+            <ul class="sml-category">
+                <li><a href="${ path }" class="sml-text2"><span><i id="sml-ctgr-img1" class="material-icons-outlined chgcolor">home</i> 홈</span></a></li>
+                <li id="bar">></li>
+                <li><a href="${ path }/question" class="sml-text2"><span>1:1문의</span></a></li>
+            </ul>
+        </div>
   <h1 style="text-align: center;">무엇을 도와드릴까요?</h1>
     <br><br><br>
     <table id="tbl-question">
@@ -78,9 +85,10 @@
         </tr>
     </table>
 
-    <button type="button" id="btn1" onClick="location.href='${ path }/views/board/questionUpdate.jsp'" style="padding:6px; margin:8px;">문의하기</button>
-    
-    <br><br><br><br>
+        <div id="btn-area">
+          <button type="button" id="btn1" onClick="location.href='${ path }/views/board/questionUpdate.jsp'">문의하기</button>
+        </div>
+    <br>
     
     <div id="pageBar">
         <!-- 맨 처음으로 -->
