@@ -16,25 +16,17 @@
 </head>
 <body>
     <div>
-    <header>
-    </header>
     <section>
         <div class="product_box">
             <div class="categories_box">
                 <ul>
                     <li>
-                        <a href="Home.html">HOME</a>
+                        <a href="${ path }/main.jsp">HOME</a>
                     </li>
                     <li>
-                        <a href="bigCategories.html">
+                        <a href="">
                             > 
-                            대분류 카테고리
-                        </a>
-                    </li>
-                    <li>
-                        <a href="subCategoreis.html">
-                            > 
-                            중분류 카테고리
+                            목록으로
                         </a>
                     </li>
                 </ul>
@@ -67,10 +59,10 @@
                                 </div>
                                 <div class="item_info">
                                     <div class="item_name_price_info">
-                                        <h1 class="item_name">캠핑텐트 제드트윈오토듀얼팔레스 차박텐트 팝니다(마지막 가격다운)</h1>
+                                        <h1 class="item_name">${ saleboard.title }</h1>
                                         <div>
                                             <div class="item_price">
-                                                350,000
+                                                ${ saleboard.price }
                                                 <span>원</span>
                                             </div>
                                             <div class="report_user">
@@ -127,25 +119,7 @@
                                             <h3 class="description_title_h3">
                                                 <div class="description_title">상세설명</div>
                                             </h3>
-                                            <div class="description_text">
-                                                캠핑홀릭 오두막텐트(면텐트), 베스티블, 전용 이너매트팝니다.
-                                                ​<br>
-                                                오두막과 베스티블은 지퍼형식은 아닙니다.
-                                                입구 에이폴에 걸어서 사용하시면 됩니다.
-                                                <br>
-                                                중고로 구매하여 총 3회 피칭하였으며
-                                                불빵 팩빵 없으며 생활 오염과 이염이 조금씩 있습니다.
-                                                <br>
-                                                <br>
-                                                구성품은 오두막텐트, 이너 A폴, 입구A폴, 베스티블, 오두막 전용 이너매트, 오두막 전용 팩(피아노강선팩), 사이드폴, 스트링과 스토퍼 입니다.
-                                                ​<br>
-                                                구성품은 풀셋트라고 생각하시면 될 것 같습니다.
-                                                <br>
-                                                부피가 크기때문에 직거래 원합니다.
-                                                직거래 지역은 부산입니다.
-                                                <br>
-                                                더 궁긍하신것은 댓글이나 문자부탁드립니다.
-                                            </div>
+                                            <div class="description_text">${ saleboard.content }</div>
                                         </section>
                                         <section class="item_user_info">
                                             <div class="profile_img">
