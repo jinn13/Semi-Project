@@ -16,22 +16,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<form>
+<form action="${ pageContext.request.contextPath }/board/salewrite" method="post"
+		enctype="multipart/form-data">
     <div>
         <div style="font-weight: bold; font-size:30px;
             text-align: center;" class="" spellcheck="false">판매하기</div>
             <br>
         <table id="tbl-sellgoods"class="goodsregist">
+        	<!--<tr>
+                <th>판매자</th>
+                <td style="width:100px;"></td>
+                <td><textarea id="selltext" name="writerNo" value="${ loginMember.id }" readonly></textarea></td>
+            </tr>-->
+        
             <tr>
                 <th>상품명</th>
                 <td style="width:100px;"></td>
-                <td><textarea id="selltext" placeholder="상품명을 입력해주세요."></textarea></td>
+                <td><textarea id="selltext" name="title" placeholder="상품명을 입력해주세요."></textarea></td>
             </tr>
 
             <tr>
                 <th>가격</th>
                 <td style="width:100px;"></td>
-                <td><textarea id="selltext" placeholder="희망 가격을 입력해주세요."></textarea></td>
+                <td><textarea id="selltext" name="price" placeholder="희망 가격을 입력해주세요."></textarea></td>
             </tr>
 
             <tr>
@@ -53,7 +60,7 @@
                     <!--<input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" multiple/> 
                     <div id="image_container"></div>-->
                     <div id='image_preview'>
-                    <input type='file' id='btnAtt' multiple='multiple' />
+                    <input type='file' id='btnAtt' name="upfile" multiple='multiple' />
                     <div id='att_zone'
                         data-placeholder='파일을 첨부 하려면 파일 선택 버튼을 클릭하거나 파일을 드래그앤드롭 하세요'></div>
                     </div>
@@ -71,13 +78,13 @@
                 <td style="width:100px;"></td>
                 <td>
                     <div class="state" style="width:100px;">
-                        <label><input type="radio" name="state" value="notopen">미개봉</label>
+                        <label><input type="radio" name="goodsStatus" value="NOP">미개봉</label>
                     </div>
                     <div class="state" style="width:110px;">
-                        <label><input type="radio" name="state" value="almostnew">거의 새 것</label>
+                        <label><input type="radio" name="goodsStatus" value="NEW">거의 새 것</label>
                     </div>
                     <div class="state" style="width:100px;">
-                        <label><input type="radio" name="state" value="used">사용감 있음</label>
+                        <label><input type="radio" name="goodsStatus" value="USD">사용감 있음</label>
                     </div>
                 </td>
             </tr>
@@ -87,13 +94,13 @@
                 <td style="width:100px;"></td>
                 <td>
                     <div class="dealtype" style="width:100px;">
-                        <label><input type="checkbox" value="delivery">택배</label>
+                        <label><input type="checkbox" name="dealStatus" value="MAIL">택배</label>
                     </div>
                     <div class="dealtype" style="width:130px;">
-                        <label><input type="checkbox" value="direct">만나서 거래</label>
+                        <label><input type="checkbox" name="dealStatus" value="DRCT">만나서 거래</label>
                     </div>
                     <div class="dealtype" style="width:100px;">
-                        <label><input type="checkbox" value="safety">안전거래</label>
+                        <label><input type="checkbox" name="dealStatus" value="SAFE">안전거래</label>
                     </div>
                 </td>
             </tr>
@@ -111,7 +118,7 @@
         </div>
         <br>
         <div class="goodsinfo">
-            <textarea class="goodsinfo1" placeholder="상품의 정보를 입력해주세요."></textarea>
+            <textarea class="goodsinfo1" name="content" placeholder="상품의 정보를 입력해주세요."></textarea>
         </div>
         
     </div>
