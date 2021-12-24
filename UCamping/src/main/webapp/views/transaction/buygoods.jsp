@@ -39,13 +39,16 @@
 	                    </tr>
 	                    <tr>
 	                        <td id="images" colspan="" rowspan="5" width="370px" height="">
-	                            <img src="${ path }/resources/upload/saleboard/${ saleboard.fileName}" width="318px" height="174px"/>
+	                            <img src="${ path }/resources/upload/saleboard/${ saleboard.fileSystemName }" width="318px" height="174px" download="${ path }/resources/upload/saleboard/${ saleboard.fileName }"/>
 	                        </td>
 	                        <td style="font-size: 18px;" id="title"colspan="2" width="646px" height="35px">${ saleboard.title }</td>   
 	                    </tr>
 	                    <tr>
 	                        <td></td>
-	                        <td style="font-size: 16px;" width="200px"><img src="${ path }/resources/images/icon/icons8-star-96.png" width="20" height="20"> 관심상품 등록</td>
+	                        <td style="font-size: 16px;" width="200px">
+	                        	<a href="#"><img src="${ path }/resources/images/icon/icons8-star-96.png" width="20" height="20"> 관심상품 등록</a>
+	                        </td>
+	                        
 	                    </tr>
 	                    <tr>
 	                        
@@ -68,7 +71,7 @@
         <div id="pageBar">
 			<!-- 맨 처음으로 -->
 			<button onclick="location.href='${ pageContext.request.contextPath }/saleboard/salelist?page=1'">&lt;&lt;</button>
-
+			
 			<!-- 이전 페이지로 -->
 			<button onclick="location.href='${ pageContext.request.contextPath }/saleboard/salelist?page=${ pageInfo.prevePage }'">&lt;</button>
 

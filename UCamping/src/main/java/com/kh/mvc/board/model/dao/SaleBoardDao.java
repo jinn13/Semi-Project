@@ -42,7 +42,7 @@ public class SaleBoardDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String query = 
-				"SELECT RNUM, SALE_WRITER_NO, SALE_TITLE, ID, SALE_CONTENT, SALE_FILENAME, SALE_PRICE"
+				"SELECT RNUM, SALE_WRITER_NO, SALE_TITLE, ID, SALE_CONTENT, SALE_FILENAME, SALE_PRICE, FILESYSTEMNAME"
 				+ " FROM ("
 				+    "SELECT ROWNUM AS RNUM, "
 				+           "SALE_WRITER_NO, "
@@ -50,14 +50,17 @@ public class SaleBoardDao {
 				+ 			"ID, "
 				+ 			"SALE_CONTENT, "
 				+ 			"SALE_FILENAME, "
-				+  			"SALE_PRICE "
+				+  			"SALE_PRICE, "
+				+  			"FILESYSTEMNAME "
+				
 				+ 	 "FROM ("
 				+ 	    "SELECT S.SALE_WRITER_NO, "
 				+ 			   "S.SALE_TITLE, "
 				+  			   "M.ID, "
 				+ 			   "S.SALE_CONTENT, "
 				+ 			   "S.SALE_FILENAME, "
-				+ 			   "S.SALE_PRICE "
+				+ 			   "S.SALE_PRICE, "
+				+  			   "S.FILESYSTEMNAME "
 				+ 		"FROM SALEBOARD S "
 				+ 		"JOIN MEMBER M ON(S.SALE_WRITER_NO = M.NO) "
 				+ 		"WHERE S.STATUS = 'Y' ORDER BY S.SALE_NO DESC"
@@ -82,6 +85,7 @@ public class SaleBoardDao {
 				saleboard.setContent(rs.getString("SALE_CONTENT"));
 				saleboard.setFileName(rs.getString("SALE_FILENAME"));
 				saleboard.setPrice(rs.getString("SALE_PRICE"));
+				saleboard.setFileSystemName(rs.getString("FILESYSTEMNAME"));
 				System.out.println(saleboard);
 				
 				salelist.add(saleboard);																							
@@ -99,7 +103,7 @@ public class SaleBoardDao {
 	public int insertBoard(Connection connection, SaleBoard saleboard) {
 		int result = 0;
 		PreparedStatement pstmt = null;
-		String query = "INSERT INTO SALEBOARD VALUES(SEQ_SALEBOARD_NO.NEXTVAL,?,?,?,?,?,?,DEFAULT,DEFAULT,?,?,DEFAULT)";
+		String query = "INSERT INTO SALEBOARD VALUES(SEQ_SALEBOARD_NO.NEXTVAL,?,?,?,?,?,?,DEFAULT,DEFAULT,?,?,DEFAULT,?)";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -112,6 +116,7 @@ public class SaleBoardDao {
 			pstmt.setString(6, saleboard.getFileName());
 			pstmt.setString(7, saleboard.getGoodsStatus());
 			pstmt.setString(8, saleboard.getDealStatus());
+			pstmt.setString(9, saleboard.getFileSystemName());
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
