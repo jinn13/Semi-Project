@@ -11,16 +11,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
  <link rel="icon" href="./favicon.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
-  <!--Google Material Icons-->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-  <link rel="stylesheet" href="${ path }/resources/css/noticeUpdate.css">
-
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" href="${ path }/resources/css/noticeUpdate.css">
 </head>
 <body>
     <div class="body">
@@ -33,23 +28,23 @@
         </div>
 
         <div class="view-area">
-            <h2>공지 제목</h2>
+            <h2>공지 제목 수정</h2>
             <hr id="line">
-            <form action="${ pageContext.request.contextPath }/admin/notice/write" method="post">
+            <form action="${ pageContext.request.contextPath }/admin/notice/update" method="post">
             <input type="hidden" name="no" value="${ notice.no }">
             <div id="title-area">
-                <div id="title"><input type="text" name="title" id="title" placeholder="제목을 입력해주세요."></div>
+                <div id="title"><input type="text" name="title" id="title" value="${ notice.title }"></div>
             </div>
             <hr>
             <div id="content-area">
-                <h2>공지 내용</h2>
+                <h2>공지 내용 수정</h2>
                 <div>
-                    <textarea id="content" name="content" cols="94" rows="13" placeholder="내용을 입력해 주세요."></textarea>
+                    <textarea id="content" name="content" cols="94" rows="13">${ notice.content }</textarea>
                 </div>
             </div>
 
             <div id="btn-area">
-                <input type="submit" class="btn" value="등록">
+                <input type="submit" class="btn" value="수정하기">
                 <button type="button" class="btn" onclick="location.href='${ pageContext.request.contextPath }/notice'">이전으로</button>
             </div>
         </form>

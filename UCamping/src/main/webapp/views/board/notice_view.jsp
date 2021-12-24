@@ -50,7 +50,7 @@
 
             <div id="btn-area">
             <c:if test="${ !empty loginMember && loginMember.role == 'ROLE_ADMIN' }">
-                <button class="btn" type="button" onclick="location.href='${ pageContext.request.contextPath }/board/update?no=${ board.no }'">수정</button>
+                <button class="btn" type="button" onclick="location.href='${ pageContext.request.contextPath }/admin/notice/update?no=${ notice.no }'">수정</button>
                 <button class="btn" type="button" id="btnDelete">삭제</button>
             </c:if>
             <button type="button" class="btn" onclick="location.href='${ pageContext.request.contextPath }/notice'">목록으로</button>
@@ -61,7 +61,7 @@
                 $("#btnDelete").on("click", ()=>{
                     
                     if(confirm("정말로 게시글을 삭제하겠습니까?")){
-                        location.replace("${ pageContext.request.contextPath }/board/delete?no=${ board.no }");
+                        location.replace("${ pageContext.request.contextPath }/admin/notice/delete?no=${ notice.no }");
                     }
                 })
                 

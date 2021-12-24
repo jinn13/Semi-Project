@@ -1,9 +1,12 @@
 package com.kh.mvc.board.model.service;
 
 import java.sql.Connection;
+import java.util.List;
 
 import com.kh.mvc.board.model.dao.QBoardDao;
 import com.kh.mvc.board.model.vo.QuestionBoard;
+import com.kh.mvc.common.util.PageInfo;
+
 import static com.kh.mvc.common.jdbc.JDBCTemplate.*;
 
 public class QuestionService {
@@ -40,7 +43,7 @@ public class QuestionService {
 		int result = 0;
 		Connection connection = getConnection();
 		
-		if(qBoard.getUserNum() != 0) {
+		if(qBoard.getOtoNo() != 0) {
 			result = dao.updateQBoard(connection, qBoard);
 		} else {
 			result = dao.insertQBoard(connection, qBoard);
@@ -53,6 +56,16 @@ public class QuestionService {
 		}
 		
 		return result;
+	}
+
+	public List<QuestionBoard> getQBoardList(PageInfo pageInfo) {
+		List<QuestionBoard> list = null;
+		Connection connection = getConnection();
+		list = dao.findAll(connection, pageInfo);
+		
+		close(connection);
+		
+		return list;
 	}
 	
 	

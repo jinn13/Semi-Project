@@ -20,7 +20,7 @@ public class NoticeService {
 		Connection connection=getConnection();
 		
 		if(notice.getNo()!=0) {
-//			result = dao.updateBoard(connection, board);
+			result = dao.updateNotice(connection, notice);
 		} else {
 			result = dao.insertNotice(connection, notice);
 		}
@@ -71,6 +71,29 @@ public class NoticeService {
 		return notice;
 
 		
+	}
+
+
+	public int delete(int no) {
+		// Delete이니 결과값은 정수값
+		int result=0;
+		// 커넥션 필요(클로즈도 잊지말고 마지막에 적어주자)
+		Connection connection=getConnection();
+		
+		// dao한테 상태값만 바꾸라고 시키고 결과값 받기
+		result=dao.updateStatus(connection, no, "N");
+		
+		// 상태값 바꾸는데 성공 또는 실패하면 커밋or롤백하기 
+		if(result>0) {
+			commit(connection);
+		}else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+
 	}
 	
 

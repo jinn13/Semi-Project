@@ -148,7 +148,16 @@
   border-radius: 10px;
   margin-top: 15px;
   margin-left: 30px;
+  transition-property: background-color;
+transition-duration: .3s;
 }
+
+.submit:hover{
+	background-color: #a4835f;
+    color: white;
+}
+
+
 
 /* --------------------화면 나눔 선 -------------------------- */
 .line {

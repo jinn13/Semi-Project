@@ -30,7 +30,14 @@
             </ul>
         </div>
 	<section>
+	<div id="title-area1">	
       <div id="notice">공지사항</div>
+      
+      <c:if test="${ !empty loginMember && loginMember.role == 'ROLE_ADMIN'}">
+      <button type="button" id="btn-add"
+      onclick="location.href='${ path }/admin/notice/write'">글쓰기</button>
+      </c:if>
+	</div>
 
  <table id="tbl-board">
 			<tr>
@@ -49,7 +56,7 @@
 				<c:forEach var="notice" items="${list}">
 					<tr>
 						<td>${ notice.rowNum }</td>
-						<td style="text-align: center;">
+						<td style="text-align: left;">
 							<a href="${ pageContext.request.contextPath }/notice/view?no=${ notice.no }">
 								${ notice.title }
 							</a>
@@ -60,10 +67,7 @@
 			</c:if>			
 		</table>
 		
-      <c:if test="${ !empty loginMember && loginMember.role == 'ROLE_ADMIN'}">
-      <button type="button" id="btn-add"
-      onclick="location.href='${ path }/admin/notice/write'">글쓰기</button>
-      </c:if>
+
 
 
 		<div id="pageBar" style="letter-spacing: 15px;">

@@ -57,9 +57,9 @@
 
                         <div class="simple-login-area">
                           <p>SNS 간편 로그인</p>
-                          <input type="button" class="splgin-btn" id="naver" value="네이버 간편 로그인">
-                          <input type="button" class="splgin-btn" id="kakao" value="카카오 간편 로그인">
-                          <input type="button" class="splgin-btn" id="google" value="구글 간편 로그인">
+                          <input type="button" class="splgin-btn" id="naver" style="cursor:pointer;" value="네이버 간편 로그인">
+                          <input type="button" class="splgin-btn" id="kakao" style="cursor:pointer;" value="카카오 간편 로그인">
+                          <input type="button" class="splgin-btn" id="google" style="cursor:pointer;" value="구글 간편 로그인">
                       </div>
                 </div>
             </section>

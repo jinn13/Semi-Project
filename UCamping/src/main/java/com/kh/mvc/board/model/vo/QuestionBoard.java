@@ -12,20 +12,20 @@ import lombok.NoArgsConstructor;
 public class QuestionBoard {
 	private int otoNo;
 	
-	private int rowNum;
-	
-	private int userNum;
-	
-	private String otoPwd;
+	private int writerNo;
 	
 	private String otoTitle;
+	
+	private int readCount;
 
 	private String otoContent;
 	
 	private String otoFilename;
-	
+
 	private String otoStatus;
 	
 	private Date otoDate;
+	
+	private String renamedFileName;	
 
 }

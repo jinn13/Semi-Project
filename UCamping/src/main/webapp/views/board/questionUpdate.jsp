@@ -20,20 +20,15 @@
 	<section id="content">
         <h1 style="text-align: center;">1:1 문의 등록</h1>
         <div id='board-write-container'>
-            <form action="${ pageContext.request.contextPath }/board/questionUpdate" method="post"
-                    enctype="multipart/form-data">
+            <form action="${ pageContext.request.contextPath }/question/write" method="post" enctype="multipart/form-data">
                 <table id='tbl-board'>
                     <tr>
                         <th>제목</th>
                         <td><input type="text" name="title" id="title" placeholder="제목을 입력하세요." style="width:400px; height:20px;"></td>
                     </tr>
                     <tr>
-                        <th>작성자</th>
-                        <td><input type="text" name="writer" value="${ loginMember.nickname }" style="width:400px; height:20px;" readonly></td>
-                    </tr>
-                    <tr>
-                        <th>비밀번호</th>
-                        <td><input type="password" name="password" id="password" placeholder="비밀번호를 입력하세요." style="width:400px; height:20px;"></td>
+                        <th>작성자 번호</th>
+                        <td><input type="text" name="writer" value="${ loginMember.nickname}" style="width:400px; height:20px;" readonly></td>
                     </tr>
                     <tr>
                         <th>첨부파일</th>

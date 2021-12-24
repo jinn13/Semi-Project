@@ -177,4 +177,50 @@ public class NoticeDao {
 		}
 		return notice;
 	}
+
+	public int updateStatus(Connection connection, int no, String status) {
+		// 1. update이니 정수값으로 결과
+		int result=0;
+		// 2. 쿼리문 실행시킬 pstmt.. 
+		PreparedStatement pstmt=null;
+		// 3. 쿼리문까지 만들면 기본적인 준비 끝. 
+		String query="UPDATE NOTICE SET STATUS=? WHERE NOTICE_NO=?";
+		
+		try {
+			// 4. connection객체에서 퀴리문 주면 pstm얻어옴(예외처리하기)
+			pstmt=connection.prepareStatement(query);
+			pstmt.setString(1, status);
+			pstmt.setInt(2, no);
+			
+			// 6. update나 insert등등은 executeUpdate임(selet는 executeQuery임)
+			result=pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	public int updateNotice(Connection connection, Notice notice) {
+		int result=0;
+		PreparedStatement pstmt=null;
+		String query="UPDATE NOTICE SET NOTICE_TITLE=?,NOTICE_CONTENT=?,MODIFY_DATE=SYSDATE WHERE NOTICE_NO=?";
+//		System.out.println("여기까진 데이터 잘 오나 확인중");
+		try {
+			pstmt=connection.prepareStatement(query);
+			pstmt.setString(1, notice.getTitle());
+			pstmt.setString(2, notice.getContent());
+			pstmt.setInt(3, notice.getNo());
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return result;
+
+	}
 }

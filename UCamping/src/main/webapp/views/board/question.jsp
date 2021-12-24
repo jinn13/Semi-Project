@@ -87,7 +87,7 @@
     </table>
 
         <div id="btn-area">
-          <button type="button" id="btn1" onClick="location.href='${ path }/views/board/questionUpdate.jsp'">문의하기</button>
+          <button type="button" id="btn1" onclick="location.href='${ path }/question/write'">문의하기</button>
         </div>
     <br>
     

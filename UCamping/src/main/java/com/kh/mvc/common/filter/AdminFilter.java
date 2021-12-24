@@ -32,7 +32,7 @@ public class AdminFilter implements Filter {
 		
 		// 4. loginMember가 null이거나 관리자 계정이 아니라면 
 		if(loginMember == null || !loginMember.getRole().equals("ROLE_ADMIN")) {
-			request.setAttribute("msg","관리자가 아니면 글을 작성하실 수 없습니다."); // 5. 메세지 객체 만들고
+			request.setAttribute("msg","관리자가 아니면 공지글을 편집하실 수 없습니다."); // 5. 메세지 객체 만들고
 			request.setAttribute("location","/notice");				// 6. 보내버릴 location 지정하고..
 			// 7. msg.jsp로 포워딩 시킨다. 
 			request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);

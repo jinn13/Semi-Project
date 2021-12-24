@@ -1,3 +1,4 @@
+
 body {
   color: #333;
   font-size: 16px;
@@ -77,34 +78,30 @@ body {
 }
 
 .btn{
-	border: 1px solid transparent;
-	border-radius: 20px;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    background-color: #a4835f;
-    padding: 8px 25px 8px;
-    margin-left: 5px;
-    /* margin: auto; */
-    margin-bottom: 50px;
-    margin-top: 10px;
-    transition-property: background-color;
-	transition-duration: .3s;
-    cursor: pointer;
+cursor: pointer;
+font-size: 14px;
+/* line-height: 1; */
+border-radius: 20px;
+transition-property: background-color;
+transition-duration: .3s;
+border: 1px solid transparent;
+/* letter-spacing: 2px; */
+font-weight: bold;
+padding: 10px 20px 10px 20px;
+/* margin-top: 5px; */
+margin-bottom: 20px;
+color: white;
+background-color: #a4835f;
+/* float: right; */
 }
 
 .btn:hover{
 	background-color: black;
-	color: #fff;
+    color: #fff;
 }
 
-#line3{
-    border: 1px solid black;
-}
-
-h2{
-	text-align: center;
-	margin-bottom: 20px;
+#line{
+    border: 2px solid black;
 }
 
 #title-area{
@@ -118,11 +115,12 @@ h2{
 
 #title{
     /* background-color: blueviolet; */
-    width: 600px;
+    width: 660px;
     /* text-align: center; */
-    margin-left: 30px;
-    padding-top: 15px;
-    font-size: 20px;
+    margin-left: 25px;
+    /* margin-top: 10px; */
+    padding: 9px;
+    font-size: 15px;
 }
 
 #date{
@@ -137,17 +135,35 @@ h2{
 
 #content-area{
     width: auto;
-    height: 300px;
+    height: 320px;
     display: block;
     /* background-color: greenyellow; */
     /* border: 1px solid black; */
     border-bottom: 1px solid gray;
 }
 
+#content-area>h2{
+    /* background-color: red; */
+    width: 500px;
+    margin: auto;
+    margin-bottom: -30px;
+    text-align: center;
+}
+
 #content-area>div{
-    width: 600px;
+    width: 680px;
     /* background-color: red; */
     margin: auto;
     padding-top: 50px;
-    font-size: 17px;
+    font-size: 20px;
+}
+
+#content{
+    resize: none;
+    /* border: none; */
+}
+
+textarea::placeholder{
+    color: #e4d0bb;
+    text-align: left;
 }
