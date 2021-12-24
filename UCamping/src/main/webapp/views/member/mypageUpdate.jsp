@@ -43,7 +43,7 @@
                     <div id="profile-box">
                         <img id="profile-img" src="${ path }/resources/images/pro_photo.jpg">
                     </div>
-                    <div id="profile-text"><p id="profile-text1">캠핑처돌이</p></div>
+                    <div id="profile-text"><p id="profile-text1">${ loginMember.nickname }</p></div>
                     <div id="profile-img-update"><button id="updateImg">프로필 수정</button></div>
                 </div>
         </aside>
@@ -60,57 +60,42 @@
                         <tr>
                             <th>아이디</th>
                             <td>
-                                <input type="text" name="userId" id="newId"
+                                <input class="form_myPage" type="text" name="userId" id="newId"
                                         value="${ loginMember.id }" readonly required >
-                            </td> 	
-                        </tr>
-                        <tr>
-                            <th>비밀번호</th>
-                            <td>
-                                <input type="password" name="userPwd" id="userPwd"
-                                        value="${ loginMember.password }" readonly required >
-                            </td> 	
-                        </tr>
-                        <tr>
-                            <th>비밀번호 확인</th>
-                            <td>
-                                <input type="password" name="userPwd2" id="userPwd2"
-                                        value="${ loginMember.password }" readonly required >
-                                <button id="btnPwd">확인</button>
                             </td> 	
                         </tr>
                         <tr>
                             <th>닉네임</th>
                             <td>
-                                <input type="text" name="userNickname" id="userNickname"
+                                <input class="form_myPage" type="text" name="userNickname" id="userNickname"
                                         value="${ loginMember.nickname }" required >
                             </td> 	
                         </tr>
                         <tr>
                             <th>이름</th>
                             <td>
-                                <input type="text" name="userName" id="userName"
+                                <input class="form_myPage" type="text" name="userName" id="userName"
                                         value="${ loginMember.name }" required>				
                             </td> 	
                         </tr>
                         <tr>
                             <th>휴대폰</th>
                             <td>
-                                <input type="tel" name="userPhone" id="userPhone"
+                                <input class="form_myPage" type="tel" name="userPhone" id="userPhone"
                                         value="${ loginMember.phone }" maxlength="11">
                             </td>
                         </tr>
                         <tr>
                             <th>이메일</th>
                             <td>
-                                <input type="email" name="userEmail" id="userEmail"
+                                <input class="form_myPage"type="email" name="userEmail" id="userEmail"
                                         value="${ loginMember.email }">												
                             </td> 	
                         </tr>
                         <tr>
                             <th>주소</th>
                                 <td>
-                                    <input type="text" name="userAddress" id="userAddress" 
+                                    <input class="form_myPage" type="text" name="userAddress" id="userAddress" 
                                         value="${ loginMember.address }">
                                 </td> 	
                         </tr>

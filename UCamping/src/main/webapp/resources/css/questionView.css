@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  /* padding-top: 150px; */
+  
+}
+
+/* --------------작은 카테고리------------- */
+#sml-category-area{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.sml-category {
+  display: flex;
+  /* justify-content: center; */
+  line-height: 60px;
+  width: 400px;
+  flex-grow: 1;
+  /* background: green; */
+}
+
+.sml-category > li {
+  font-size: 12px;
+  margin-left: 14px;
+  font-weight: bold;
+}
+
+/* 작은 메뉴 색상 변경(건드리면 골치아픔) */
+.sml-category:hover > span {
+  color: #a4835f;
+}
+
+.sml-category:hover > span .material-icons-outlined.chgcolor {
+  color: #a4835f;
+}
+
+.sml-category:hover > span .material-icons.chgcolor {
+  color: #a4835f;
+}
+
+#bar {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#sml-ctgr-img1 {
+  display: inline-block;
+  vertical-align: -7px;
+  margin-right: 15px;
+  width: 10px;
+  height: 10px;
+}
+
+.body {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+.view-area{
+    width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+#btn-area{
+    width: auto;
+    /* background-color: yellow; */
+    text-align: center;
+    margin-top: 12px;
+}
+
+.btn{
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #a4835f;
+    border: none;
+    padding: 7px 20px 7px;
+    margin-left: 5px;
+    /* margin: auto; */
+    margin-bottom: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#line3{
+    border: 1px solid black;
+}
+
+h2{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#title-area{
+    position: relative;
+    width: 800px;
+    height: 62px;
+    /* background-color: yellow; */
+    display: flex;
+    margin: auto;
+}
+
+#title{
+    /* background-color: blueviolet; */
+    width: 600px;
+    /* text-align: center; */
+    margin-left: 30px;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+#date{
+    /* background-color: pink; */
+    width: 200px;
+    /* text-align: center; */
+    margin-left: 30px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: gray;
+}
+
+#content-area{
+    width: auto;
+    height: 300px;
+    display: block;
+    /* background-color: greenyellow; */
+    /* border: 1px solid black; */
+    border-bottom: 1px solid gray;
+}
+
+#content-area>div{
+    width: 600px;
+    /* background-color: red; */
+    margin: auto;
+    padding-top: 50px;
+    font-size: 17px;
+}

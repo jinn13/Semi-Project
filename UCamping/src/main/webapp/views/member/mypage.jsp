@@ -17,7 +17,7 @@
 </head>
 <body>
 <main id="wrap">
-        <nav>
+        <nav class="category_bar">
             <div class="product_box">
             <div class="categories_box">
                 <ul>
@@ -39,7 +39,7 @@
                     <div id="profile-box">
                         <img id="profile-img" src="${ path }/resources/images/pro_photo.jpg">
                     </div>
-                    <div id="profile-text"><p id="profile-text1">Ucamping</p></div>
+                    <div id="profile-text"><p id="profile-text1">${ loginMember.nickname }</p></div>
                     <div id="update-mypage"><a href="${ path }/views/member/mypageUpdate.jsp"> 회원정보 수정</a></div>
                     <div class="profile-board" id="profile-board1"><a href="">내가 차단한 회원</a></div>              
                     <div class="profile-board" id="profile-board2"><a href="">내가 신고한 회원</a></div>
@@ -53,9 +53,9 @@
                     <p id="myProduct-t">내가 등록한 상품</p>
                 </div>
                 <div id="myProduct1">
-                    <div><img class="product-img" src="${ path }/resources/images/KakaoTalk_20211218_130450521_01.jpg" alt=""></div>
-                    <div><img class="product-img" src="${ path }/resources/images/KakaoTalk_20211218_130450521_02.jpg" alt=""></div>
-                    <div><img class="product-img" src="${ path }/resources/images/KakaoTalk_20211218_130450521_03.jpg" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item27" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item37" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item28" alt=""></div>
                 </div>
             </div>
             <div>
@@ -64,9 +64,9 @@
                     <p><img src="${ path }/resources/images/heart (1).png" style="width: 20px; display: inline;"></p>
                 </div>
                 <div id="heartProduct1">
-                    <div><img class="product-img" src="${ path }/resources/images/KakaoTalk_20211218_130450521_04.jpg" alt=""></div>
-                    <div><img class="product-img" src="${ path }/resources/images/KakaoTalk_20211218_130450521_05.jpg" alt=""></div>
-                    <div><img class="product-img" src="${ path }/resources/images/KakaoTalk_20211219_145111505.jpg" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item29" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item30" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item36" alt=""></div>
                 </div>
             </div>
         </section>

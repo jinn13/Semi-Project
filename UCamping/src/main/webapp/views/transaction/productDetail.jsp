@@ -112,7 +112,7 @@
                                     </div>
                                     <div class="item_sns">
                                         <div class="item_chat">
-                                            <button type="button" class="item_chat_submit">1:1채팅하기</button>
+                                            <button type="button" class="item_chat_submit" id="chat_btn">1:1채팅하기</button>
                                         </div>
                                         <div class="item_wish">
                                             <button type="button" class="item_wish_myproduct">찜</button>
@@ -207,6 +207,18 @@
     </section>
     </div>
 </body>
+
+<script>
+	$(document).ready(() => {
+		$("#chat_btn").on("click", () => {
+			const url = "${pageContext.request.contextPath}/member/chatting";
+			const status = "left=500px, top=200px, width=400px, height=200px";
+			
+			open(url, "", status);
+		});
+
+	});
+</script>
 </html>
 
 <jsp:include page="/views/common/footer.jsp" />

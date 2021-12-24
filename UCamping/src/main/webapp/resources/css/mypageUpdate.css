@@ -71,10 +71,10 @@ body {
     min-width: 1000px;
 }
 
-input {
+.form_myPage {
+	height: 20px;
     width: 500px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin: 20px;
 }
 
 .titleArea {
