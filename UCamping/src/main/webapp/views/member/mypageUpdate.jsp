@@ -123,7 +123,7 @@
 		
 		$("#updatePwd").on("click", () => {
 			const url = "${ pageContext.request.contextPath }/member/updatePwd";
-			const status = "left=500px, top=200px, width=400px,height=200px";
+			const status = "left=500px, top=200px, width=500px,height=300px";
 			
 			open(url, "", status);
 		});

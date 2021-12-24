@@ -6,16 +6,29 @@
 <meta charset="UTF-8">
 <title>비밀번호변경</title>
 <style>
+	div h2 {
+  		margin: 0 auto;
+  		text-align: center;
+	}
     div#updatePassword-container{
-        background:yellowgreen;
+        background: rgba(149, 178, 142, 0.5);
     }
     div#updatePassword-container table {
         margin:0 auto;
-        border-spacing: 20px;
+        border-spacing: 30px;
     }
     div#updatePassword-container table tr:last-of-type td {
         text-align:center;
     }
+    #button input {
+		cursor: pointer;
+		border: 0;
+		width: 100px;
+		height: 30px;
+		background-color: #A4835F;
+		border-radius: 10px;
+		color: rgb(245, 234, 234);
+	}
 </style>
 <script src="${ pageContext.request.contextPath }/resources/js/jquery-3.6.0.js"></script>
 </head>
@@ -23,6 +36,12 @@
 	<div id="updatePassword-container">
 		<form action="${ pageContext.request.contextPath }/member/updatePwd" method="post">
 			<table>
+				<tr>
+					<th>현재 비밀번호</th>
+					<td>
+						<input type="password" name="userPwd" id="nowPass" required>
+					</td>
+				</tr>
 				<tr>
 					<th>변경할 비밀번호</th>
 					<td>
@@ -36,7 +55,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2">
+					<td colspan="2" id="button">
 						<input type="submit" value="변경" onclick="return validate();">
 						&nbsp;
 						<input type="button" value="닫기" onclick="self.close();">
