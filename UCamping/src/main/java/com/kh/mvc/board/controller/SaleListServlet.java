@@ -40,10 +40,11 @@ public class SaleListServlet extends HttpServlet {
     	}
     	
     	listCount = service.getBoardCount();
-    	pageInfo = new PageInfo(page, 10, listCount, 4);
+    	pageInfo = new PageInfo(page, 10, listCount, 6);
     	salelist = service.getBoardList(pageInfo);
     	
     	System.out.println(listCount);
+    	System.out.println(salelist);
     	
     	request.setAttribute("pageInfo", pageInfo);
     	request.setAttribute("salelist", salelist);

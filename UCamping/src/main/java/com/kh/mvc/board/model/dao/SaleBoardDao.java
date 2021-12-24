@@ -1,3 +1,4 @@
+
 package com.kh.mvc.board.model.dao;
 
 import java.sql.Connection;
@@ -79,6 +80,7 @@ public class SaleBoardDao {
 				saleboard.setWriterId(rs.getString("ID"));
 				saleboard.setTitle(rs.getString("SALE_TITLE"));
 				saleboard.setContent(rs.getString("SALE_CONTENT"));
+				saleboard.setFileName(rs.getString("SALE_FILENAME"));
 				saleboard.setPrice(rs.getString("SALE_PRICE"));
 				System.out.println(saleboard);
 				

@@ -90,7 +90,7 @@ public class SaleWriteServlet extends HttpServlet {
     		saleboard.setGoodsStatus(goodsstatus);
     		saleboard.setDealStatus(dealStatus);
     		saleboard.setContent(content);
-    		saleboard.setRenamedFileName(filesystemName);
+    		saleboard.setFileSystemName(filesystemName);
     		
     		result = service.save(saleboard);
     		

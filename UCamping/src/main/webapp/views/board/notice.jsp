@@ -32,40 +32,65 @@
 	<section>
       <div id="notice">공지사항</div>
 
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 200px;">NO</th><th>제목</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align: center;">6</td><td>[이벤트] 우리동네 설경을 자랑해보세요</td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">5</td><td>지역광고 후기이벤트 당첨자를 공개해요!</td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">4</td><td>개인정보처리방침이 변경될 예정이에요</td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">3</td><td>중고거래 게시판 거래 정책이 변경될 예정이에요</td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">2</td><td>전자거래분쟁조정위원회 안저넉래 캠페인에 따른 공지 전달드려요</td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">1</td><td>유캠프 운영정책 안내</td>
-          </tr>
-        </tbody>
-      </table>
-      <div id="back-forward">
-        <a href="javascript:void(0)" class="on">&lt;&lt;</a>
-        <a href="javascript:void(0)">&lt;</a>
-        <a href="javascript:void(0)">1</a>
-        <a href="javascript:void(0)">&gt;</a>
-        <a href="javascript:void(0)">&gt;&gt;</a>
-      </div>
+ <table id="tbl-board">
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성일</th>
+			</tr>
+			<c:if test="${ empty list }">			
+				<tr>
+					<td colspan="3" style="text-align: center;">
+						조회된 게시글이 없습니다.
+					</td>
+				</tr>	
+			</c:if>
+			<c:if test="${ !empty list }">
+				<c:forEach var="notice" items="${list}">
+					<tr>
+						<td>${ notice.rowNum }</td>
+						<td style="text-align: center;">
+							<a href="${ pageContext.request.contextPath }/notice/view?no=${ notice.no }">
+								${ notice.title }
+							</a>
+						</td>
+						<td>${ notice.createDate }</td>
+					</tr>
+				</c:forEach>
+			</c:if>			
+		</table>
+		
+      <c:if test="${ !empty loginMember && loginMember.role == 'ROLE_ADMIN'}">
+      <button type="button" id="btn-add"
+      onclick="location.href='${ path }/admin/notice/write'">글쓰기</button>
+      </c:if>
+
+
+		<div id="pageBar" style="letter-spacing: 15px;">
+			<!-- 맨 처음으로 -->
+			<a href="${ pageContext.request.contextPath }/notice?page=1" style="letter-spacing: 0px;">&lt;&lt;</a>
+
+			<!-- 이전 페이지로 -->
+			<a href="${ pageContext.request.contextPath }/notice?page=${ pageInfo.prevePage }">&lt;</a>
+			<!--  10개 페이지 목록 -->
+			<c:forEach begin="${ pageInfo.startPage }" end="${ pageInfo.endPage }" varStatus="status">
+				<c:if test="${ status.current == pageInfo.currentPage }">				
+					<span style="color: #a4835f;">${ status.current }</span>
+				</c:if>
+				
+				<c:if test="${ status.current != pageInfo.currentPage }">				
+					<a href="${ pageContext.request.contextPath }/notice?page=${ status.current }">${ status.current }</a>
+				</c:if>
+
+			</c:forEach>
+			<!-- 다음 페이지로 -->
+			<a href="${ pageContext.request.contextPath }/notice?page=${ pageInfo.nextPage }">&gt;</a>
+
+			<!-- 맨 끝으로 -->
+			<a href="${ pageContext.request.contextPath }/notice?page=${ pageInfo.maxPage }" style="letter-spacing: 0px;">&gt;&gt;</a>
+		</div>
+		
+      
       
   </section>
   

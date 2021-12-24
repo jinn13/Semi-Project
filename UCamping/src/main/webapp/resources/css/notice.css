@@ -12,6 +12,10 @@ body {
   
 }
 
+#pageBar{
+    text-align: center;
+}
+
 /* --------------작은 카테고리------------- */
 #sml-category-area{
   width: 1200px;
@@ -100,6 +104,11 @@ th, td {
   padding: 10px;
   margin: 0 auto;
 }
+
+#tbl-board{
+    text-align: center;	
+}
+
 
 section #back-forward {
     text-align: center;

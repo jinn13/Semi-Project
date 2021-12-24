@@ -39,13 +39,13 @@
 	                    </tr>
 	                    <tr>
 	                        <td id="images" colspan="" rowspan="5" width="370px" height="">
-	                            <img src="${ saleboard.FileName }" width="318px" height="174px"/>
+	                            <img src="${ path }/resources/upload/saleboard/${ saleboard.fileName}" width="318px" height="174px"/>
 	                        </td>
 	                        <td style="font-size: 18px;" id="title"colspan="2" width="646px" height="35px">${ saleboard.title }</td>   
 	                    </tr>
 	                    <tr>
 	                        <td></td>
-	                        <td style="font-size: 16px;" width="200px"><img src="./semi.resources/images/icons8-star-96.png" width="20" height="20"> 관심상품 등록</td>
+	                        <td style="font-size: 16px;" width="200px"><img src="${ path }/resources/images/icon/icons8-star-96.png" width="20" height="20"> 관심상품 등록</td>
 	                    </tr>
 	                    <tr>
 	                        
@@ -53,11 +53,11 @@
 	                        
 	                    </tr>
 	                    <tr>
-	                        <td style="font-size: 16px;">${ saleboard.price }</td>
-	                        <td width="200px" style="font-size: 16px;"><img src="./semi.resources/images/icons8-chat-64.png" width="20" height="20"> 채팅 보내기</td>
+	                        <td style="font-size: 16px;">가격 : ${ saleboard.price }</td>
+	                        <td width="200px" style="font-size: 16px;"><img src="${ path }/resources/images/icon/icons8-chat-64.png" width="20" height="20"> 채팅 보내기</td>
 	                    </tr>
 	                    <tr>
-	                        <td style="font-size: 16px;">${ saleboard.writerId }</td>
+	                        <td style="font-size: 16px;">판매자 : ${ saleboard.writerId }</td>
 	                        
 	                    </tr>
 	                    <tr></tr>
@@ -67,10 +67,10 @@
         </table>
         <div id="pageBar">
 			<!-- 맨 처음으로 -->
-			<button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=1'">&lt;&lt;</button>
+			<button onclick="location.href='${ pageContext.request.contextPath }/saleboard/salelist?page=1'">&lt;&lt;</button>
 
 			<!-- 이전 페이지로 -->
-			<button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ pageInfo.prevePage }'">&lt;</button>
+			<button onclick="location.href='${ pageContext.request.contextPath }/saleboard/salelist?page=${ pageInfo.prevePage }'">&lt;</button>
 
 			<!--  10개 페이지 목록 -->
 			<c:forEach begin="${ pageInfo.startPage }" end="${ pageInfo.endPage }" varStatus="status">
@@ -79,15 +79,15 @@
 				</c:if>
 				
 				<c:if test="${ status.current != pageInfo.currentPage }">				
-					<button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ status.current }'">${ status.current }</button>
+					<button onclick="location.href='${ pageContext.request.contextPath }/saleboard/salelist?page=${ status.current }'">${ status.current }</button>
 				</c:if>
 			</c:forEach>
 
 			<!-- 다음 페이지로 -->
-			<button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ pageInfo.nextPage }'">&gt;</button>
+			<button onclick="location.href='${ pageContext.request.contextPath }/saleboard/salelist?page=${ pageInfo.nextPage }'">&gt;</button>
 
 			<!-- 맨 끝으로 -->
-			<button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ pageInfo.maxPage }'">&gt;&gt;</button>
+			<button onclick="location.href='${ pageContext.request.contextPath }/saleboard/salelist?page=${ pageInfo.maxPage }'">&gt;&gt;</button>
 		</div>
     </div>
 </body>

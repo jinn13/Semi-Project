@@ -26,9 +26,9 @@ public class SaleBoard {
 	
 	private String content;
 	
-	private String FileName;
+	private String fileName;
 	
-	private String renamedFileName;
+	private String fileSystemName;
 	
 	private String boardStatus;
 	
