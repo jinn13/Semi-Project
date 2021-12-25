@@ -68,7 +68,7 @@
                 <div id="navwrap">
                   <ul class="nav">
                         <!----- Full Drop Down Name ----> 
-                        <li class="dropdown"><a href="${ path }/views/transaction/buygoods.jsp">구매하기</a>
+                        <li class="dropdown"><a href="${ path }/saleboard/salelist">구매하기</a>
                         <!----- Full Drop Down Name Ends Here ---->     
                               
                         <!----- Full Drop Down Contents  Starts Here---->     
@@ -76,7 +76,7 @@
                             <div class="column">
                               <h3 class="title1">구매하기</h3>
                               <ul>
-                                <li><a href="#">구매홈</a></li>
+                                <li><a href="${ path }/saleboard/salelist">구매홈</a></li>
                                 <li><a href="#">텐트 및 타프</a></li>
                                 <li><a href="#">침구 및 캠핑용품</a></li>
                                 <li><a href="#">가구 및 수납</a></li>
@@ -88,12 +88,12 @@
                             <div class="column">
                                     <h3>판매하기</h3>
                               <ul>
-                                <li><a href="#">판매홈</a></li>
-                                <li><a href="#">텐트 및 타프</a></li>
-                                <li><a href="#">침구 및 캠핑용품</a></li>
-                                <li><a href="#">가구 및 수납</a></li>
-                                <li><a href="#">취사용품</a></li>
-                                <li><a href="#">의류/조명/잡화</a></li>
+                                <li><a href="${ path }/board/salewrite">판매홈</a></li>
+                                <li><a href="${ path }/board/salewrite?category=TentAndTarf">텐트 및 타프</a></li>
+                                <li><a href="${ path }/board/salewrite?category=BeddingAndEquipment">침구 및 캠핑용품</a></li>
+                                <li><a href="${ path }/board/salewrite?category=FurnitureAndAccept">가구 및 수납</a></li>
+                                <li><a href="${ path }/board/salewrite?category=Cooking">취사용품</a></li>
+                                <li><a href="${ path }/board/salewrite?category=ClothesAndLanternAndStuff">의류/조명/잡화</a></li>
                               </ul>
                             </div>
                             
@@ -116,7 +116,7 @@
                             </div>
                             
                         <!----- Full Drop Down Name ----> 
-                          <li class="dropdown"><a href="${ path }/views/transaction/sellgoods.jsp">판매하기</a>     
+                          <li class="dropdown"><a href="${ path }/board/salewrite">판매하기</a>     
                         <!----- Full Drop Down Name Ends Here ---->     
             
                         <!----- Full Drop Down Contents  Starts Here---->     
@@ -124,7 +124,7 @@
                           <div class="column">
                             <h3>구매하기</h3>
                             <ul>
-                              <li><a href="#">구매홈</a></li>
+                              <li><a href="${ path }/saleboard/salelist">구매홈</a></li>
                               <li><a href="#">텐트 및 타프</a></li>
                               <li><a href="#">침구 및 캠핑용품</a></li>
                               <li><a href="#">가구 및 수납</a></li>
@@ -136,13 +136,13 @@
                           <div class="column">
                                   <h3>판매하기</h3>
                             <ul>
-                              <li><a href="#">판매홈</a></li>
-                              <li><a href="#">텐트 및 타프</a></li>
-                              <li><a href="#">침구 및 캠핑용품</a></li>
-                              <li><a href="#">가구 및 수납</a></li>
-                              <li><a href="#">취사용품</a></li>
-                              <li><a href="#">의류/조명/잡화</a></li>
-                            </ul>
+                                <li><a href="${ path }/board/salewrite">판매홈</a></li>
+                                <li><a href="${ path }/board/salewrite?category=TentAndTarf">텐트 및 타프</a></li>
+                                <li><a href="${ path }/board/salewrite?category=BeddingAndEquipment">침구 및 캠핑용품</a></li>
+                                <li><a href="${ path }/board/salewrite?category=FurnitureAndAccept">가구 및 수납</a></li>
+                                <li><a href="${ path }/board/salewrite?category=Cooking">취사용품</a></li>
+                                <li><a href="${ path }/board/salewrite?category=ClothesAndLanternAndStuff">의류/조명/잡화</a></li>
+                              </ul>
                           </div>
             
                           <div class="column">
@@ -175,7 +175,7 @@
                           <div class="column">
                             <h3>구매하기</h3>
                             <ul>
-                              <li><a href="#">구매홈</a></li>
+                              <li><a href="${ path }/saleboard/salelist">구매홈</a></li>
                               <li><a href="#">텐트 및 타프</a></li>
                               <li><a href="#">침구 및 캠핑용품</a></li>
                               <li><a href="#">가구 및 수납</a></li>
@@ -187,13 +187,13 @@
                           <div class="column">
                                   <h3>판매하기</h3>
                             <ul>
-                              <li><a href="#">판매홈</a></li>
-                              <li><a href="#">텐트 및 타프</a></li>
-                              <li><a href="#">침구 및 캠핑용품</a></li>
-                              <li><a href="#">가구 및 수납</a></li>
-                              <li><a href="#">취사용품</a></li>
-                              <li><a href="#">의류/조명/잡화</a></li>
-                            </ul>
+                                <li><a href="${ path }/board/salewrite">판매홈</a></li>
+                                <li><a href="${ path }/board/salewrite?category=TentAndTarf">텐트 및 타프</a></li>
+                                <li><a href="${ path }/board/salewrite?category=BeddingAndEquipment">침구 및 캠핑용품</a></li>
+                                <li><a href="${ path }/board/salewrite?category=FurnitureAndAccept">가구 및 수납</a></li>
+                                <li><a href="${ path }/board/salewrite?category=Cooking">취사용품</a></li>
+                                <li><a href="${ path }/board/salewrite?category=ClothesAndLanternAndStuff">의류/조명/잡화</a></li>
+                              </ul>
                           </div>
                           
                           <div class="column">
@@ -225,7 +225,7 @@
                             <div class="column">
                               <h3>구매하기</h3>
                               <ul>
-                                <li><a href="#">구매홈</a></li>
+                                <li><a href="${ path }/saleboard/salelist">구매홈</a></li>
                                 <li><a href="#">텐트 및 타프</a></li>
                                 <li><a href="#">침구 및 캠핑용품</a></li>
                                 <li><a href="#">가구 및 수납</a></li>
@@ -237,12 +237,12 @@
                             <div class="column">
                                     <h3>판매하기</h3>
                               <ul>
-                                <li><a href="#">판매홈</a></li>
-                                <li><a href="#">텐트 및 타프</a></li>
-                                <li><a href="#">침구 및 캠핑용품</a></li>
-                                <li><a href="#">가구 및 수납</a></li>
-                                <li><a href="#">취사용품</a></li>
-                                <li><a href="#">의류/조명/잡화</a></li>
+                                <li><a href="${ path }/board/salewrite">판매홈</a></li>
+                                <li><a href="${ path }/board/salewrite?category=TentAndTarf">텐트 및 타프</a></li>
+                                <li><a href="${ path }/board/salewrite?category=BeddingAndEquipment">침구 및 캠핑용품</a></li>
+                                <li><a href="${ path }/board/salewrite?category=FurnitureAndAccept">가구 및 수납</a></li>
+                                <li><a href="${ path }/board/salewrite?category=Cooking">취사용품</a></li>
+                                <li><a href="${ path }/board/salewrite?category=ClothesAndLanternAndStuff">의류/조명/잡화</a></li>
                               </ul>
                             </div>
             

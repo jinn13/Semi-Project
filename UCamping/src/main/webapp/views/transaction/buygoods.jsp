@@ -46,7 +46,10 @@
 	                    <tr>
 	                        <td></td>
 	                        <td style="font-size: 16px;" width="200px">
-	                        	<a href="#"><img src="${ path }/resources/images/icon/icons8-star-96.png" width="20" height="20"> 관심상품 등록</a>
+	                        	<c:if test="${ ! empty loginMember && loginMember.id == saleboard.writerId }">
+									<a href="${ path }/saleboard/wish?no=${ saleboard.no }"><img src="${ path }/resources/images/icon/icons8-star-96.png" width="20" height="20"> 관심상품 등록</a>
+								</c:if>
+								
 	                        </td>
 	                        
 	                    </tr>
