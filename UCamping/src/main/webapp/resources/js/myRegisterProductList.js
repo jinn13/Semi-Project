@@ -10,7 +10,7 @@ $(document).ready(function() {
         
         if(total != checked) $(".checked_delete_title #chk_all").prop("checked", false);
         else $(".checked_delete_title #chk_all").prop("checked", true); 
-    });å
+    });
 
         var selection = document.getElementById("categories_option_box");
     function select() {

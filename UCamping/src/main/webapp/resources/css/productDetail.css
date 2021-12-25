@@ -132,12 +132,13 @@ button {
 .detail_box .photo_area .main_img {
     width: 450px;
     height: 450px;
-    background: url(../resources/exphoto_main.jpg) no-repeat;
+    background: url(goodsimage) no-repeat;
     background-size: cover;
     position: relative;
 }
 
 .img_viewport {
+	display: none;
     float: left;
     width: 460px;
     position: relative;
@@ -404,6 +405,7 @@ td {
 
 /* 상세설명 */
 .detail_comment .description_text {
+	margin-top: 50px;
     padding-bottom: 50px;
     width: 680px;
     float: left;
@@ -426,7 +428,7 @@ td {
     width: 234px;
     padding: 30px 0 28px;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 50px;
     border-radius: 20px;
 }
 
