@@ -12,7 +12,11 @@ import lombok.NoArgsConstructor;
 public class QuestionBoard {
 	private int otoNo;
 	
+	private int rowNum;	
+	
 	private int writerNo;
+	
+	private String writerId;
 	
 	private String otoTitle;
 	

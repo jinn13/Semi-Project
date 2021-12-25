@@ -24,98 +24,87 @@
                 <li><a href="${ path }/question" class="sml-text2"><span>1:1문의</span></a></li>
             </ul>
         </div>
-  <h1 style="text-align: center;">무엇을 도와드릴까요?</h1>
-    <br><br><br>
-    <table id="tbl-question">
-        <tr>
-            <th>번호</th>
-            <th width="500px">제목</th>
-            <th width="100px">글쓴이</th>
-            <th width="100px">작성일</th>
-            <th width="100px">조회수</th>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
 
-    </table>
 
-        <div id="btn-area">
-          <button type="button" id="btn1" onclick="location.href='${ path }/question/write'">문의하기</button>
-        </div>
-    <br>
+        <section>
+            <div id="title-area1">	
+                <div id="notice">1:1문의 게시판</div>
+            </div>
+        
+         <table id="tbl-board">
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th style="width: 200px">작성자</th>
+                        <th style="width: 200px">작성일</th>
+                    </tr>
+                    <c:if test="${ empty list }">			
+                        <tr>
+                            <td colspan="3" style="text-align: center;">
+                                조회된 게시글이 없습니다.
+                            </td>
+                        </tr>	
+                    </c:if>
+                   
+                    <c:if test="${ !empty list }">
+                        <c:forEach var="question" items="${list}">
+                            <tr>
+                                <td>${ question.rowNum }</td>
+                                <td style="text-align: left;">
+                                    <a href="${ pageContext.request.contextPath }/question/view?no=${ question.otoNo }">
+                                        ${ question.otoTitle }
+                                    </a>
+                                </td>
+                                <td>${ question.writerId }</td>
+                                <td>${ question.otoDate }</td>
+                            </tr>
+                        </c:forEach>
+                    </c:if>		
+                   	
+                </table>
+                
+	 			
+                <div id="title-area1">
+                    <button type="button" id="btn-add" 
+                    onclick="location.href='${ path }/question/write'">문의하기</button>
+                </div>
+        
+         
+                <div id="pageBar" style="letter-spacing: 15px;">
+
+                    <a href="${ pageContext.request.contextPath }/question?page=1" style="letter-spacing: 0px;">&lt;&lt;</a>
+        
+
+                    <a href="${ pageContext.request.contextPath }/question?page=${ pageInfo.prevePage }">&lt;</a>
+
+                    <c:forEach begin="${ pageInfo.startPage }" end="${ pageInfo.endPage }" varStatus="status">
+                        <c:if test="${ status.current == pageInfo.currentPage }">				
+                            <span style="color: #a4835f;">${ status.current }</span>
+                        </c:if>
+                        
+                        <c:if test="${ status.current != pageInfo.currentPage }">				
+                            <a href="${ pageContext.request.contextPath }/question?page=${ status.current }">${ status.current }</a>
+                        </c:if>
+        
+                    </c:forEach>
+         
+                    <a href="${ pageContext.request.contextPath }/question?page=${ pageInfo.nextPage }">&gt;</a>
+        
+                
+                    <a href="${ pageContext.request.contextPath }/question?page=${ pageInfo.maxPage }" style="letter-spacing: 0px;">&gt;&gt;</a>
+                </div>
+
+         
+        
+        </section>       
+
+
+
     
-    <div id="pageBar">
-        <!-- 맨 처음으로 -->
-        <button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=1'">&lt;&lt;</button>
 
-        <!-- 이전 페이지로 -->
-        <button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ pageInfo.prevePage }'">&lt;</button>
 
-        <!--  10개 페이지 목록 -->
-        <c:forEach begin="${ pageInfo.startPage }" end="${ pageInfo.endPage }" varStatus="status">
-            <c:if test="${ status.current == pageInfo.currentPage }">				
-                <button disabled>${ status.current }</button>
-            </c:if>
-            
-            <c:if test="${ status.current != pageInfo.currentPage }">				
-                <button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ status.current }'">${ status.current }</button>
-            </c:if>
-        </c:forEach>
 
-        <!-- 다음 페이지로 -->
-        <button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ pageInfo.nextPage }'">&gt;</button>
 
-        <!-- 맨 끝으로 -->
-        <button onclick="location.href='${ pageContext.request.contextPath }/board/list?page=${ pageInfo.maxPage }'">&gt;&gt;</button>
-    </div>
-</div>
 
 </body>
 </html>

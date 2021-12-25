@@ -52,10 +52,13 @@ public class NoticeWriteServlet extends HttpServlet {
     	String title = request.getParameter("title");
     	String writer = request.getParameter("writer");
     	String content = request.getParameter("content");
+    	// 내용의 경우 엔터, 개행은 <br>로 대체하는 코드
+    	content=content.replace("\r\n","<br>");
     	
     	System.out.println("제목 : "+title);
     	System.out.println("글쓴이 : "+writer);
     	System.out.println("내용 : "+content);
+    	
     	
     	// 로그인 안된 사용자가 게시글 작성이 불가능하도록 체크하는 로직
     	 HttpSession session = request.getSession(false);

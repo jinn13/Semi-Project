@@ -37,12 +37,8 @@ public class QuestionListServlet extends HttpServlet {
 		pageInfo = new PageInfo(page, 10, listCount, 10);
 		list=service.getQBoardList(pageInfo);
 		
-//		System.out.println("서블릿에서 찍음 총 페이지:"+listCount);
-//		System.out.println("pageInfo 찍어봄 : "+pageInfo);
-//		System.out.println("이전페이지"+pageInfo.getPrevePage());
 		
-//		System.out.println(listCount);
-//		System.out.println(list);
+
 		
 		// ﻿﻿request 객체를 가져와서 데이터를 setAttribute()에 담아서 foward로 notice.jsp에 넘겨준다.
 		request.setAttribute("pageInfo", pageInfo);

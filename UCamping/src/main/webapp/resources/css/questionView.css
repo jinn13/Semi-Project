@@ -12,6 +12,29 @@ body {
   
 }
 
+.btn{
+    cursor: pointer;
+    font-size: 14px;
+    /* line-height: 1; */
+    border-radius: 30px;
+    transition-property: background-color;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    /* letter-spacing: 2px; */
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    /* margin-top: 5px; */
+    margin-bottom: 20px;
+    color: white;
+    background-color: #a4835f;
+/* float: right; */
+}
+
+.btn:hover{
+	background-color: black;
+    color: #fff;
+}
+
 /* --------------작은 카테고리------------- */
 #sml-category-area{
   width: 1200px;
@@ -78,19 +101,7 @@ body {
     margin-top: 12px;
 }
 
-.btn{
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    background-color: #a4835f;
-    border: none;
-    padding: 7px 20px 7px;
-    margin-left: 5px;
-    /* margin: auto; */
-    margin-bottom: 50px;
-    margin-top: 10px;
-    cursor: pointer;
-}
+
 
 #line3{
     border: 1px solid black;
@@ -144,4 +155,26 @@ h2{
     margin: auto;
     padding-top: 50px;
     font-size: 17px;
+}
+
+#file-area{
+    /* background-color: yellow; */
+    display: flex;
+    /* margin-left: 70px; */
+    margin: 10px 10px;
+    display: inline;
+
+}
+
+#file-area2{
+    display: inline-block;
+    /* background-color: blue; */
+    width: 570px;
+    padding: 15px;
+}
+
+#writer{
+    display: inline-block;
+    font-weight: bold;
+    /* background-color: red; */
 }

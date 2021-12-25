@@ -167,3 +167,77 @@ textarea::placeholder{
     color: #e4d0bb;
     text-align: left;
 }
+
+    .file-btn{
+        cursor: pointer;
+        font-size: 12px;
+        width: 50px;
+        /* line-height: 1; */
+        border-radius: 20px;
+        transition-property: background-color;
+        transition-duration: .3s;
+        /* border: 1px solid transparent; */
+        /* letter-spacing: 2px; */
+        font-weight: bold;
+        padding: 5px 10px 5px 10px;
+        /* margin-top: 5px; */
+        /* margin-bottom: 20px; */
+        color: white;
+        background-color: #a4835f;
+        text-align: center;
+    }
+
+    .file-btn:hover{
+	background-color: black;
+    color: #fff;
+}
+
+    
+
+.btn{
+    cursor: pointer;
+    font-size: 14px;
+    /* line-height: 1; */
+    border-radius: 20px;
+    transition-property: background-color;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    /* letter-spacing: 2px; */
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    /* margin-top: 5px; */
+    margin-bottom: 20px;
+    color: white;
+    background-color: #a4835f;
+/* float: right; */
+}
+
+.btn:hover{
+	background-color: black;
+    color: #fff;
+}
+
+.file-area{
+    /* background-color: yellow; */
+    display: flex;
+    margin: 10px 65px;
+}
+
+.file-area>label{
+    margin-right: 10px;
+    /* background-color: blue; */
+}
+
+#file-title{
+    display: block;
+    margin-top: 3px;
+    font-size: 12px;
+    /* vertical-align: middle; */
+    /* background-color: tomato; */
+}
+
+input[type="text"] {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+  /* filter: brightness(90%); */
+}

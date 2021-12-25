@@ -45,6 +45,7 @@ public class QuestionService {
 		
 		if(qBoard.getOtoNo() != 0) {
 			result = dao.updateQBoard(connection, qBoard);
+//			System.out.println("업에이트 되었나?(여긴서비스임) : "+result);
 		} else {
 			result = dao.insertQBoard(connection, qBoard);
 		}
@@ -66,6 +67,28 @@ public class QuestionService {
 		close(connection);
 		
 		return list;
+	}
+
+	public int delete(int no) {
+		// Delete이니 결과값은 정수값
+		int result=0;
+		// 커넥션 필요(클로즈도 잊지말고 마지막에 적어주자)
+		Connection connection=getConnection();
+		
+		// dao한테 상태값만 바꾸라고 시키고 결과값 받기
+		result=dao.updateStatus(connection, no, "N");
+		
+		// 상태값 바꾸는데 성공 또는 실패하면 커밋or롤백하기 
+		if(result>0) {
+			commit(connection);
+		}else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+
 	}
 	
 	

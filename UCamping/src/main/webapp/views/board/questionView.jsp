@@ -37,43 +37,67 @@
             <h2>1:1 문의</h2>
             <hr id="line3">
             <div id="title-area">
-                <p type="hidden" id="otoNo">${ qBoard.otoNo }</p>
-                <p type="hidden" id="otoPwd">${ qBoard.otoPwd }</p>
-                <div id="title">${ qBoard.otoTitle }</div>
-                <div id="date">${ qBoard.otoDate }</div>
+                <div id="title">${ question.otoTitle }</div>
+                <div id="date">${ question.otoDate }</div>
             </div>
             <hr>
-            <div id="file-area">첨부파일 : ${ qBoard.otoFilename }</div>
+
+                <div id="file-area">
+
+                    <div id="file-area2">
+            		<c:if test="${ empty question.otoFilename }">
+					<!-- OriginalFileName없으면 span으로 - 찍기 -->
+						<span> - </span>
+					</c:if>
+					<c:if test="${ !empty question.otoFilename }">
+					<!-- OriginalFileName있으면 img와 파일명 출력하기 -->
+						<li><a href="javascript:fileDownload('${question.otoFilename}', '${question.renamedFileName}')" class="sml-text2"><span><i id="sml-ctgr-img1" class="material-icons-outlined chgcolor">file_download</i>${ question.otoFilename }</span></a></li>
+						</a>	
+					</c:if>
+                </div>
+                    <div id="writer">${question.writerId}</div>
+                </div>
+            
+            
+            
             <hr>
             <div id="content-area">
                 <div>
-                ${ qBoard.otoContent }
+                ${ question.otoContent }
 
                 </div>
             </div>
 
             <div id="btn-area">
-            <c:if test="${ !empty loginMember && loginMember.role == 'ROLE_ADMIN' }">
-                <button class="btn" type="button" onclick="location.href='${ pageContext.request.contextPath }/board/auestionUpdate?no=${ qboard.otoNo }'">수정</button>
+            <c:if test="${ ! empty loginMember && loginMember.id == question.writerId }">
+                <button class="btn" type="button" onclick="location.href='${ pageContext.request.contextPath }/question/update?no=${ question.otoNo }'">수정</button>
                 <button class="btn" type="button" id="btnDelete">삭제</button>
             </c:if>
             <button type="button" class="btn" onclick="location.href='${ pageContext.request.contextPath }/question'">목록으로</button>
             </div>
 
-        <script>
-            $(document).ready(()=>{
-                $("#btnDelete").on("click", ()=>{
-                    
-                    if(confirm("정말로 게시글을 삭제하겠습니까?")){
-                        location.replace("${ pageContext.request.contextPath }/board/delete?no=${ board.no }");
-                    }
-                })
-                
-            });
-        </script>
+
         </div>
     </div>
 </body>
+<script>
+	$(document).ready(()=>{
+		$("#btnDelete").on("click", ()=>{
+			
+			if(confirm("정말로 게시글을 삭제하겠습니까?")){
+				location.replace("${ pageContext.request.contextPath }/question/delete?no=${ question.otoNo }");
+			}
+		})
+		
+	});
 
+	function fileDownload(oname, rname){
+		
+		// 브라우저마다 동작 안할경우 있으므로 인코딩해서 넘겨주기
+		// encodeURIComponent()
+		// 	- 아스키문자(a~z, A~Z, 1~8, ..)는 그대로 전달하고 기타문자(한글, 특수문자 등)만 %XX(16진수 2자리)와 같이 변환된다.
+		location.assign("${ pageContext.request.contextPath }/question/fileDown?oname="+encodeURIComponent(oname)+"&rname="+encodeURIComponent(rname));		
+	}
+</script>
 
 <jsp:include page="/views/common/footer.jsp" />

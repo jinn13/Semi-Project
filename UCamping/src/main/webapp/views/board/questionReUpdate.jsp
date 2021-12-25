@@ -28,14 +28,14 @@
         </div>
 
         <div class="view-area">
-            <h2>1:1문의 제목</h2>
+            <h2>1:1문의 제목 수정</h2>
             <hr id="line">
-            <form action="${ pageContext.request.contextPath }/question/write" method="post" enctype="multipart/form-data">
+            <form action="${ pageContext.request.contextPath }/question/update" method="post" enctype="multipart/form-data">
             <input type="hidden" name="no" value="${ board.otoNo }">
 			<input type="hidden" name="originalFileName" value="${ board.otoFilename }">
 			<input type="hidden" name="renamedFileName" value="${ board.renamedFileName }">
             <div id="title-area">
-                <div id="title"><input type="text" name="title" id="title" placeholder="제목을 입력하세요."></div>
+                <div id="title"><input type="text" name="title" id="title" value="${ board.otoTitle }"></div>
             </div>
             <hr>
             <div class="file-area">
@@ -49,14 +49,14 @@
             </div>
             <hr>
             <div id="content-area">
-                <h2>1:1문의 내용</h2>
+                <h2>1:1문의 내용 수정</h2>
                 <div>
-                    <textarea id="content" name="content" cols="94" rows="13" placeholder="문의내용을 입력해주세요."></textarea>
+                    <textarea id="content" name="content" cols="94" rows="13">${ board.otoContent }</textarea>
                 </div>
             </div>
 
             <div id="btn-area">
-                <input type="submit" class="btn" value="등록">
+                <input type="submit" class="btn" value="수정하기">
                 <button type="button" class="btn" onclick="location.href='${ pageContext.request.contextPath }/question'">이전으로</button>
             </div>
         </form>

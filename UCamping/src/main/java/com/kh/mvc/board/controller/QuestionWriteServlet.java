@@ -71,6 +71,8 @@ public class QuestionWriteServlet extends HttpServlet {
     	String title = mr.getParameter("title");
     	String writer = mr.getParameter("writer");
     	String content = mr.getParameter("content");
+    	// 내용의 경우 엔터, 개행은 <br>로 대체하는 코드
+    	content=content.replace("\r\n","<br>");
     	
     	// 파일에 대한 정보를 가져올 때
     	String filesystemName=mr.getFilesystemName("upfile");
@@ -82,6 +84,9 @@ public class QuestionWriteServlet extends HttpServlet {
     	
     	if(loginMember != null) {
     		QuestionBoard board = new QuestionBoard();
+    		
+
+
     		
     		board.setWriterNo(loginMember.getNo());
     		board.setOtoTitle(title);
