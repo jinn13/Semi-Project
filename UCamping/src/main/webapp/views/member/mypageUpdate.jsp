@@ -111,29 +111,34 @@
         </div>
     </section>
 </main>
-	
 <script>
-	$(document).ready(() => {
-		$("#updateImg").on("click", () => {
-			const url = "${ pageContext.request.contextPath }/views/member/updateImg.jsp";
-			const status = "lest=500px, top=200px, width=500px, height=200px";
-		
-			open(url, "", status);
-		});
-		
-		$("#updatePwd").on("click", () => {
-			const url = "${ pageContext.request.contextPath }/member/updatePwd";
-			const status = "left=500px, top=200px, width=500px,height=300px";
-			
-			open(url, "", status);
-		});
-		
-		$("#btnDelete").on("click", () => {
-			if(confirm("정말로 탈퇴하시겠습니까?")) {
-				location.replace("${ pageContext.request.contextPath }/member/delete");
-			}
-		});
+$(document).ready(() => {
+	$("#updateImg").on("click", () => {
+		const url = "${ pageContext.request.contextPath }/views/member/updateImg.jsp";
+		const status = "lest=500px, top=200px, width=500px, height=200px";
+	
+		open(url, "", status);
 	});
+	
+	$("#updatePwd").on("click", () => {
+		const url = "${ pageContext.request.contextPath }/updatePwd";
+		const status = "left=500px, top=200px, width=500px,height=270px";
+		
+		open(url, "", status);
+	});
+	
+	$("#btnDelete").on("click", () => {
+		if(confirm("정말로 탈퇴하시겠습니까?")) {
+			location.replace("${ pageContext.request.contextPath }/delete");
+		}
+	});
+});
 </script>
+<style>
+	table span {
+		font-size: 15px;
+	}
+</style>
 
+<script src="${ path }/resources/js/mypageUpdate.js"></script>
 <jsp:include page="/views/common/footer.jsp" />

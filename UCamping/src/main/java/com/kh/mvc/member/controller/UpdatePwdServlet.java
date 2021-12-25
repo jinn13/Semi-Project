@@ -34,15 +34,16 @@ public class UpdatePwdServlet extends HttpServlet {
     	HttpSession session = request.getSession(false);
 		Member loginMember = session != null ? (Member) session.getAttribute("loginMember") : null;
 		String userPwd = request.getParameter("userPwd");
+		String userId = request.getParameter("userID");
 		
 		if(loginMember != null) {
-			result = service.updatePassword(loginMember.getNo(), userPwd);
+			result = service.updatePassword(userId, userPwd);
 			
 			if(result > 0) {
 				request.setAttribute("msg", "비밀번호 변경이 완료되었습니다.");
 				request.setAttribute("script", "self.close()");			
 			} else {
-				request.setAttribute("msg", "비밀번호 변경에 실패하였습니다.");
+				request.setAttribute("msg", "현재 아이디를 확인해주세요.");
 				request.setAttribute("location", "/member/updatePwd");
 			}
 			

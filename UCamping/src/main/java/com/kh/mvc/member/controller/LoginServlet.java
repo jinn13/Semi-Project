@@ -12,7 +12,7 @@ import com.kh.mvc.member.model.service.MemberService;
 import com.kh.mvc.member.model.vo.Member;
 
 
-@WebServlet(name="login", urlPatterns = "/member/login")
+@WebServlet(name="login", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -80,7 +80,7 @@ public class LoginServlet extends HttpServlet {
     		
     		// 1. 공용으로 사용하는 에러 메시지 출력 페이지에 전달해줄 메시지와 이동할 페이지를 request 객체에 저장한다. 
     		request.setAttribute("msg", "아이디나 비밀번호가 일치하지 않습니다.");
-    		request.setAttribute("location", "/");
+    		request.setAttribute("location", "/login");
     		
     		// request 객체의 데이터를 유지해서 페이지를 넘기기 위해 RequestDispatcher를 이용해서 페이지 전환(forward)
     		request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);

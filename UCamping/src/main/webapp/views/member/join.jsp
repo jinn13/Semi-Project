@@ -27,7 +27,7 @@
             <ul class="sml-category">
                 <li><a href="${ path }" class="sml-text2"><span><i id="sml-ctgr-img1" class="material-icons-outlined chgcolor">home</i> 홈</span></a></li>
                 <li id="bar">></li>
-                <li><a href="${ path }/member/enroll" class="sml-text2"><span>회원가입</span></a></li>
+                <li><a href="${ path }/enroll" class="sml-text2"><span>회원가입</span></a></li>
             </ul>
         </div>
 
@@ -35,10 +35,11 @@
 <div id="container">
 		<div id="join">
 
-		<form name="memberEnrollFrm" action="${ pageContext.request.contextPath }/member/enroll" method="post">
+		<form name="memberEnrollFrm" action="${ path }/enroll" method="post">
 			<div class="form-group">
 				<label for="userId">아이디</label>
 				<input type="text" name="userId" id="userId" placeholder="첫 문자를 영어로 시작하여 총 5~12자로 입력하세요."/>
+				<input type="button" id="checkDuplicate" value="중복검사" >
 				<p id="member-id"></p>
 			</div>
 			<div class="form-group">
@@ -58,9 +59,9 @@
 			</div>
       		<div class="form-group">
 				<label for="userBirth">생년월일</label>
-				<input type="text" name="bornBirth" id="bornYear" placeholder="년도"/>
-        		<input type="text" name="bornBirth" id="bornMonth" placeholder="월"/>
-        		<input type="text" name="bornBirth" id="bornDate" placeholder="일"/>
+				<input type="text" name="bornBirth" id="bornYear" placeholder="1901"/>
+        		<input type="text" name="bornBirth" id="bornMonth" placeholder="01"/>
+        		<input type="text" name="bornBirth" id="bornDate" placeholder="01"/>
         		<div id="member-year"></div>
           		<div id="member-month"></div>
           		<div id="member-date"></div>
@@ -88,123 +89,37 @@
       </form>
 		</div>
 	</div>
+
 <script>
-//아이디
-let idCheck = RegExp(/^[a-zA-Z][a-zA-Z\d]{4,11}$/);
-$('#userId').keyup(function() {
-  if (!idCheck.test($('#userId').val())) {
-    $('#member-id').css('color', 'red').text("형식에 맞지 않음");
-  } else {
-    $('#member-id').css('color', 'green').text("형식에 맞음");
-  }
+//아이디 중복 확인
+$(document).ready(() => {
+	$("#checkDuplicate").on("click", () => {
+		let userId = $("#userId").val().trim();
+		
+		$.ajax({
+			type: "post",
+			url: "${ path }/idCheck",
+			dataType: "JSON",
+			data: {
+				userId
+			},
+			success: (data) => {
+				console.log(data);
+				
+				if(data.duplicate == true) {
+					alert("이미 사용중인 아이디 입니다.");
+				} else {
+					alert("사용 가능한 아이디 입니다.");
+				}
+			},
+			error: (error) => {
+				console.log(error);
+			}	
+		});
+	});
 });
-
-
-// 비밀번호
-let passwordCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^~*+=-])(?=.*[0-9]).{8,16}$/);
-$('#userPwd').keyup(function() {
-  if (!passwordCheck.test($('#userPwd').val())) {
-    $('#member-password').css('color', 'red').text("형식에 맞지 않음");
-  } else {
-    $('#member-password').css('color', 'green').text("형식에 맞음");
-  }
-});
-
-
-// 비밀번호 확인체크
-$('#userPwCheck').keyup(function(){
-  let passwd = $('#userPwd').val();
-  let passwdcheck = $('#userPwCheck').val();
-
-  if(passwd == passwdcheck){
-    passCheck = true;
-    $('#member-passwordcheck').text('동일한 비밀번호 입니다.');
-    $('#member-passwordcheck').css('color', '#08a600');
-  }else{
-    passCheck = false;
-    $('#member-passwordcheck').text('동일하지 않은 비밀번호 입니다.');
-    $('#member-passwordcheck').css('color', 'red');
-  }
-});
-
-
-// 이름
-let nameCheck = RegExp(/^[a-zA-Z가-힣]{2,}$/);
-$('#userName').keyup(function() {
-  if (!nameCheck.test($('#userName').val())) {
-    $('#member-name').css('color', 'red').text("형식에 맞지 않음");
-  } else {
-    $('#member-name').css('color', 'green').text("형식에 맞음");
-  }
-});
-
-
-// 생년월일
-// 년도
-let yearCheck = RegExp(/^(19|20)\d{2}$/);
-$('#bornYear').keyup(function() {
-  if (!yearCheck.test($('#bornYear').val())) {
-    $('#member-year').css('color', 'red').text("형식에 맞지 않음");
-  } else {
-    $('#member-year').css('color', 'green').text("형식에 맞음");
-  }
-});
-
-// 월
-let monthCheck = RegExp(/^(0[1-9]|1[012])$/);
-$('#bornMonth').keyup(function() {
-  if (!monthCheck.test($('#bornMonth').val())) {
-    $('#member-month').css('color', 'red').text("형식에 맞지 않음");
-  } else {
-    $('#member-month').css('color', 'green').text("형식에 맞음");
-  }
-});
-
-// 일
-let dateCheck = RegExp(/^(0[1-9]|[12][0-9]|3[01])$/);
-$('#bornDate').keyup(function() {
-  if (!dateCheck.test($('#bornDate').val())) {
-    $('#member-date').css('color', 'red').text("형식에 맞지 않음");
-  } else {
-    $('#member-date').css('color', 'green').text("형식에 맞음");
-  }
-});
-
-
-// 닉네임
-let nicknameCheck = RegExp(/^[a-zA-Z가-힣]{2,}$/);
-$('#userNickname').keyup(function() {
-	if (!nicknameCheck.test($('#userNickname').val())) {
-		$('#member-nickname').css('color', 'red').text("형식에 맞지 않음");
-		} else {
-      $('#member-nickname').css('color', 'green').text("형식에 맞음");
-    }
-});
-
-
-// 이메일
-let emailCheck = RegExp(/^[\w-]+@([\w-]+)\.([A-Za-z\.]{2,6})$/);
-$('#userEmail').keyup(function() {
-	if (!emailCheck.test($('#userEmail').val())) {
-		$('#member-email').css('color', 'red').text("형식에 맞지 않음");
-		} else {
-      $('#member-email').css('color', 'green').text("형식에 맞음");
-    }
-});
-
-
-// 휴대전화
-let phoneCheck = RegExp(/^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/);
-$('#userPhone').keyup(function() {
-	if (!phoneCheck.test($('#userPhone').val())) {
-		$('#member-phone').css('color', 'red').text("형식에 맞지 않음");
-		} else {
-      $('#member-phone').css('color', 'green').text("형식에 맞음");
-    }
-});
-
-</script>	
+</script>
 	
 
-
+<script src="${ path }/resources/js/join.js"></script>
 <jsp:include page="/views/common/footer.jsp" />
