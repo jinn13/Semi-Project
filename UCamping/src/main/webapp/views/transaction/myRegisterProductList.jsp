@@ -16,26 +16,22 @@
 </head>
 <body>
     <div>
-    <header>
-    </header>
     <section>
             <div class="item_list_area">
                 <div class="categories_box">
                     <ul>
                         <li>
-                            <a href="">HOME</a>
+                            <a href="${ path }/main.jsp">HOME</a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="${ path }/mypage">
                                 > 
                                 마이페이지
                             </a>
                         </li>
                         <li>
-                            > <select id="categories_option_box" class="categories_option_box" onchange="if(this.value) window.open=(this.value);">
-                                <option value="./myWishProductList.html"><a href="./myWishProductList.html">내가 찜한 상품</a></option>
-                                <option value="./myRegisterProductList.html"><a href="./myRegisterProductList.html">내가 등록한 상품</a></option>
-                            </select>
+                            > 
+                           	내가 등록한 상품
                         </li>
                     </ul>
                 </div>
@@ -45,11 +41,11 @@
                                 <div class="item_user_info">
                                     <div class="profile_img">
                                         <a href="">
-                                            <img id="profile-img" src="${ path }/resources/images/pro_photo.jpg" alt="users_profile_img">
+                                            <img class="profile" id="profile-img" src="${ path }/resources/images/pro_photo.jpg" alt="users_profile_img">
                                         </a>
                                     </div>
                                     <div class="nick">
-                                        <a href="">
+                                        <a href="${ path }/mypage">
                                             어쩔캠핑
                                         </a>
                                     </div>
@@ -99,12 +95,12 @@
                                         <div class="categories_sort">
                                         <div class="my_item_list_sort my_item_categorie_sort">
                                             <select>
-                                                <option value=>카테고리 전체</option>
-                                                <option value="">텐트 및 타프</option>
-                                                <option value="">침구 및 캠핑용품</option>
-                                                <option value="">가구 및 수납</option>
-                                                <option value="">취사용품</option>
-                                                <option value="">의류/조명/잡화</option>
+									            <option value="all" selected>전체</option>
+									            <option value="Tent&Tarf">텐트 및 타프</option>
+									            <option value="Bedding&Equipment">침구 및 캠핑용품</option>
+									            <option value="Furniture&accept">가구 및 수납</option>
+									            <option value="Cooking">취사용품</option>
+									            <option value="Clothes&Lantern&Stuff">의류/조명/잡화</option>
                                             </select>
                                         </div>
                                         <div class="my_item_list_sort my_item_categorie_sort_wish">
@@ -133,7 +129,7 @@
                                                             <div class="cont">
                                                                 <div class="item_title">텐트팔아요</div>
                                                                 <div class="item_price profile_price">
-                                                                    300,000
+                                                                    ${ saleboard.price }
                                                                     원
                                                                 </div>
                                                             </div>
@@ -166,30 +162,7 @@
                                                         <input type="checkbox" name="chk" value="del_check" class="wish_check_btn">
                                                     </div>
                                                 </li>
-                                                <li class="main_col_3">
-                                                    <a class="card card_list" href="">
-                                                        <div class="card_box">
-                                                            <div class="img_wrap">
-                                                                <div class="img_outside_box">
-                                                                    <div class="img_box">
-                                                                        <img class="thumbnail_img" src="${ path }/resources/images/item/item.20.jpg" alt="">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="cont">
-                                                                <div class="item_title">쿨거원해요</div>
-                                                                <div class="item_price profile_price">
-                                                                    140,000
-                                                                    원
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                    <div class="img_wish_box">
-                                                        <input type="checkbox" name="chk" value="del_check" class="wish_check_btn">
-                                                    </div>
-                                                </li>
-                                                <li class="main_col_3">
+
                                                     <a class="card card_list" href="">
                                                         <div class="card_box">
                                                             <div class="img_wrap">
