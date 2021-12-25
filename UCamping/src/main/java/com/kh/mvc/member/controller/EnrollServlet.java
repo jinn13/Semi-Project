@@ -11,7 +11,7 @@ import com.kh.mvc.member.model.service.MemberService;
 import com.kh.mvc.member.model.vo.Member;
 
 
-@WebServlet(name="enroll", urlPatterns = "/member/enroll")
+@WebServlet(name="enroll", urlPatterns = "/enroll")
 public class EnrollServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -50,7 +50,7 @@ public class EnrollServlet extends HttpServlet {
     	} else {
     		// 회원 가입 실패
     		request.setAttribute("msg", "회원 가입 실패!");
-			request.setAttribute("location", "/member/enroll");
+			request.setAttribute("location", "/enroll");
     	}
     	
     	request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);

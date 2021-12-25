@@ -40,7 +40,7 @@
                         <img id="profile-img" src="${ path }/resources/images/pro_photo.jpg">
                     </div>
                     <div id="profile-text"><p id="profile-text1">${ loginMember.nickname }</p></div>
-                    <div id="update-mypage"><a href="${ path }/views/member/mypageUpdate.jsp"> 회원정보 수정</a></div>
+                    <div id="update-mypage"><a href="${ path }/mypageUpdate"> 회원정보 수정</a></div>
                     <div class="profile-board" id="profile-board1"><a href="">내가 차단한 회원</a></div>              
                     <div class="profile-board" id="profile-board2"><a href="">내가 신고한 회원</a></div>
                     <div class="profile-board" id="profile-board3"><a href="">1:1 문의</a></div>              

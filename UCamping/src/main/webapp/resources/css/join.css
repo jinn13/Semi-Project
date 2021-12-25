@@ -106,20 +106,37 @@ a {
 	border: 2px solid #A4835F;
 	border-radius: 10px;
 }
-
+#join #userId{
+	width: 380px;
+	display: inline;
+}
+#join #checkDuplicate{
+	width: 100px;
+	display: inline;
+	padding: 6px;
+	font-size: 17px;
+	/* border: 3px solid #999; */
+	border: 2px solid #A4835F;
+	border-radius: 10px;
+	background-color: #A4835F;
+	color: #fff;
+	border: 2px solid #64492d;
+   	border-radius: 10px;
+  	cursor: pointer;
+}
 
 #join #bornYear{
-  width: 144.8px;
+    width: 144.8px;
 	font-weight: normal;
 	display: inline;
 }
 #join #bornMonth{
-  width: 144.8px;
+    width: 144.8px;
 	font-weight: normal;
 	display: inline;
 }
 #join #bornDate{
-  width: 144.8px;
+    width: 144.8px;
 	font-weight: normal;
 	display: inline;
 }

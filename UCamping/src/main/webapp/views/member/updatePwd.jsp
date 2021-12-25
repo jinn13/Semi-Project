@@ -37,9 +37,9 @@
 		<form action="${ pageContext.request.contextPath }/member/updatePwd" method="post">
 			<table>
 				<tr>
-					<th>현재 비밀번호</th>
+					<th>현재 아이디</th>
 					<td>
-						<input type="password" name="userPwd" id="nowPass" required>
+						<input type="text" name="userId" id="NowId" required>
 					</td>
 				</tr>
 				<tr>

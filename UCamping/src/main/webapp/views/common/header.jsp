@@ -39,9 +39,9 @@
                     <ul class="sml-menu">
                       <li id="a12"><a href="${ path }/mywish" class="sml-text"><span><i id="sml-img1" class="material-icons-outlined chgcolor">shopping_cart</i> 찜한상품</span></a></li>
                       <li id="bar">|</li>
-                      <li><a href="${ path }/member/login" class="sml-text"><span><i id="sml-img2" class="material-icons-outlined chgcolor">login</i>&nbsp&nbsp로그인</span></a></li>
+                      <li><a href="${ path }/login" class="sml-text"><span><i id="sml-img2" class="material-icons-outlined chgcolor">login</i>&nbsp&nbsp로그인</span></a></li>
                       <li id="bar">|</li>
-                      <li><a href="${ path }/member/enroll" class="sml-text"><span><i id="sml-img3" class="material-icons chgcolor">person_add_alt_1</i>&nbsp회원가입</span></a></li>
+                      <li><a href="${ path }/enroll" class="sml-text"><span><i id="sml-img3" class="material-icons chgcolor">person_add_alt_1</i>&nbsp회원가입</span></a></li>
                       
                   	</ul>
                   	</c:if>
