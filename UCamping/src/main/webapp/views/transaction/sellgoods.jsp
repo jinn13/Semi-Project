@@ -45,11 +45,36 @@
                 <th>카테고리</th>
                 <td style="width:100px;"></td>
                 <td>
-                    <label><input type="radio" name="category" value="Tent&Tarf">텐트 및 타프</label>
-                    <label><input type="radio" name="category" value="Bedding&Equipment" checked>침구 및 캠핑용품</label>
-                    <label><input type="radio" name="category" value="Furniture&accept" checked>가구 및 수납</label><br>
-                    <label><input type="radio" name="category" value="Cooking" checked>취사용품</label>
-                    <label><input type="radio" name="category" value="Clothes&Lantern&Stuff" checked>의류/조명/잡화</label>
+                	<c:if test="${ category =='TentAndTarf' }">
+                		<label><input type="radio" name="category" value="TentAndTarf" checked>텐트 및 타프</label>
+                	</c:if>
+                	<c:if test="${ category !='TentAndTarf' }">
+                		<label><input type="radio" name="category" value="TentAndTarf">텐트 및 타프</label>
+                	</c:if>
+                	<c:if test="${ category =='BeddingAndEquipment' }">
+                	    <label><input type="radio" name="category" value="BeddingAndEquipment" checked>침구 및 캠핑용품</label>
+                	</c:if>
+                	<c:if test="${ category !='BeddingAndEquipment' }">
+                		<label><input type="radio" name="category" value="BeddingAndEquipment">침구 및 캠핑용품</label>
+                	</c:if>
+                	<c:if test="${ category =='FurnitureAndAccept' }">
+                		<label><input type="radio" name="category" value="FurnitureAndAccept" checked>가구 및 수납</label><br>
+                	</c:if>
+                	<c:if test="${ category !='FurnitureAndAccept' }">
+                		<label><input type="radio" name="category" value="FurnitureAndAccept">가구 및 수납</label><br>
+                	</c:if>
+                	<c:if test="${ category =='Cooking' }">
+                		<label><input type="radio" name="category" value="Cooking" checked>취사용품</label>
+                	</c:if>
+                	<c:if test="${ category !='Cooking' }">
+                		<label><input type="radio" name="category" value="Cooking">취사용품</label>
+                	</c:if>
+                	<c:if test="${ category =='ClothesAndLanternAndStuff' }">
+                		<label><input type="radio" name="category" value="ClothesAndLanternAndStuff" checked>의류/조명/잡화</label>
+                	</c:if>
+                	<c:if test="${ category !='ClothesAndLanternAndStuff' }">
+                		<label><input type="radio" name="category" value="ClothesAndLanternAndStuff">의류/조명/잡화</label>
+                	</c:if>
                 </td>
             </tr>
 

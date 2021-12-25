@@ -31,13 +31,15 @@ public class SaleWriteServlet extends HttpServlet {
     	HttpSession session = request.getSession(false); 
     	Member loginMember = session != null ? (Member) session.getAttribute("loginMember") : null;
     	String viewName = "/views/transaction/sellgoods.jsp";
+    	String category = request.getParameter("category");
+    	
     	
     	if(loginMember == null) {    
     		viewName = "/views/common/msg.jsp";
     		request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");
 			request.setAttribute("location", "/");
     	}
-    	
+    	request.setAttribute("category", category);
     	request.getRequestDispatcher(viewName).forward(request, response);
 	}
 

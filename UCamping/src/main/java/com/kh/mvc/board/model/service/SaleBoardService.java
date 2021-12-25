@@ -55,4 +55,21 @@ public class SaleBoardService {
 		
 		return result;
 	}
+
+	public int wish(int no) {
+		int result = 0;
+		Connection connection = getConnection();
+		
+		result = dao.updateWishStatus(connection, no, "Y");
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);		
+		
+		return result;
+	}
 }

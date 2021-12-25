@@ -42,11 +42,13 @@ public class SaleBoardDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String query = 
-				"SELECT RNUM, SALE_WRITER_NO, SALE_TITLE, ID, SALE_CONTENT, SALE_FILENAME, SALE_PRICE, FILESYSTEMNAME"
+				"SELECT RNUM, SALE_NO, SALE_WRITER_NO, SALE_TITLE, SALE_CATEGORY, ID, SALE_CONTENT, SALE_FILENAME, SALE_PRICE, FILESYSTEMNAME"
 				+ " FROM ("
 				+    "SELECT ROWNUM AS RNUM, "
+				+           "SALE_NO, "
 				+           "SALE_WRITER_NO, "
 				+ 			"SALE_TITLE, "
+				+ 			"SALE_CATEGORY, "
 				+ 			"ID, "
 				+ 			"SALE_CONTENT, "
 				+ 			"SALE_FILENAME, "
@@ -55,7 +57,9 @@ public class SaleBoardDao {
 				
 				+ 	 "FROM ("
 				+ 	    "SELECT S.SALE_WRITER_NO, "
+				+              "S.SALE_NO, "
 				+ 			   "S.SALE_TITLE, "
+				+ 			   "S.SALE_CATEGORY, "
 				+  			   "M.ID, "
 				+ 			   "S.SALE_CONTENT, "
 				+ 			   "S.SALE_FILENAME, "
@@ -79,9 +83,11 @@ public class SaleBoardDao {
 				SaleBoard saleboard = new SaleBoard();
 				
 				saleboard.setWriterNo(rs.getInt("SALE_WRITER_NO"));
+				saleboard.setNo(rs.getInt("SALE_NO"));
 				saleboard.setRowNum(rs.getInt("RNUM"));
 				saleboard.setWriterId(rs.getString("ID"));
 				saleboard.setTitle(rs.getString("SALE_TITLE"));
+				saleboard.setCategory(rs.getString("SALE_CATEGORY"));
 				saleboard.setContent(rs.getString("SALE_CONTENT"));
 				saleboard.setFileName(rs.getString("SALE_FILENAME"));
 				saleboard.setPrice(rs.getString("SALE_PRICE"));
@@ -145,6 +151,27 @@ public class SaleBoardDao {
 			pstmt.setString(5, saleboard.getGoodsStatus());
 			pstmt.setString(6, saleboard.getDealStatus());
 			pstmt.setInt(7, saleboard.getNo());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+
+	public int updateWishStatus(Connection connection, int no, String wishstatus) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE SALEBOARD SET WISH_STATUS=? WHERE SALE_NO=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setString(1, wishstatus);
+			pstmt.setInt(2, no);
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
