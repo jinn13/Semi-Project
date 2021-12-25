@@ -1,12 +1,17 @@
 package com.kh.mvc.transaction.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.kh.mvc.board.model.vo.SaleBoard;
+import com.kh.mvc.common.util.PageInfo;
+
+import static com.kh.mvc.common.jdbc.JDBCTemplate.*;
 
 @WebServlet("/productDetail")
 public class ProductDetailServlet extends HttpServlet {

@@ -129,7 +129,7 @@
                                                             <div class="cont">
                                                                 <div class="item_title">텐트팔아요</div>
                                                                 <div class="item_price profile_price">
-                                                                    300,000
+                                                                    ${ saleboard.price }
                                                                     원
                                                                 </div>
                                                             </div>
@@ -162,30 +162,7 @@
                                                         <input type="checkbox" name="chk" value="del_check" class="wish_check_btn">
                                                     </div>
                                                 </li>
-                                                <li class="main_col_3">
-                                                    <a class="card card_list" href="">
-                                                        <div class="card_box">
-                                                            <div class="img_wrap">
-                                                                <div class="img_outside_box">
-                                                                    <div class="img_box">
-                                                                        <img class="thumbnail_img" src="${ path }/resources/images/item/item20.jpg" alt="">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="cont">
-                                                                <div class="item_title">쿨거원해요</div>
-                                                                <div class="item_price profile_price">
-                                                                    140,000
-                                                                    원
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                    <div class="img_wish_box">
-                                                        <input type="checkbox" name="chk" value="del_check" class="wish_check_btn">
-                                                    </div>
-                                                </li>
-                                                <li class="main_col_3">
+
                                                     <a class="card card_list" href="">
                                                         <div class="card_box">
                                                             <div class="img_wrap">

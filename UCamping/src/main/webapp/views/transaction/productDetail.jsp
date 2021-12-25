@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="SaleBoardDao.java" %>
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="path" value="${ pageContext.request.contextPath }"/>     
@@ -24,7 +25,7 @@
                         <a href="${ path }/main.jsp">HOME</a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="${ path }/saleboard/salelist">
                             > 
                             목록으로
                         </a>
@@ -38,7 +39,7 @@
                             <section class="detail_box_area">
                                 <div class="photo_area">
                                     <div class="main_img"></div>
-                                    <div class="img_viewport">
+                                    <!--  <div class="img_viewport">
                                         <div class="img_viewport_prev"></div>
                                         <div class="img_viewport_container">
                                             <div class="img_item img_normal_item img_item_other">
@@ -55,7 +56,7 @@
                                             </div>
                                         </div>
                                         <div class="img_viewport_next"></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="item_info">
                                     <div class="item_name_price_info">
@@ -88,15 +89,15 @@
                                                 <tbody>
                                                     <tr class="description_sales_table">
                                                         <td class="title">거래방법</td>
-                                                        <td class="description">직거래</td>
-                                                    </tr>
-                                                    <tr class="description_sales_table">
-                                                        <td class="title">배송비</td>
-                                                        <td class="description">배송비 별도</td>
+                                                        <td class="description">${ saleboard.deal_status }</td>
                                                     </tr>
                                                     <tr class="description_sales_table">
                                                         <td class="title">상품상태</td>
-                                                        <td class="description">판매중</td>
+                                                        <td class="description">saleboard.getGoodsStatus}</td>
+                                                    </tr>
+                                                    <tr class="description_sales_table">
+                                                        <td class="title">상품상태</td>
+                                                        <td class="description">${ saleboard.status }</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
