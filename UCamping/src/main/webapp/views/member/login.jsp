@@ -50,7 +50,7 @@
                             <li id="bar">|</li>
                             <li><a href="${ path }/find-pw" class="sml-text2"><span>비밀번호 찾기</span></a></li>
                             <li id="bar">|</li>
-                            <li><a href="${ path }/member/enroll" class="sml-text2"><span>회원가입</span></a></li>
+                            <li><a href="${ path }/enroll" class="sml-text2"><span>회원가입</span></a></li>
                         </ul>
 
                         <hr class="short-line">

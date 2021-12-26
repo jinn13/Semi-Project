@@ -26,9 +26,9 @@
             <ul class="sml-category">
                 <li><a href="${ path }" class="sml-text2"><span><i id="sml-ctgr-img1" class="material-icons-outlined chgcolor">home</i> 홈</span></a></li>
                 <li id="bar">></li>
-                <li><a href="${ path }/member/login" class="sml-text2"><span>로그인</span></a></li>
+                <li><a href="${ path }/login" class="sml-text2"><span>로그인</span></a></li>
                 <li id="bar">></li>
-                <li><a href="${ path }/member/login" class="sml-text2"><span>비밀번호 찾기</span></a></li>
+                <li><a href="${ path }/find-pw" class="sml-text2"><span>비밀번호 찾기</span></a></li>
             </ul>
 
             <section class="login-section">
@@ -49,11 +49,11 @@
                       </form>
 
                         <ul class="find-signup-area">
-                            <li><a href="${ path }/member/login" class="sml-text2"><span>이전 화면으로</span></a></li>
+                            <li><a href="${ path }/login" class="sml-text2"><span>이전 화면으로</span></a></li>
                             <li id="bar">|</li>
                             <li><a href="${ path }/find-id" class="sml-text2"><span>아이디 찾기</span></a></li>
                             <li id="bar">|</li>
-                            <li><a href="${ path }/member/enroll" class="sml-text2"><span>회원가입</span></a></li>
+                            <li><a href="${ path }/enroll" class="sml-text2"><span>회원가입</span></a></li>
 
                         </ul>
 

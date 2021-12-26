@@ -26,7 +26,7 @@
             <ul class="sml-category">
                 <li><a href="${ path }" class="sml-text2"><span><i id="sml-ctgr-img1" class="material-icons-outlined chgcolor">home</i> 홈</span></a></li>
                 <li id="bar">></li>
-                <li><a href="${ path }/board/list" class="sml-text2"><span>FAQ</span></a></li>
+                <li><a href="${ path }/faq" class="sml-text2"><span>FAQ</span></a></li>
             </ul>
         </div>
 	<main>

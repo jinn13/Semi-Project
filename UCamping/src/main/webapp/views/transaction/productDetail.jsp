@@ -37,7 +37,9 @@
                         <article class="detail_box_top">
                             <section class="detail_box_area">
                                 <div class="photo_area">
-                                    <div class="main_img"></div>
+                                    <div class="main-img">
+                                        <a><img alt="main-img" style="background-color: yellow;" class="main_img" src="${ path }/resources/upload/saleboard/${ SaleBoard.fileSystemName }"></a>
+                                    </div>
                                     <!--<div class="img_viewport">
                                         <div class="img_viewport_prev"></div>
                                         <div class="img_viewport_container">
@@ -60,10 +62,10 @@
                                 </div>
                                 <div class="item_info">
                                     <div class="item_name_price_info">
-                                        <h1 class="item_name">${ saleboard.title }</h1>
+                                        <h1 class="item_name">${ SaleBoard.title }</h1>
                                         <div>
                                             <div class="item_price">
-                                                ${ saleboard.price }
+                                                ${ SaleBoard.price }
                                                 <span>원</span>
                                             </div>
                                             <div class="report_user">
@@ -89,19 +91,19 @@
                                                 <tbody>
                                                     <tr class="description_sales_table">
                                                         <td class="title">거래방법</td>
-                                                        <td class="description">${ saleboard.deal_status }</td>
+                                                        <td class="description">${ SaleBoard.dealStatus }</td>
                                                     </tr>
                                                     <tr class="description_sales_table">
                                                         <td class="title">상품상태</td>
-                                                        <td class="description">${ saleboard.getGoodsStatus }</td>
+                                                        <td class="description">${ SaleBoard.goodsStatus }</td>
                                                     </tr>
                                                     <tr class="description_sales_table">
                                                         <td class="title">상품상태</td>
-                                                        <td class="description">${ saleboard.status }</td>
+                                                        <td class="description">${ SaleBoard.goodsStatus }</td>
                                                    	</tr>
                                                     <tr class="description_sales_table">
                                                         <td class="title">작성일</td>
-                                                        <td class="description">${ saleboard.createDate }</td>
+                                                        <td class="description">${ SaleBoard.createDate }</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -124,7 +126,7 @@
                                             <h3 class="description_title_h3">
                                                 <div class="description_title">상세설명</div>
                                             </h3>
-                                            <div class="description_text">${ saleboard.content }</div>
+                                            <div class="description_text">${ SaleBoard.content }</div>
                                         </section>
                                         <section class="item_user_info">
                                             <div class="profile_img">

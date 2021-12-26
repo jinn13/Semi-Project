@@ -30,7 +30,7 @@ public class ProductDetailServlet extends HttpServlet {
     	
     	SaleBoard saleboard = service.findSaleBoardNo(no);
     	
-    	System.out.println(saleboard);
+    	System.out.println("상품게시글 객체 : "+saleboard);
     	
     	request.setAttribute("SaleBoard", saleboard);
     	request.getRequestDispatcher("/views/transaction/productDetail.jsp").forward(request, response);

@@ -78,11 +78,13 @@ public class SaleBoardService {
 		SaleBoard saleboard = null;
 		Connection connection = getConnection();
 		
-		saleboard = dao.findSaleBoardNo(connection, no);
 		
+		System.out.println("dao한테 넘기기전 no"+no);
+		saleboard = dao.findSaleBoardNo(connection, no);
+		System.out.println("서비스단에 잘 불려워지나 체크중 : "+saleboard);
 		close(connection);
 		
-		return null;
+		return saleboard;
 	}
 
 }

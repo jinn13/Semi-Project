@@ -195,10 +195,14 @@ public class SaleBoardDao {
 				+ "			   S.SALE_CONTENT, "
 				+ "			   S.SALE_FILENAME, "
 				+ "			   S.SALE_PRICE, "
+				+ "			   S.DEAL_STATUS, "
+				+ "			   S.GOODS_STATUS, "
+				+ "			   S.WISH_STATUS, "
+				+ "			   S.SALE_DATE, "
 				+ "			   S.FILESYSTEMNAME "
 				+ "		FROM SALEBOARD S "
 				+ "		JOIN MEMBER M ON(S.SALE_WRITER_NO = M.NO) "
-				+ "		WHERE S.STATUS = 'Y' AND M.NO=? ";
+				+ "		WHERE S.STATUS = 'Y' AND S.SALE_NO=? ";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -210,11 +214,9 @@ public class SaleBoardDao {
 			if (rs.next()) {
 				saleboard = new SaleBoard();
 				
-				saleboard.setWriterNo(rs.getInt("WriterNO"));
-				saleboard.setNo(rs.getInt("NO"));
 				saleboard.setWriterNo(rs.getInt("SALE_WRITER_NO"));
-				saleboard.setNo(rs.getInt("SALE_NO"));
-				saleboard.setRowNum(rs.getInt("RNUM"));
+				saleboard.setNo(no);
+				saleboard.setRowNum(rs.getInt("SALE_NO"));
 				saleboard.setWriterId(rs.getString("ID"));
 				saleboard.setTitle(rs.getString("SALE_TITLE"));
 				saleboard.setCategory(rs.getString("SALE_CATEGORY"));
@@ -222,6 +224,10 @@ public class SaleBoardDao {
 				saleboard.setFileName(rs.getString("SALE_FILENAME"));
 				saleboard.setPrice(rs.getString("SALE_PRICE"));
 				saleboard.setFileSystemName(rs.getString("FILESYSTEMNAME"));
+				saleboard.setCreateDate(rs.getDate("SALE_DATE"));
+				saleboard.setWishStatus(rs.getString("WISH_STATUS"));
+				saleboard.setDealStatus(rs.getString("DEAL_STATUS"));
+				saleboard.setGoodsStatus(rs.getString("GOODS_STATUS"));
 
 			}
 			
@@ -231,6 +237,7 @@ public class SaleBoardDao {
 			close(rs);
 			close(pstmt);
 		}
+		System.out.println("dao에서찍는중 : "+saleboard);
 		
 		return saleboard;
 	}

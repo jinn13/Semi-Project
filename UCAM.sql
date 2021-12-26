@@ -233,3 +233,22 @@ END;
 --SELECT OTO_FILENAME FROM QBOARD WHERE STATUS='Y';
 
 --UPDATE QBOARD SET OTO_TITLE='수정할래2',OTO_CONTENT='ㅇㅇㅇ',OTO_FILENAME='',RENAMED_FILENAME='' WHERE OTO_NO=50;
+
+
+
+-- 상품디테일 안나와서 확인하려고 찍는 쿼리문
+--SELECT S.SALE_WRITER_NO, 
+--       S.SALE_NO, 
+--       S.SALE_TITLE, 
+--       S.SALE_CATEGORY, 
+--       M.ID, 
+--       S.SALE_CONTENT, 
+--       S.SALE_FILENAME, 
+--       S.SALE_PRICE, 
+--       S.DEAL_STATUS,
+--       S.GOODS_STATUS,
+--       S.WISH_STATUS,
+--       SALE_DATE, 
+--       S.FILESYSTEMNAME 
+--       FROM SALEBOARD S JOIN MEMBER M ON(S.SALE_WRITER_NO = M.NO) 
+--       WHERE S.STATUS = 'Y' AND S.SALE_NO=21;
