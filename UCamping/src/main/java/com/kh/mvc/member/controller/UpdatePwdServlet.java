@@ -12,7 +12,7 @@ import com.kh.mvc.member.model.service.MemberService;
 import com.kh.mvc.member.model.vo.Member;
 
 
-@WebServlet(name="updatePwd", urlPatterns = "/member/updatePwd")
+@WebServlet(name="updatePwd", urlPatterns = "/updatePwd")
 public class UpdatePwdServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -34,22 +34,22 @@ public class UpdatePwdServlet extends HttpServlet {
     	HttpSession session = request.getSession(false);
 		Member loginMember = session != null ? (Member) session.getAttribute("loginMember") : null;
 		String userPwd = request.getParameter("userPwd");
-		String userId = request.getParameter("userID");
+//		String userId = request.getParameter("userID");
 		
 		if(loginMember != null) {
-			result = service.updatePassword(userId, userPwd);
+			result = service.updatePassword(loginMember.getNo(), userPwd);
 			
 			if(result > 0) {
 				request.setAttribute("msg", "비밀번호 변경이 완료되었습니다.");
 				request.setAttribute("script", "self.close()");			
 			} else {
-				request.setAttribute("msg", "현재 아이디를 확인해주세요.");
-				request.setAttribute("location", "/member/updatePwd");
+				request.setAttribute("msg", "비밀번호 변경에 실패하였습니다.");
+				request.setAttribute("location", "/updatePwd");
 			}
 			
 		} else {
 			request.setAttribute("msg", "로그인 후 삭제해 주세요.");
-			request.setAttribute("location", "/");
+			request.setAttribute("location", "/login");
 		}
 		
 		request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);

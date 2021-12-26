@@ -34,18 +34,12 @@
 </head>
 <body>
 	<div id="updatePassword-container">
-		<form action="${ pageContext.request.contextPath }/member/updatePwd" method="post">
+		<form action="${ pageContext.request.contextPath }/updatePwd" name="frm" method="post">
 			<table>
-				<tr>
-					<th>현재 아이디</th>
-					<td>
-						<input type="text" name="userId" id="NowId" required>
-					</td>
-				</tr>
 				<tr>
 					<th>변경할 비밀번호</th>
 					<td>
-						<input type="password" name="userPwd" id="pass1" required>
+						<input type="password" name="userPwd" id="pass1"  required>
 					</td>
 				</tr>
 				<tr>
@@ -66,7 +60,10 @@
 		</form>
 	</div>
 	<script>
+	
 		function validate() {
+			
+			
 			let pass1 = $("#pass1").val();
 			let pass2 = $("#pass2").val();
 			

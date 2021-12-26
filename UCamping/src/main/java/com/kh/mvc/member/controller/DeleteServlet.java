@@ -12,7 +12,7 @@ import com.kh.mvc.member.model.service.MemberService;
 import com.kh.mvc.member.model.vo.Member;
 
 
-@WebServlet("/member/delete")
+@WebServlet("/delete")
 public class DeleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private MemberService service = new MemberService();
@@ -35,7 +35,7 @@ public class DeleteServlet extends HttpServlet {
 				request.setAttribute("location", "/logout");
 			} else {
 				request.setAttribute("msg", "탈퇴에 실패하였습니다.");
-				request.setAttribute("location", "/member/mypage");
+				request.setAttribute("location", "/mypage");
 			}
 			
 		} else {

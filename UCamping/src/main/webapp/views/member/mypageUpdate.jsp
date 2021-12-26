@@ -68,28 +68,28 @@
                             <th>닉네임</th>
                             <td>
                                 <input class="form_myPage" type="text" name="userNickname" id="userNickname"
-                                        value="${ loginMember.nickname }" required >
+                                        value="${ loginMember.nickname }" required > <span id="member-nickname"></span>
                             </td> 	
                         </tr>
                         <tr>
                             <th>이름</th>
                             <td>
                                 <input class="form_myPage" type="text" name="userName" id="userName"
-                                        value="${ loginMember.name }" required>				
+                                        value="${ loginMember.name }" required>	<span id="member-name"></span>			
                             </td> 	
                         </tr>
                         <tr>
                             <th>휴대폰</th>
                             <td>
                                 <input class="form_myPage" type="tel" name="userPhone" id="userPhone"
-                                        value="${ loginMember.phone }" maxlength="11">
+                                        value="${ loginMember.phone }" maxlength="11"> <span id="member-phone"></span>
                             </td>
                         </tr>
                         <tr>
                             <th>이메일</th>
                             <td>
                                 <input class="form_myPage"type="email" name="userEmail" id="userEmail"
-                                        value="${ loginMember.email }">												
+                                        value="${ loginMember.email }">	<span id="member-email"></span>											
                             </td> 	
                         </tr>
                         <tr>
@@ -130,7 +130,7 @@ $(document).ready(() => {
 	$("#btnDelete").on("click", () => {
 		if(confirm("정말로 탈퇴하시겠습니까?")) {
 			location.replace("${ pageContext.request.contextPath }/delete");
-		}
+		};
 	});
 });
 </script>

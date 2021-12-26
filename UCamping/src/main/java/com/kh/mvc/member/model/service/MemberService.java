@@ -94,12 +94,12 @@ public class MemberService {
 		return result;
 	}
 	
-	public int updatePassword(String id, String password) {
+	public int updatePassword(int no, String password) {
 		int result = 0;
 		
 		Connection connection = getConnection();
 		
-		result = dao.updateMemberPassword(connection, id, password);
+		result = dao.updateMemberPassword(connection, no, password);
 		
 		
 		if(result > 0) {
