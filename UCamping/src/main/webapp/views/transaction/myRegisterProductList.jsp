@@ -46,7 +46,7 @@
                                     </div>
                                     <div class="nick">
                                         <a href="${ path }/mypage">
-                                            어쩔캠핑
+                                            ${ saleboard.writerId }
                                         </a>
                                     </div>
                                     <div class="users_count_review">
@@ -127,55 +127,9 @@
                                                                 </div>
                                                             </div>
                                                             <div class="cont">
-                                                                <div class="item_title">텐트팔아요</div>
+                                                                <div class="item_title">${ saleboard.title }</div>
                                                                 <div class="item_price profile_price">
                                                                     ${ saleboard.price }
-                                                                    원
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                    <div class="img_wish_box">
-                                                        <input type="checkbox" name="chk" value="del_check" class="wish_check_btn">
-                                                    </div>
-                                                </li>
-                                                <li class="main_col_3">
-                                                    <a class="card card_list" href="">
-                                                        <div class="card_box">
-                                                            <div class="img_wrap">
-                                                                <div class="img_outside_box">
-                                                                    <div class="img_box">
-                                                                        <img class="thumbnail_img" src="${ path }/resources/images/item/item23.jpg" alt="">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="cont">
-                                                                <div class="item_title">캠핑용품팝니당당당</div>
-                                                                <div class="item_price profile_price">
-                                                                    30,000
-                                                                    원
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                    <div class="img_wish_box">
-                                                        <input type="checkbox" name="chk" value="del_check" class="wish_check_btn">
-                                                    </div>
-                                                </li>
-
-                                                    <a class="card card_list" href="">
-                                                        <div class="card_box">
-                                                            <div class="img_wrap">
-                                                                <div class="img_outside_box">
-                                                                    <div class="img_box">
-                                                                        <img class="thumbnail_img" src="${ path }/resources/images/item/item25.jpg" alt="">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="cont">
-                                                                <div class="item_title">무료나눔합ㄴ디ㅏ</div>
-                                                                <div class="item_price profile_price">
-                                                                    0
                                                                     원
                                                                 </div>
                                                             </div>

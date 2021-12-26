@@ -110,7 +110,7 @@
                                     <h3>고객센터</h3>
                               <ul>
                                 <li><a href="${ path }/notice">공지사항</a></li>
-                                <li><a href="${ path }/board/list">FAQ</a></li>
+                                <li><a href="${ path }/faq">FAQ</a></li>
                                 <li><a href="${ path }/question">1:1문의</a></li>
                               </ul>
                             </div>
@@ -158,7 +158,7 @@
                                   <h3>고객센터</h3>
                             <ul>
                               <li><a href="${ path }/notice">공지사항</a></li>
-                              <li><a href="${ path }/board/list">FAQ</a></li>
+                              <li><a href="${ path }/faq">FAQ</a></li>
                               <li><a href="${ path }/question">1:1문의</a></li>
                             </ul>
                           </div>
@@ -209,14 +209,14 @@
                                   <h3>고객센터</h3>
                             <ul>
                               <li><a href="${ path }/notice">공지사항</a></li>
-                              <li><a href="${ path }/board/list">FAQ</a></li>
+                              <li><a href="${ path }/faq">FAQ</a></li>
                               <li><a href="${ path }/question">1:1문의</a></li>
                             </ul>
                           </div>
                           <!----- Full Drop Down Contents  Ends  Here---->  
             
                         <!----- Full Drop Down Name ----> 
-                        <li class="dropdown"><a href="${ path }/board/list">고객센터</a>     
+                        <li class="dropdown"><a href="${ path }/notice">고객센터</a>     
                           <!----- Full Drop Down Name Ends Here ---->     
                             
                           <!----- Full Drop Down Contents  Starts Here---->     
@@ -260,7 +260,7 @@
                               <ul>
 
                                 <li><a href="${ path }/notice">공지사항</a></li>
-                                <li><a href="${ path }/board/list">FAQ</a></li>
+                                <li><a href="${ path }/faq">FAQ</a></li>
                                 <li><a href="${ path }/question">1:1문의</a></li>
 
                               </ul>

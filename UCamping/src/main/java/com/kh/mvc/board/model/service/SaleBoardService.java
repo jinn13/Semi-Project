@@ -72,4 +72,17 @@ public class SaleBoardService {
 		
 		return result;
 	}
+
+
+	public SaleBoard findSaleBoardNo (int no) {
+		SaleBoard saleboard = null;
+		Connection connection = getConnection();
+		
+		saleboard = dao.findSaleBoardNo(connection, no);
+		
+		close(connection);
+		
+		return null;
+	}
+
 }

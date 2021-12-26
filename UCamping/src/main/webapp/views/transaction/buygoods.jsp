@@ -39,9 +39,15 @@
 	                    </tr>
 	                    <tr>
 	                        <td id="images" colspan="" rowspan="5" width="370px" height="">
+	                        	<a href="${ path }/productDetail?no=${ saleboard.no }">
 	                            <img src="${ path }/resources/upload/saleboard/${ saleboard.fileSystemName }" width="318px" height="174px" download="${ path }/resources/upload/saleboard/${ saleboard.fileName }"/>
+	                        	</a>
 	                        </td>
-	                        <td style="font-size: 18px;" id="title"colspan="2" width="646px" height="35px">${ saleboard.title }</td>   
+	                        <td style="font-size: 18px;" id="title"colspan="2" width="646px" height="35px">
+	                        	<a href="${ path }/productDetail?no=${ saleboard.no }">
+	                        	${ saleboard.title }
+	                        	</a>
+	                        </td>
 	                    </tr>
 	                    <tr>
 	                        <td></td>
@@ -49,7 +55,6 @@
 	                        	<c:if test="${ ! empty loginMember && loginMember.id == saleboard.writerId }">
 									<a href="${ path }/saleboard/wish?no=${ saleboard.no }"><img src="${ path }/resources/images/icon/icons8-star-96.png" width="20" height="20"> 관심상품 등록</a>
 								</c:if>
-								
 	                        </td>
 	                        
 	                    </tr>

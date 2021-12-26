@@ -182,6 +182,58 @@ public class SaleBoardDao {
 		
 		return result;
 	}
+	
+	public SaleBoard findSaleBoardNo(Connection connection, int no) {
+		SaleBoard saleboard = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String query = "SELECT S.SALE_WRITER_NO, "
+				+ "			   S.SALE_NO, "
+				+ "			   S.SALE_TITLE, "
+				+ "			   S.SALE_CATEGORY, "
+				+ "			   M.ID, "
+				+ "			   S.SALE_CONTENT, "
+				+ "			   S.SALE_FILENAME, "
+				+ "			   S.SALE_PRICE, "
+				+ "			   S.FILESYSTEMNAME "
+				+ "		FROM SALEBOARD S "
+				+ "		JOIN MEMBER M ON(S.SALE_WRITER_NO = M.NO) "
+				+ "		WHERE S.STATUS = 'Y' AND M.NO=? ";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setInt(1, no);
+			
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				saleboard = new SaleBoard();
+				
+				saleboard.setWriterNo(rs.getInt("WriterNO"));
+				saleboard.setNo(rs.getInt("NO"));
+				saleboard.setWriterNo(rs.getInt("SALE_WRITER_NO"));
+				saleboard.setNo(rs.getInt("SALE_NO"));
+				saleboard.setRowNum(rs.getInt("RNUM"));
+				saleboard.setWriterId(rs.getString("ID"));
+				saleboard.setTitle(rs.getString("SALE_TITLE"));
+				saleboard.setCategory(rs.getString("SALE_CATEGORY"));
+				saleboard.setContent(rs.getString("SALE_CONTENT"));
+				saleboard.setFileName(rs.getString("SALE_FILENAME"));
+				saleboard.setPrice(rs.getString("SALE_PRICE"));
+				saleboard.setFileSystemName(rs.getString("FILESYSTEMNAME"));
+
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		
+		return saleboard;
+	}
 }
 
 	

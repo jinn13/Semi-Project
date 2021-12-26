@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="nick">
                                         <a href="">
-                                            어쩔캠핑
+                                            ${ saleboard.writerId }
                                         </a>
                                     </div>
                                     <div class="users_count_review">
@@ -131,7 +131,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="cont">
-                                                                <div class="item_title">캠핑용품팝니당당당</div>
+                                                                <div class="item_title">${ saleboard.title }</div>
                                                                 <div class="item_price profile_price">
                                                                     ${ saleboard.price }
                                                                     원

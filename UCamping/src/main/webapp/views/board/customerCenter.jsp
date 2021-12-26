@@ -37,10 +37,10 @@
         <hr style="border: 1.5px solid black; background-color: black; margin-bottom: 15px;">
         
         <div id="customer-menu">
-          <a href="javascript:void(0)">공지사항<hr color="black" size="1"></a>
-          <a href="javascript:void(0)">자주 찾는 질문(FAQ)<hr></a>
-          <a href="javascript:void(0)">이용 안내<hr></a>
-          <a href="javascript:void(0)">1:1 게시판 문의<hr></a>
+          <a href="${ path }/notice">공지사항<hr color="black" size="1"></a>
+          <a href="${ path }/faq">자주 찾는 질문(FAQ)<hr></a>
+          <!-- <a href="javascript:void(0)">이용 안내<hr></a>  -->
+          <a href="${ path }/question">1:1 게시판 문의<hr></a>
         </div>
         
       </aside>

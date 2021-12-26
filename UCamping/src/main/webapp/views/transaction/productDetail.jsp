@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="SaleBoardDao.java" %>
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="path" value="${ pageContext.request.contextPath }"/>     
@@ -39,7 +38,7 @@
                             <section class="detail_box_area">
                                 <div class="photo_area">
                                     <div class="main_img"></div>
-                                    <!--  <div class="img_viewport">
+                                    <!--<div class="img_viewport">
                                         <div class="img_viewport_prev"></div>
                                         <div class="img_viewport_container">
                                             <div class="img_item img_normal_item img_item_other">
@@ -56,7 +55,8 @@
                                             </div>
                                         </div>
                                         <div class="img_viewport_next"></div>
-                                    </div> -->
+                                    </div>
+                                     --> 
                                 </div>
                                 <div class="item_info">
                                     <div class="item_name_price_info">
@@ -78,7 +78,7 @@
                                             <ul>
                                                 <li><img src="${ path }/resources/images/wish_heart.png" width="15px" height="15px">0
                                                 </li>
-                                                <li>조회 0
+                                                <li>조회 <%-- ${ saleBoard.readCount } --%>
                                                 </li>
                                                 <li>채팅 0
                                                 </li>
@@ -93,11 +93,15 @@
                                                     </tr>
                                                     <tr class="description_sales_table">
                                                         <td class="title">상품상태</td>
-                                                        <td class="description">saleboard.getGoodsStatus}</td>
+                                                        <td class="description">${ saleboard.getGoodsStatus }</td>
                                                     </tr>
                                                     <tr class="description_sales_table">
                                                         <td class="title">상품상태</td>
                                                         <td class="description">${ saleboard.status }</td>
+                                                   	</tr>
+                                                    <tr class="description_sales_table">
+                                                        <td class="title">작성일</td>
+                                                        <td class="description">${ saleboard.createDate }</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -130,7 +134,7 @@
                                             </div>
                                             <div class="nick">
                                                 <a href="">
-                                                    어쩔캠핑
+                                                    ${ saleboard.writerId }
                                                 </a>
                                             </div>
                                             <div class="users_item_count">
