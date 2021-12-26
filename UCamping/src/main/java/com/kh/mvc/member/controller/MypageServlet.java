@@ -30,7 +30,7 @@ public class MypageServlet extends HttpServlet {
 			request.getRequestDispatcher("/views/member/mypage.jsp").forward(request, response);
 		} else {
 			request.setAttribute("msg", "로그인 후 수정해 주세요.");
-			request.setAttribute("location", "/");
+			request.setAttribute("location", "/login");
 			
 			request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
 		}

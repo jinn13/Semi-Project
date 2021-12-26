@@ -65,7 +65,7 @@ public class MypageUpdateServlet extends HttpServlet {
 			
 		} else {
 			request.setAttribute("msg", "로그인 후 수정해 주세요.");
-			request.setAttribute("location", "/");
+			request.setAttribute("location", "/login");
 			
 		}
 		
