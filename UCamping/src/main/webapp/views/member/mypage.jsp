@@ -53,20 +53,20 @@
                     <p id="myProduct-t">내가 등록한 상품</p>
                 </div>
                 <div id="myProduct1">
-                    <div><img class="product-img" src="${ path }/resources/images/item/item27" alt=""></div>
-                    <div><img class="product-img" src="${ path }/resources/images/item/item37" alt=""></div>
-                    <div><img class="product-img" src="${ path }/resources/images/item/item28" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item27.jpg" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item37.jpg" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item28.jpg" alt=""></div>
                 </div>
             </div>
             <div>
                 <div id="heartProduct">
                     <p id="heartProduct-t">찜한 상품</p>
-                    <p><img src="${ path }/resources/images/heart (1).png" style="width: 20px; display: inline;"></p>
+                    <p><img src="${ path }/resources/images/icon/heart (1).png" style="width: 20px; display: inline;"></p>
                 </div>
                 <div id="heartProduct1">
-                    <div><img class="product-img" src="${ path }/resources/images/item/item29" alt=""></div>
-                    <div><img class="product-img" src="${ path }/resources/images/item/item30" alt=""></div>
-                    <div><img class="product-img" src="${ path }/resources/images/item/item36" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item29.jpg" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item30.jpg" alt=""></div>
+                    <div><img class="product-img" src="${ path }/resources/images/item/item36.jpg" alt=""></div>
                 </div>
             </div>
         </section>

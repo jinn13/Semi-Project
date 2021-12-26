@@ -50,7 +50,7 @@
                     <ul class="sml-menu">
                       <li><a href="${ path }/mywish" class="sml-text2"><span><i id="sml-img1" class="material-icons-outlined chgcolor">shopping_cart</i> 찜한상품</span></a></li>
                       <li id="bar">|</li>
-                      <li><a href="#" class="sml-text2"><span><i id="sml-img2" class="material-icons-outlined chgcolor">forum</i>&nbsp&nbsp채팅</span></a></li>
+                      <li><a href="#" class="sml-text2"><span id="chatting"><i id="sml-img2" class="material-icons-outlined chgcolor">forum</i>&nbsp&nbsp채팅</span></a></li>
                       <li id="bar">|</li>
                       <li><a href="${ path }/mypage" class="sml-text2"><span><i id="sml-img3" class="material-icons chgcolor">person_pin</i>${ loginMember.nickname } 님</span></a>
                         <li id="hamburger"><a href="" class="sml-text2"><span><i id="sml-img4" class="material-icons-outlined chgcolor">menu</i></span></a>
@@ -345,6 +345,14 @@
       autoplaySpeed: 5000,
     });
 
+
+	$("#chatting").on("click", ()=>{
+		const url="${pageContext.request.contextPath}/chatting";
+		const status="left=1000px,top=200px,width=500px,height=690px";
+		
+		open(url, "", status);
+	});
+    
 
   });
 </script>
