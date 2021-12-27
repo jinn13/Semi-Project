@@ -42,7 +42,7 @@ public class QuestionWriteServlet extends HttpServlet {
     	if(loginMember == null) {                                
     		viewName="/views/common/msg.jsp";                    
     		request.setAttribute("msg", "1:1문의는 로그인 후 사용할 수 있습니다.");        
-    		request.setAttribute("location", "/member/login");                              
+    		request.setAttribute("location", "/login");                              
     	}
     	request.getRequestDispatcher(viewName).forward(request, response);       
 
