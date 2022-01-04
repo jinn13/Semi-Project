@@ -552,16 +552,52 @@ td {
     line-height: 20px;
     border: 1px solid #e8ebed;
 }
+
 .input_comment .cmt_btn_box .cmt_send_btn {
     text-align: center;
     padding: 25px 5px;
     font-size: 15px;
-    font-weight: 500;
-    color: black;
+    font-weight: bold;
+    color: white;
     border: 1px solid #a4835f;
     background-color: #a4835f;
     width: 150px;
-    float: right;
+    /* float: right; */
+    margin-left: 10px;
     cursor: pointer;
     border-radius: 50px;
 }
+
+.input_comment .cmt_btn_box .cmt_send_btn:hover{
+	        background-color: black;
+        }
+        
+        /*댓글테이블*/
+        table#tbl-comment{width:100%; margin:0 auto; border-collapse:collapse; clear:both; } 
+        table#tbl-comment tr td{border-bottom:1px solid #a4835f; border-top:1px solid #a4835f; padding:10px; text-align:left; line-height:200%;}
+        table#tbl-comment tr td:first-of-type{padding: 5px 5px 5px 50px;}
+        table#tbl-comment tr td:last-of-type {text-align:right; width: 100px;}
+        table#tbl-comment button.btn-delete{
+            /* display:none; */
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 14px;
+            transition-property: background-color;
+            transition-duration: .3s;
+            border: 1px solid transparent;
+            font-weight: bold;
+            padding: 5px 10px 5px 10px;
+            color: white;
+            background-color: #a4835f;
+        }   
+        table#tbl-comment button.btn-delete:hover{
+	        background-color: black;
+        }
+
+        table#tbl-comment tr:hover {background:rgb(255, 249, 237);}
+        table#tbl-comment tr:hover button.btn-delete{display:inline;}
+        table#tbl-comment sub.comment-writer {color:#a4835f; font-size:18px; font-weight: bold;}
+        table#tbl-comment sub.comment-date {color:#95b28e; font-size:11px}
+        .level1>td{
+            font-size: 14px;
+        }

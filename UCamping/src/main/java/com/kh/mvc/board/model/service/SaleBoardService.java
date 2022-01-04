@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import com.kh.mvc.board.model.dao.SaleBoardDao;
+import com.kh.mvc.board.model.vo.Reply;
 import com.kh.mvc.board.model.vo.SaleBoard;
 import com.kh.mvc.common.util.PageInfo;
 
@@ -79,12 +80,48 @@ public class SaleBoardService {
 		Connection connection = getConnection();
 		
 		
-		System.out.println("dao한테 넘기기전 no"+no);
+		// System.out.println("dao한테 넘기기전 no"+no);
 		saleboard = dao.findSaleBoardNo(connection, no);
-		System.out.println("서비스단에 잘 불려워지나 체크중 : "+saleboard);
+		// System.out.println("서비스단에 잘 불려워지나 체크중 : "+saleboard);
 		close(connection);
 		
 		return saleboard;
 	}
+
+	public int saveReply(Reply reply) {
+		int result = 0;
+		Connection connection = getConnection();
+		
+		result = dao.insertReply(connection, reply);
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+	}
+
+	public int deleteReply(int no) {
+		int result = 0;
+		Connection connection = getConnection();
+		
+		result = dao.deleteReplyStatus(connection, no, "N");
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);		
+		
+		return result;
+	}
+
+
 
 }

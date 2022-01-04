@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.kh.mvc.board.model.vo.Reply;
 import com.kh.mvc.board.model.vo.SaleBoard;
 import com.kh.mvc.common.util.PageInfo;
 
@@ -228,6 +229,7 @@ public class SaleBoardDao {
 				saleboard.setWishStatus(rs.getString("WISH_STATUS"));
 				saleboard.setDealStatus(rs.getString("DEAL_STATUS"));
 				saleboard.setGoodsStatus(rs.getString("GOODS_STATUS"));
+				saleboard.setReplies(this.getRepliesByNo(connection, no));
 
 			}
 			
@@ -237,10 +239,98 @@ public class SaleBoardDao {
 			close(rs);
 			close(pstmt);
 		}
-		System.out.println("dao에서찍는중 : "+saleboard);
+		// System.out.println("dao에서찍는중 : "+saleboard);
 		
 		return saleboard;
 	}
+
+	
+	private List<Reply> getRepliesByNo(Connection connection, int no) {
+		List<Reply> replies = new ArrayList<>();
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String query = null;
+		
+		try {
+			query = 
+				  "SELECT R.NO, R.SALE_NO, R.CONTENT, M.ID, R.CREATE_DATE, R.MODIFY_DATE "
+				+ "FROM REPLY R "
+				+ "JOIN MEMBER M ON(R.WRITER_NO = M.NO) "
+				+ "WHERE R.STATUS='Y' AND SALE_NO=? "
+				+ "ORDER BY R.NO";
+			
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setInt(1, no);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Reply reply = new Reply();
+				
+				reply.setNo(rs.getInt("NO"));
+				reply.setSaleNo(rs.getInt("SALE_NO"));
+				reply.setContent(rs.getString("CONTENT"));
+				reply.setWriterId(rs.getString("ID"));
+				reply.setCreateDate(rs.getDate("CREATE_DATE"));
+				reply.setModifyDate(rs.getDate("MODIFY_DATE"));
+				
+				replies.add(reply);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstmt);
+		}		
+		
+		return replies;
+	}
+	
+	public int insertReply(Connection connection, Reply reply) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "INSERT INTO REPLY VALUES(SEQ_REPLY_NO.NEXTVAL, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT)";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setInt(1, reply.getSaleNo());
+			pstmt.setInt(2, reply.getWriterNo());
+			pstmt.setString(3, reply.getContent());
+			
+			result = pstmt.executeUpdate();	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+
+	public int deleteReplyStatus(Connection connection, int no, String status) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE REPLY SET STATUS=? WHERE NO=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setString(1, status);
+			pstmt.setInt(2, no);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		System.out.println("result값이 dao에서 넘어오나..?"+result);
+		return result;
+	}
+	
 }
 
 	

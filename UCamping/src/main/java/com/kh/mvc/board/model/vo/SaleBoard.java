@@ -1,6 +1,7 @@
 package com.kh.mvc.board.model.vo;
 
 import java.util.Date;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -37,6 +38,8 @@ public class SaleBoard {
 	private String goodsStatus;
 	
 	private String dealStatus;
+	
+	private List<Reply> replies;	
 	
 	private Date createDate;
 	
