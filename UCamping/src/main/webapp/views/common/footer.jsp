@@ -5,7 +5,7 @@
 <c:set var="path" value="${ pageContext.request.contextPath }"/>    
 
 
-<title>Insert title here</title>
+
 <link rel="stylesheet" href="${ path }/resources/css/footer.css">
 
 	<footer>
@@ -32,3 +32,6 @@
 
     </div>
   </footer>
+</body>
+    <script src="${ path }/resources/js/main.js"></script>
+</html>
