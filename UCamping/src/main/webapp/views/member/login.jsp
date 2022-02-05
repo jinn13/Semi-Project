@@ -58,15 +58,90 @@
                         <div class="simple-login-area">
                           <p>SNS 간편 로그인</p>
                           <input type="button" class="splgin-btn" id="naver" style="cursor:pointer;" value="네이버 간편 로그인">
+                          <a href="javascript:kakaoLogin();">
                           <input type="button" class="splgin-btn" id="kakao" style="cursor:pointer;" value="카카오 간편 로그인">
-                          <input type="button" class="splgin-btn" id="google" style="cursor:pointer;" value="구글 간편 로그인">
+                          </a>
+                          <a href="javascript:kakaoLogout();">
+                          <input type="button" class="splgin-btn" id="google" style="cursor:pointer;" value="카카오 로그아웃">
+                          </a>
                       </div>
                 </div>
             </section>
           </div>
 </div>
 
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script>
+    window.Kakao.init("9974a2b0bcc3fc1ae56607528d2c66a7");
+
+    function kakaoLogin() {
+        window.Kakao.Auth.login({
+            scope:'profile_nickname, profile_image, account_email, gender',
+            success: function(authObj){
+                console.log(authObj);
+                window.Kakao.API.request({
+                    url:'/v2/user/me',
+                    success: res =>{
+                        const kakao_account = res.kakao_account;
+                        console.log(kakao_account);
+
+
+
+                        // const a=JSON.stringify(kakao_account)
+	                    // console.log(res.id);
+                        // let email = kakao_account.email;
+                        // let nickName = kakao_account.profile.nickname;
+                        // console.log(email, nickName);
+                                            
+                        
+                        $.ajax({ 
+                            type: "post", 
+                            url: "${ path }/kakaosignup",
+                            data: res,
+                            datatype: 'JSON',
+                            success: function(data) {
+                                
+                                console.log(res);
+                                console.log(Object.keys(kakao_account));
+                                console.log(Object.values(kakao_account));
+                                location.href="http://localhost:8088/UCamping/";
+
+                            }, 
+                            error: function(error) {
+                                console.log("error", error );
+                            },
+                            complete: function() {
+                                console.log("complete");
+                            }
+                        });
+
+								// location.replace("${ path }/enroll");
+
+                    }
+                });
+						// location.href='${ path }';
+                
+
+            }
+        });            
+    }
+    
+    function kakaoLogout(){
+    	if(!Kakao.Auth.getAccessToken()){
+    		console.log('Not logged in.');
+    		return;
+    	}
+    	Kakao.Auth.logout(function(response){
+    		alert(response+' logout');
+    		window.location.href='${ path }'
+    	});
+    };
+    
+</script>
+
 </body>
+
+
 <script src="${ path }/resources/js/main.js"></script>
 
 <jsp:include page="/views/common/footer.jsp" />
