@@ -51,6 +51,20 @@ public class MemberService {
 		}
 	}
 
+	public Member sns_login(String id, String email) {
+		Connection connection = getConnection();	
+		Member member = dao.findMemberById(connection, id);
+		
+		close(connection);
+		
+		if(member != null && member.getEmail().equals(email)) {
+			return member;			
+		} else {
+			return null;
+		}
+	}
+	
+
 	public int save(Member member) {
 		int result = 0;
 		
